@@ -1,0 +1,185 @@
+---
+import SliderSection from '../Components/SliderSection.astro';
+import ServicesSection from '../Components/ServicesSection.astro';
+import AboutSection from '../Components/AboutSection.astro';
+import CtaSection from '../Components/CtaSection.astro';
+import BloqSection from '../Components/BloqSection.astro';
+import EventSection from '../Components/EventSection.astro';
+import OfertaAcademicaSuscripcion from '../Components/OfertaAcademicaSuscripcion.astro';
+import HeaderIndex from '../Components/HeaderIndex.astro';
+import Loader from '../Components/Loader.astro';
+import WhatsappContact from '../Components/WhatsappContact.astro';
+import Footer from '../Components/Footer.astro';
+
+
+// ESTILOS CSS
+import "../assets/style.css";
+import ScrollUp from '../Components/ScrollUp.astro';
+import SearchModal from '../Components/SearchModal.astro';
+---
+
+<html lang="en">
+	<head>
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<!-- <meta name="generator" content={Astro.generator} /> -->
+
+		<meta charset="utf-8" />
+		<title>ULVR - Universidad Laica Vicente Rocafuerte</title>
+		<meta name="description" content="" />
+		<!-- responsive tag -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/fav.png"/>
+	    <!-- Bootstrap v5.0.2 css -->
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	    <!-- font-awesome css -->
+	    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	    <!-- animate css -->
+	    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+	    <!-- owl.carousel css -->
+	    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+	    <!-- slick css -->
+	    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+	    <!-- off canvas css -->
+	    <link rel="stylesheet" type="text/css" href="css/off-canvas.css" />
+	    <!-- linea-font css -->
+	    <link rel="stylesheet" type="text/css" href="fonts/linea-fonts.css"/>
+	    <!-- flaticon css  -->
+	    <link rel="stylesheet" type="text/css" href="fonts/flaticon.css" />
+	    <!-- magnific popup css -->
+	    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css"
+	    />
+	    <!-- Main Menu css -->
+	    <link rel="stylesheet" href="css/rsmenu-main.css" />
+	    <!-- spacing css -->
+	    <link rel="stylesheet" type="text/css" href="css/rs-spacing.css" />
+	    <!-- style css -->
+	    <link rel="stylesheet" type="text/css" href="css/style.scss" />
+	    <!-- This stylesheet dynamically changed from style.less -->
+	    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+	    <!-- responsive css -->
+	    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	    <!--[if lt IE 9]>
+	    	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	    	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+		<!-- <title>Astro</title> -->
+	</head>
+    <body class="home-style2">
+        <!-- whatsapp start -->
+        <WhatsappContact />
+        <!-- whatsapp end -->
+    
+        <!--Preloader area start here-->
+        <Loader />
+        <!--Preloader area End here-->
+
+        <!-- Main content Start -->
+        <div class="main-content">
+            <!--Full width header Start-->
+            <div class="full-width-header home8-style4 home9">
+                <!--Header Start-->
+                <HeaderIndex />
+                <!--Header End-->
+            </div>
+            <!--Full width header End-->
+
+            <!-- Banner Section Start -->
+            <div id="rs-banner" class="rs-banner">
+                <div class="gradient-top"></div>
+                <video autoplay muted loop id="myVideo">
+                    <source src="../assets/video/LOOP_8-copia.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div><br />
+            <!-- Banner Section End -->
+            <!-- Slider Section Start -->
+            <SliderSection />
+            <br />			
+            <!-- Slider Section End -->
+
+            <!-- Services Section Start -->
+            <ServicesSection />
+            <!-- Services Section End -->
+
+            <!-- About Section Start -->
+            <AboutSection />
+            <!-- About Section End -->
+
+            <!-- CTA Section Start -->
+            <CtaSection />
+            <!-- CTA Section End -->
+
+            <!-- Blog Section Start -->
+            <BloqSection />
+            <!-- Blog Section End -->
+
+            <!-- Section Gray bg Wrap start -->
+            <div class="gray-bg">
+                <!-- Latest Events Section Start -->
+                <EventSection />
+                <!-- Latest Events Section End -->
+
+                <!-- Newsletter section start -->
+                <OfertaAcademicaSuscripcion />
+                <!-- Newsletter section end -->
+            </div>
+        </div>
+        <!-- Main content End -->
+
+        <!-- Footer Start -->
+        <Footer />
+        <!-- Footer End -->
+
+        <!-- start scrollUp  -->
+        <ScrollUp />
+        <!-- End scrollUp  -->
+
+        <!-- Search Modal Start -->
+        <SearchModal />
+        <!-- Search Modal End -->
+
+        <!-- modernizr js -->
+        <script is:inline src="/scripts/modernizr-2.8.3.min.js"></script>
+        <!-- jquery latest version -->
+        <script is:inline src="/scripts/jquery.min.js"></script>
+        <!-- Bootstrap v5.0.2 js -->
+        <script is:inline src="/scripts/bootstrap.min.js"></script>
+        <!-- Menu js -->
+        <script is:inline src="/scripts/rsmenu-main.js"></script>
+        <!-- op nav js -->
+        <script is:inline src="/scripts/jquery.nav.js"></script>
+        <!-- owl.carousel js -->
+        <script is:inline src="/scripts/owl.carousel.min.js"></script>
+        <!-- Slick js -->
+        <script is:inline src="/scripts/slick.min.js"></script>
+        <!-- isotope.pkgd.min js -->
+        <script is:inline src="/scripts/isotope.pkgd.min.js"></script>
+        <!-- imagesloaded.pkgd.min js -->
+        <script is:inline src="/scripts/imagesloaded.pkgd.min.js"></script>
+        <!-- wow js -->
+        <script is:inline src="/scripts/wow.min.js"></script>
+        <!-- Skill bar js -->
+        <script is:inline src="/scripts/skill.bars.jquery.js"></script>
+        <script is:inline src="/scripts/jquery.counterup.min.js"></script>
+        <!-- counter top js -->
+        <script is:inline src="/scripts/waypoints.min.js"></script>
+        <!-- video js -->
+        <script is:inline src="/scripts/jquery.mb.YTPlayer.min.js"></script>
+        <!-- magnific popup js -->
+        <script is:inline src="/scripts/jquery.magnific-popup.min.js"></script>
+        <!-- plugins js -->
+        <script is:inline src="/scripts/plugins.js"></script>
+        <!-- contact form js -->
+        <script is:inline src="/scripts/contact.form.js"></script>
+        <!-- main js -->
+        <script is:inline src="/scripts/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    </body>
+</html>

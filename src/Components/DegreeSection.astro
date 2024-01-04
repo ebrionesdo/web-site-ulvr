@@ -1,0 +1,32 @@
+---
+const { dataDegree } = Astro.props;
+---
+<div class="rs-degree style1 modify gray-bg pt-100 pb-70 md-pt-70 md-pb-40">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="sec-title wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
+                    <h2 class="title mb-0">{dataDegree.titulo}</h2>
+                </div>
+            </div>
+                <div class="col-lg-4 col-md-6 mb-30 align-items-center">
+                <div class="degree-wrap">
+                    <img src="images/degrees/1.jpg" alt="" />
+                    <div class="title-part">
+                        <h4 class="title">{dataDegree.recuadro.titulo}</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">Historia</a></h4>
+                        <p class="text-center">
+                            {dataDegree.recuadro.subtitulo}
+                            <br><br>
+                        </p>
+                        <div class="btn-part">
+                            <a href={dataDegree.recuadro.url} target="_blank">{dataDegree.recuadro.boton}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

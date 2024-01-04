@@ -1,0 +1,55 @@
+---
+import NavbarIndexHijo from '../Components/NavbarIndexHijo.astro';
+import MenuToggle from '../Components/MenuToggle.astro';
+import RedesSocialesMenu from '../Components/RedesSocialesMenu.astro';
+---
+
+<header id="rs-header" class="rs-header">
+    <div class="menu-area menu-sticky">
+        <div class="container">
+            <div class="row y-middle justify-content-center">
+                <div class="col-2 mx-auto md-pt-6">
+                    <div class="logo-cat-wrap justify-content-center">
+                        <div class="logo-part p-2">
+                            <a href="index.html">
+                                <img class="normal-logo" src="/images/logo-light3.png" alt=""/>
+                                <img class="sticky-logo " src="/images/logo-dark4.png" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-1 text-end">
+                    <div class="expand-btn-inner">
+                        <a id="nav-expander" class="nav-expander style6">
+                            <span class="dot1"></span>
+                            <span class="dot2"></span>
+                            <span class="dot3"></span>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- Menu End -->
+
+    <!-- Canvas Menu start -->
+    <nav class="right_menu_togle" style="border: 2px solid red;">
+        <!-- MENU TOGGLE START -->
+        <MenuToggle />
+        <!-- MENU TOGGLE END -->
+
+        <div class="mt-5">
+            <!-- NAVBAR CHILD START -->
+            <NavbarIndexHijo />
+            <!-- NAVBAR CHILD END -->
+        </div>
+
+        <div class="canvas-contact">
+            <!-- REDES SOCIALES START -->
+            <RedesSocialesMenu />
+            <!-- REDES SOCIALES END -->
+        </div>
+    </nav>
+    <!-- Canvas Menu end -->
+</header>

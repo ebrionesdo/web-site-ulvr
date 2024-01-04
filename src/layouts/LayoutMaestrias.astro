@@ -1,0 +1,90 @@
+---
+
+import CarrerasPorFacultad from '../Components/CarrerasPorFacultad.astro';
+
+import Layout from './Layout.astro';
+
+import "../assets/style.css";
+import AcordionMaestrias from '../Components/AcordionMaestrias.astro';
+import FaqSectionCMestrias from '../Components/FaqSectionCMestrias.astro';
+
+export interface Breadcrumb {
+    title:        string;
+    titleCarrera: string;
+    menuAtras:    string;
+    servicio:     string;
+    nombreBoton:  string;
+    img:          string;
+    urlInscribete:string;
+    urlAtras:     string;
+}
+
+export interface ICarrera {
+    niveles:   string;
+    carrera:   string;
+    modalidad: string;
+    profesion: string;
+    imagen:    string;
+    url:      string;
+}
+
+export interface DescripcionCarrera {
+    descripcion:string
+    duracion:   number,
+    modalidad:  string
+    troncocomun:number,
+    titulo:     string
+    jornada:    string
+}
+
+// interface Props {
+//     facultad:              string;
+//     carreras:              ICarrera[];
+//     breadcrumbs:           Breadcrumb;
+//     descargarInformacion: string;
+//     acordionData:          any
+// }
+
+
+const {facultad, carreras, breadcrumbs, descargarInformacion, acordionData} = Astro.props;
+---
+
+<Layout {breadcrumbs}>
+    <!-- Categories Section Start -->
+    <div id="rs-categories" class="rs-categories main-home pt-20 md-pt-60 md-pb-80">
+        <div class="conteiner">
+            <div class="w-50 mx-auto wow fadeInUp mt-30">
+                <div class="btn-part pull-right" data-wow-delay="400ms" data-wow-duration="2000ms">
+                    <a class="readon2" href={descargarInformacion} target="_blank">Descargar Información</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sec-title3 text-center mt-30 mb-20">
+                <!-- <div class="sub-title"> GRADO</div> -->
+                <h2 class="title black-color">{breadcrumbs.titleCarrera}</h2>
+            </div>
+            <!-- ACORDION DESCRIPCION CARRERA START -->
+            <AcordionMaestrias {acordionData}>
+                <!-- {dataDescripcion} -->
+            </AcordionMaestrias>
+            <!-- ACORDION DESCRIPCION CARRERA END -->
+            
+        </div>
+    </div>    
+    <!-- Categories Section End -->
+
+
+    <!-- Faq Section Start -->
+    <FaqSectionCMestrias />
+    <!-- faq Section Start -->
+
+    <!-- Categories Section Start -->
+    <div id="rs-categories" class="rs-categories main-home pt-20 pb-20 md-pt-60 md-pb-80">
+        <!-- Carreras de la Facultad de Educación -->
+        <CarrerasPorFacultad carreras={carreras}>
+            {facultad}
+        </CarrerasPorFacultad>
+        <!-- Main content End -->
+    </div>
+</Layout>

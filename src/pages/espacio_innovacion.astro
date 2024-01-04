@@ -1,0 +1,136 @@
+---
+import AboutSectionServicios from "../Components/AboutSectionServicios.astro";
+import AcordionDinamico from "../Components/AcordionDinamico.astro";
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Espacio de Innovación',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Investigación',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/investigacion.jpg',        
+    descargarInformacvion : '',  
+}
+
+const aboutData = {
+    imagen:'images/about/innovación-01.jpg',
+    descripcion: ['El Espacio de Innovación de la ULVR inicia sus actividades del 15 de enero de 2015, mediante oficio de rectorado autorizando su funcionamiento, con el propósito de incentivar en la comunidad universitaria el desarrollo de emprendimientos. En 2018, con informe técnico No. SENESCYT-DCYT-GYE-2018-001-IN se acreditó como AGENTE DE INNOVACIÓN, en calidad de INCUBADORA.']
+}
+const acordionData = {
+    titulo:'Conoce más acerca del Espacio de Innovación',
+    acordion:[
+        {
+            titulo:'Breve historia',
+            descripcion: ['La contribución al ecosistema de innovación se constituye en un proceso fundamental para el desarrollo de una cultura de la innovación.',
+                          'En este contexto, las Instituciones de Educación Superior son actores importantes en este reto, ya que con sus medios y transferencia de conocimientos pueden influir de forma significativa en el fortalecimiento de las ideas de innovación en la comunidad educativa generando proyectos de componente innovador, con potencialidad al emprendimiento creativo.',
+                          'El trabajo del Espacio de Innovación – ULVR supone el acompañamiento a los emprendedores, estudiantes y docentes por equipos multidisciplinarios de profesionales que forman parte de la Universidad Laica VICENTE ROCAFUERTE de Guayaquil, para promover emprendimientos sostenibles que respondan a las necesidades económicas, sociales y ambientales de la localidad y el país.',
+                          'El 18 de junio de 2018, mediante Oficio No. SENESCYT-SGCT-SITT-2018-0231-CO, se dio respuesta a la solicitud efectuada por la Universidad Laica VICENTE ROCAFUERTE de Guayaquil para acreditar la Incubadora de la institución y que, una vez realizada la evaluación correspondiente, cumplía con los requisitos establecidos en el Reglamento de Acreditación de Espacios y Agentes de Innovación, razón por la cual con informe técnico No. SENESCYT-DCYT-GYE-2018-001-IN se determinó que era pertinente su acreditación como AGENTE DE INNOVACIÓN, en calidad de INCUBADORA.'],
+            buttonUrl:'',
+            buttonName:'',
+            mostrar:true,
+            posicion: 'One'            
+        },
+        {
+            titulo:'Objetivos',
+            descripcion: ['Brindar servicios de acompañamiento integral que permitan el desarrollo de proyectos de emprendimiento que contribuyan al ecosistema de innovación de nuestra comunidad educativa y del país.'],
+            buttonUrl:'',
+            buttonName:'',
+            posicion: 'Two'            
+        },
+        {
+            titulo:'Incubadora de Negocios',
+            descripcion: [],
+            item: [
+                {
+                    titulo:'Ventajas',
+                    listas: [
+                                'Promueve el trabajo científico estudiantil que se materializa en proyectos con componente innovador en temáticas específicas de la profesión.',
+                                'Asesoría en la elaboración de planes estratégicos.',
+                                'Asesorías profesionales por especialistas en el campo amplio de la administración.',
+                                'Identificación de oportunidades del entorno para impulsar la investigación, la innovación y el apoyo al emprendimiento local.',
+                                'Identificación de capacidades de innovación en las carreras de la ULVR para poder dar una respuesta adaptada a las necesidades internas y del entorno.'
+                    ]
+                },
+                {
+                    titulo:'Emprendimientos a incubar',
+                    descripcion: ['Los emprendimientos a ser incubados son:'],
+                    listas: [
+                                'Proyectos áulicos y proyectos de vinculación con la sociedad con componente innovador de estudiantes de la ULVR.',
+                                'Resultados de proyectos de investigación científica de la ULVR.',
+                                'Proyectos semilleros impulsados por la ULVR.',
+                                'Emprendedores de convocatorias a través del Banco de Ideas de la SENESCYT..'
+                    ]
+                },
+                {
+                    titulo:'Servicios',
+                    descripcion: ['Entre los servicios que se brindan a los emprendimientos a incubar están el acompañamiento que comprende algunos ámbitos, entre ellos el diseño de modelos de negocios, desarrollo de producto mínimo viable, asesoría en la elaboración del modelo de negocio y del plan de negocio, entre otros. Todos en interacción con el emprendedor o el equipo innovador.'],
+                    listas: []
+                },
+            ],
+            buttonUrl:'',
+            buttonName:'',
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Proceso de incubación',
+            descripcion: ['El desarrollo de los procesos tiene como premisa la inscripción de la idea de negocio en un formulario de aplicación.'],
+            item: [
+                {
+                    titulo:'Preincubación',
+                    listas: [
+                                'Análisis de los servicios a brindar al emprendedor.',
+                                'Elaboración del plan a seguir y verificación de los horarios de tutores y mentores.',
+                                'Elaboración del Modelo de Negocio y Plan de Negocio.',
+                                'Evaluación del Modelo de Negocio y Plan de Negocio.'
+                    ]
+                },
+                {
+                    titulo:'Incubación',
+                    descripcion: ['Los emprendimientos a ser incubados son:'],
+                    listas: [
+                                'Asesoría en la ejecución del Plan de Negocio.',
+                                'Asesoría en la gestión para la obtención de financiamiento.',
+                                'Asesoramiento en aspectos jurídicos, contables, tributarios, de producción, comercialización en correspondencia a las competencias y capacidad de la ULVR.'
+                    ]
+                },
+                {
+                    titulo:'Posincubación',
+                    descripcion: ['Entre los servicios que se brindan a los emprendimientos a incubar están el acompañamiento que comprende algunos ámbitos, entre ellos el diseño de modelos de negocios, desarrollo de producto mínimo viable, asesoría en la elaboración del modelo de negocio y del plan de negocio, entre otros. Todos en interacción con el emprendedor o el equipo innovador.'],
+                    listas: [
+                                'Seguimiento a la empresa sobre su crecimiento, desarrollo de sus productos o servicios ofrecidos.',
+                                'Asesoría y orientaciones puntuales, las que sean necesarias.',
+                    ]
+                },
+            ],
+            buttonUrl:'https://docs.google.com/forms/d/e/1FAIpQLScW1W6n_XLCcGZTCLgC5C3cX-qTpBNepVUsJL8lEm0kU7chDA/viewform',
+            buttonName:'Solicitud',
+            posicion: 'Four'             
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Oscar Parada Gutiérrez,Ph.D.', 
+                    cargo:'Director', 
+                    telefono:'(04) 259 6500', 
+                    ext:'155', 
+                    email:'espaciodeinnovacion@ulvr.edu.ec'
+                }
+            ],
+            horario:'',
+            posicion: 'Five',               
+        },
+    ]
+}
+
+---
+
+<Layout {breadcrumbs}>
+    <div class="contenedor">
+        <AboutSectionServicios {aboutData} />    
+        <AcordionDinamico {acordionData} />    
+    </div>
+</Layout>

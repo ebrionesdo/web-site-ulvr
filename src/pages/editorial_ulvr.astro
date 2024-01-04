@@ -1,0 +1,150 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Editorial ULVR',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Investigación',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Bienvenido a la Biblioteca Digital "Dra. Elsa Alarcón Soto"',
+    descripcion: ['Ofrecemos una gran variedad de títulos desarrollados por la comunidad académica y científica de la Universidad Laica VICENTE ROCAFUERTE de Guayaquil. Navega por nuestro catálogo para encontrar algo que te guste o descubre tu nuevo favorito.']
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/Editorial ULVR/IMG_biblioteca.jpg',
+    },
+
+    detalletab: [
+        {
+            nombre:'Abrimos las puertas literarias',
+            tab:'puertas-literarias',
+            imagen:'',
+            mostrar:true,
+            descripcion: ['Biblioteca Digital "Dra. Elsa Alarcón Soto" fomenta la educación, el desarrollo personal y el enriquecimiento de la comunidad laica. Aquí encontrarás los libros escritos por docentes, investigadores y estudiantes de la ULVR.']
+        },
+    ]
+}
+
+export const catalogoBibliotecaVirtual = [
+    {
+        niveles:'33 Libros',
+        carrera:'Académico',
+        librosDesc:'Desde la cátedra a tus manos',
+        imagen: '/images/Editorial ULVR/academico.JPG',
+        url: '/editorial_academico'
+    },
+    {
+        niveles:'5 Libros',
+        carrera:'Investigación',
+        librosDesc:'Ciencia, Tecnología & Innovación',
+        imagen: '/images/Editorial ULVR/investiga.JPG',
+        url: '/editorial_investigacion'
+    },
+    {
+        niveles:'8 Libros',
+        carrera:'Palabras de cristal',
+        librosDesc:'Cuentos Infantiles para todas las edades',
+        imagen: '/images/Editorial ULVR/palabras2.jpg',
+        url: '/editorial_palabras'
+    },
+    {
+        niveles:'1 Libros',
+        carrera:'Prosa & Verso',
+        librosDesc:'Una opción para cada persona',
+        imagen: '/images/Editorial ULVR/mousa.JPG',
+        url: '/editorial_mousa'
+    },
+
+    
+]
+
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+    .img2p {
+        max-width: 50%;
+        margin: auto;
+        height: auto;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        <div class="desc">
+            {
+                dataEncabezado.descripcion.map((desc:any) =>
+                <p class="text-justify">{desc}</p>
+                )
+
+            }
+        </div>				
+    </div>
+    <!-- About Section Start -->
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 padding-0 md-pl-15 md-pr-15 md-mb-30">
+                <div class="img2p">
+                    <img class="" src={dataAboutTab.cabeceraTab.imagen} alt="About Image"/>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="tab-content tabs-content" id="myTabContent">
+                    {
+                        dataAboutTab.detalletab.map((desc:any) =>
+                        <div class:list={[ 'tab-pane fade', { "show active": desc.mostrar }]}
+                             id={`about-${desc.tab}`}
+                             role="tabpanel"
+                             aria-labelledby={`about-${desc.tab}-ta`}>
+                            <div class="sec-title mb-25">
+                                <h3 class="title text-center">{desc.nombre}</h3>
+                                <div class="desc">
+                                    <p class="text-justify"> {desc.descripcion} </p>
+                                </div>
+                            </div>
+                            <div class="tab-img">
+                                {
+                                    desc.imagen && (
+                                        <img class="" src={desc.imagen} alt={`Tab {desc.tab}`} />
+                                    )
+                                }
+                            </div>
+                        </div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- Intro Info Tabs-->
+        <div class="intro-info-tabs"></div>
+    </div>
+    <!-- About Section End -->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoBibliotecaVirtual}>
+            Catálogo de la Biblioteca virtual
+        </CarrerasPorFacultad/>
+    </div>
+ 
+</LayoutVarios>

@@ -1,0 +1,152 @@
+---
+import AboutTabSection from "../Components/AboutTabSection.astro";
+import AcordionDinamico from "../Components/AcordionDinamico.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Bienestar Universitario',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/about/binestar.JPG',
+        menu: [
+            {
+                nombre:'¿Qué hacemos?',
+                tab:'que-hacemos',
+                img:"images/about/icon/4.png",
+                mostrar:true
+            },
+            {
+                nombre:'Vías de atención',
+                tab:'vias-atención',
+                img:"images/about/icon/5.png"
+            },
+            {
+                nombre:'Contactos',
+                tab:'contactos',
+                img:"images/about/icon/EJEMPLO.png"
+            },
+        ]
+
+    },
+
+    detalletab: [
+        {
+            nombre:'¿Qué hacemos?',
+            tab:'que-hacemos',
+            imagen:'images/about/bienestar 2.jpg',
+            mostrar:true,
+            descripcion: ['Bienestar Universitario brinda atención integral al estudiante sobre temas relacionados a necesidades educativas especiales, becas, rutas de acción en situaciones de acoso, violencia, consumo y expendio de sustancias sujetas a fiscalización, entre otros.',
+                          'El personal de atención lo conforman psicólogos y trabajadores sociales quienes dan al estudiante información relacionada con los procesos que se desarrollan dentro de la ULVR.']
+        },
+        {
+            nombre:'Vías de atención',
+            tab:'vias-atención',
+            imagen:'',
+            descripcion: [],
+            descripcionItem: [],
+            // item1: {nombre:'Presencial', descripcion:'Oficina ubicada en el edificio de Bienestar, planta baja. a 20:00 ininterrumpidamente.'},
+            // item2: {nombre:'Virtual', numero:'593968157284', email:'bienestaruniversitario@ulvr.edu.ec'},
+            items: [
+                {nombre:'Presencial', descripcion:'Oficina ubicada en el edificio de Bienestar, planta baja. a 20:00 ininterrumpidamente.', atencion:'', whatsApp:'', email:''},
+                {nombre:'Virtual', whatsApp:'593968157284', email:'bienestaruniversitario@ulvr.edu.ec', atencion:'', descripcion:''},
+            ]
+        },
+        {
+            nombre:'Contactos',
+            tab:'contactos',
+            imagen:'',
+            descripcion: [],
+            lista: [],
+            contacto: [
+                {
+                    nombre:'Mgtr. Jessica Aroca Clavijo',
+                    cargo:'Directora Bienestar Universitario',
+                    telefono:'04 2596-500 Ext. 141',
+                    email:'jarocac@ulvr.edu.ec',
+                    atencion:'Atención de 07:00 a 16:00'
+                },
+                {
+                    nombre:'Psic. Lidia Gómez Gómez',
+                    cargo:'Psicóloga',
+                    telefono:'04 2596-500 Ext. 169',
+                    email:'lrgomezg@ulvr.edu.ec',
+                    atencion:'Atención de 07:00 a 16:00'
+                },
+                {
+                    nombre:'Lcda. Gladys Recalde Valdez',
+                    cargo:'Trabajadora Social',
+                    telefono:'04 2596-500 Ext. 240',
+                    email:'grecaldev@ulvr.edu.ec',
+                    atencion:'Atención de 09:00 a 18:00'
+                },
+                {
+                    nombre:'Lcda. Ana Argudo Puga',
+                    cargo:'Trabajadora Social',
+                    telefono:'04 2596-500 Ext. 279',
+                    email:'aargudop@ulvr.edu.ec',
+                    atencion:'Atención de 11:00 a 20:00'
+                },
+            ],
+        },
+    ]
+}
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            mostrar:true,
+            titulo:'Rutas y protocolos de atención',
+            link:   [
+                        {
+                            url:'documentos/bienestar/ATENCIÓN PARA CASOS DE VIOLENCIA.pdf', 
+                            texto:'Atención para casos de violencia.'
+                        },
+                        {
+                            url:'documentos/bienestar/ATENCIÓN PARA CASOS DE ESTUDIANTES CON DISCAPACIDAD .pdf', 
+                            texto:'Atención para casos de estudiantes con discapacidad.'
+                        },
+                        {
+                            url:'documentos/bienestar/ATENCIÓN CASOS DE CONSUMO .pdf', 
+                            texto:'Atención para casos de consumo y/o presunto expendio o consumo.'
+                        },
+                        {
+                            url:'documentos/bienestar/ATENCIÓN DE CASOS CON PROBLEMAS DE DISCIPLINA ok.pdf', 
+                            texto:'Atención de casos con problemas de disciplina.'
+                        },
+                        {
+                            url:'documentos/bienestar/Reglamento para garantizar la Igualdad en el Sistema de Educación Superior..pdf', 
+                            texto:'Reglamento para garantizar la igualdad en el sistema de educación.'
+                        },
+                        {
+                            url:'documentos/bienestar/PROTOCOLO DE PREVENCIÓN Y ACTUACIÓN EN CASOS DE ACOSO, DISCRIMINACIÓN Y VIOLENCIA BASADA EN GÉNERO Y ORIENTACIÓN SEXUAL EN LAS INSTITUCIONES DE EDUCACIÓN SUPERIOR.pdf', 
+                            texto:'Protocolo de prevención y actuación en casos de acoso, discriminación y violencia basada en género y orientación sexual en las instituciones de educación superior.'
+                        },
+                    ],
+            posicion: 'One'   
+        },
+    ]
+}
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+    <!-- About Section Start -->
+    <AboutTabSection {dataAboutTab} />
+    <!-- About Section End -->
+
+    <AcordionDinamico {acordionData} /> 
+
+</LayoutVarios>

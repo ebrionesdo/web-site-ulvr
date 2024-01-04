@@ -1,0 +1,187 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Transparencia',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Resoluciones C. Universitario',
+            tab:'prod-resoluciones',
+            mostrar:true,
+            titulo:'',
+            acordiones: [
+                {
+                    titulo:'Resoluciones del Consejo Universitario',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Documento vigente',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2020/RESOLUCION DEL CONSEJO UNIVERSITARIO - 30012020.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 05/09/2019',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2019/RESOLUCION DEL CONSEJO UNIVERSITARIO - 05092019.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 15/07/2019',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2019/RESOLUCION DEL CONSEJO UNIVERSITARIO - 15072019.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 22/05/2019',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2019/RESOLUCION DEL CONSEJO UNIVERSITARIO - 22052019.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 14/06/2018',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2018/RESOLUCION DEL CONSEJO UNIVERSITARIO - 14062018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 28/03/2018',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2018/RESOLUCION DEL CONSEJO UNIVERSITARIO - 28032018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 22/02/2018',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2018/RESOLUCION DEL CONSEJO UNIVERSITARIO - 22022018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 11/01/2018',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2018/RESOLUCION DEL CONSEJO UNIVERSITARIO - 11012018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 13/12/2017',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2017/RESOLUCION DEL CONSEJO UNIVERSITARIO - 13122017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 03/10/2017',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2017/RESOLUCION DEL CONSEJO UNIVERSITARIO - 03102017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 31/08/2017',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2017/RESOLUCION DEL CONSEJO UNIVERSITARIO - 31082017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 13/03/2017',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2017/RESOLUCION DEL CONSEJO UNIVERSITARIO - 13032017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 09/01/2017',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2017/RESOLUCION DEL CONSEJO UNIVERSITARIO - 09012017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 26/10/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 26102016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 10/10/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 10102016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 30/08/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 30082016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 23/06/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 23062016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 15/04/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 15042016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 14/04/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 14042016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución del 13/04/2016',
+                            url:'documentos/Transparencia/8 Resoluciones del Consejo Universitario/2016/RESOLUCION DEL CONSEJO UNIVERSITARIO - 13042016.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+ 
+</LayoutVarios>

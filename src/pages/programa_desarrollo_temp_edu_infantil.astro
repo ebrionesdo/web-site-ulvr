@@ -1,0 +1,129 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Desarrollo Temprano y Educación Infantil',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Administración-de-Empresas.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_desarrollo_temp_edu_infantil');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Desarrollo Temprano_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Los párvulos requieren una educación especializada, centrada en la estimulación de las capacidades, habilidades y destrezas, para lo cual es necesario la preparación profesional de los educadores, mediante métodos, técnicas y recursos didácticos y creativos, que  preparen al niño para convivir y aprender.',
+                            'El Magíster en Desarrollo Temprano y Educación Infantil con mención en Atención Temprana de la ULVR es un profesional capaz de evaluar las necesidades específicas del desarrollo infantil, proponer estrategias de estimulación, optimizando las habilidades del infante y preparándolo para su vida estudiantil. ',
+                            'Nuestros graduados desarrollan las habilidades como líderes educativos, con competencias directivas para la creación de  emprendimientos en la educación infantil, mostrando un carácter crítico, integral, inclusivo con compromiso ético y valores humanos.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Profesionalizar a docentes, directivos y especialistas en los procesos para la atención y educación temprana con un direccionamiento integral e inclusivo, desde un ámbito de desempeño profesional contextualizado en la estimulación para el desarrollo infantil.'],
+            especificos: ['Analizar el desarrollo infantil desde una perspectiva integradora, así como sus implicaciones en la atención temprana.',
+                          'Valorar los fundamentos y ámbitos de actuación contextualizados de la atención temprana mostrando una perspectiva interdisciplinar sobre los procesos evolutivos y posibles alteraciones del desarrollo.',
+                          'Evaluar las necesidades específicas del desarrollo infantil fomentando propuestas de mejoramiento en la calidad de vida, así como de oportunidades y accesibilidad que pueda tener desde la interdisciplinariedad.',
+                          'Identificar las características propias y diferenciales de las alteraciones del desarrollo y las limitaciones que pueda tener el infante en su desempeño de vida.',
+                          'Detectar las dificultades de comportamientos y aprendizajes en los infantes.',
+                          'Reflexionar críticamente sobre la práctica educativa, basada en las experiencias y evidencias científicas.',
+                          'Seleccionar las herramientas y las estrategias destinadas a crear ambientes de aprendizaje que promuevan la adaptación, la autorregulación del comportamiento y la estabilidad emocional del niño.',
+                          'Planificar proyectos alternativos e innovadores relacionados con la atención y el desarrollo temprano infantil.',
+                          'Incorporar diferentes herramientas tecnológicas virtuales al proceso didáctico.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Desarrollo Temprano y Educación Infantil con mención en Atención Temprana de la ULVR tiene la capacidad de:'],
+            lista: ['Actuar en su labor profesional en correspondencia con los nuevos conocimientos y saberes sobre la atención en el desarrollo y aprendizaje de los niños de la primera infancia.',
+                    'Diseñar, planificar y gestionar programas recreativos, culturales, comunicacionales, familiares, de desarrollo institucional, de inclusión y otros afines.',
+                    'Garantizar desde el conocimiento disciplinar, profesional e investigativo un manejo adecuado de métodos, metodologías, modelos, protocolos, procesos y procedimientos que vaya acorde a los escenarios de la educación infantil.',
+                    'Proponer programas de capacitación y formación para profesionales y no profesionales del campo de la atención y educación a la primera infancia con bases científicas, sobre temas del desarrollo y aprendizaje de los niños entre 0 y 5 años de edad.',
+                    'Demostrar ética en su profesión basada en los valores y principios en el marco de un enfoque de derechos, igualdad e interculturalidad con un pensamiento universal.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Director, coordinador, gestor educativo de la educación infantil.',
+                    'Docente de educación inicial, básica o superior.',
+                    'Emprendedor de Centros de atención y estimulación temprana.',
+                    'Capacitador docente y familiar.',
+                    'Tutor en la atención  de niños de 0 a 5 años.',
+                    'Investigador y planificador de proyectos educativos para la educación infantil.',
+                    'Docente particular para el acompañamiento de niños con NEE. '
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Santa Elizabeth Véliz Araujo', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)94859330', 
+                    ext:'', 
+                    email:'sveliza@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

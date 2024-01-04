@@ -1,0 +1,41 @@
+---
+// import { type ICarrera } from '../layouts/LayoutCarrera.astro';
+
+// interface Props extends ICarrera {}
+
+const { niveles, carrera, modalidad, profesion, imagen, url, librosDesc } = Astro.props;
+
+---
+
+<div class="col-lg-3 mb-30 col-md-6">
+    <div class="event-item">
+        <div class="event-short">
+            <div class="featured-img">
+                <img src={imagen} alt={carrera}>
+                <div class="dates"> {niveles}</div>
+            </div>
+            <div class="content-part">
+                <h4 class="title">
+                    <a href={url}>{carrera}</a>
+                </h4>
+                <div class="time-sec">
+                    {
+                        modalidad && (
+                            <div class="timesec"><i class="fa fa-clock-o"></i> {modalidad}</div>
+                        )
+                    }
+                    {
+                        profesion && (
+                            <div class="address"><i class="fa fa-graduation-cap" aria-hidden="true"></i> {profesion}</div>
+                        )
+                    }
+                    {
+                        librosDesc && (
+                            <div class="address"><i class="fa fa-book" aria-hidden="true"></i> {librosDesc}</div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

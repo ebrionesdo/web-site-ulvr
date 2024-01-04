@@ -1,0 +1,144 @@
+---
+
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadEducacion } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Psicopedagogía',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FEDU/Psicopedagogía/Psicopedagogía_Banner Horizontal.png',        
+    descargarInformacion : 'documentos/Flyer de carreras 2022/Psicopedagogía.pdf',  
+}
+
+const carrerasEducacionFilter = carrerasFacultadEducacion.filter((carrera:any) => carrera.url !== 'psicopedagogia');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Psicopedagogía de la ULVR es un profesional que actúa en todos los niveles educativos, previniendo e identificando necesidades educativas asociadas o no a la discapacidad, a través de una intervención psicopedagógica eficaz y eficiente.',
+                         'Durante su proceso de formación el estudiante vincula los conocimientos teóricos con la práctica a través de proyectos investigativos, formativos e integradores de saberes, a los que se suman las prácticas preprofesionales y los programas de vinculación con la sociedad.', 
+                         'El título de Licenciado en Psicopedagogía de la ULVR también te permite continuar con tus estudios de posgrado.'],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Psicopedagogía.',
+            jornada:'Diurna (07:00 a 11:15) y Vespertina (16:00 a 20:15).',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'El Licenciado en Psicopedagogía de la ULVR estará preparado para comprender los fenómenos educativos, identificar y solucionar problemas en contextos educativos formales y no formales, orientados a la detección, intervención, evaluación y resolución de los problemas psicopedagógicos de niños, niñas y adolescentes, y sus familias.',
+                         ],
+            lista: ['A partir del 4° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como auxiliar en los DECE y en centros especializados.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Psicopedagogía de la ULVR será capaz de:'],
+            lista: ['Implementar adecuaciones curriculares.',
+                    'Asesorar a grupos familiares.',
+                    'Participar en proyectos de integración.',
+                    'Mediar en conflictos educacionales.',
+                    'Detectar problemas de aprendizaje asociados o no a una discapacidad.',
+                    'Identificar ámbitos de intervención psicopedagógica.',
+                    'Integrar equipos de trabajo multidisciplinarios.',
+                    'Optimizar procesos de enseñanza-aprendizaje.',
+                    'Asesorar a profesionales en el área de educación.',
+                    'Crear y desarrollar redes de apoyo comunitario',
+                    'Manejar técnicamente instrumentos, recursos y herramientas evaluativas.',
+                    'Diseñar, planificar, ejecutar y evaluar programas de intervención social.',
+                    'Diseñar, planificar, ejecutar y evaluar actividades de prevención.',
+                    'Elaborar y ejecutar programas de intervención psicopedagógica para el adulto mayor.',
+                    'Diagnosticar necesidades educativas especiales asociadas o no a una discapacidad.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Psicopedagogía de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Directivo.',
+                    'Administrador educativo.',
+                    'Consejero Estudiantil.',
+                    'Capacitador.',
+                    'Evaluador.',
+                    'Asesor académico.',
+                    'Diseñador de proyectos curriculares.',
+                    'Consejero familiar en asuntos educativos',
+                    'Rehabilitador psicopedagógico',
+                    'Docente.',
+                    'Investigador.',
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Margarita León García', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'278', 
+                    email:'mleong@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Ligia Consuelo Lara Taranto', 
+                    cargo:'Coordinadora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'278', 
+                    email:'llarat@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Martín Maldonado Morán', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'221', 
+                    email:'jmaldonadomo@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Leonor Alexandra Muñoz García', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'221', 
+                    email:'lmunozg@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Econ. Lucía Narcisa Aroca Briones', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'larocab@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Ketty Elizabeth Rodríguez Barahona', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'krodriguezb@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Psicopedagogía.pdf';   
+
+const facultad='Carreras de la Facultad de Educación'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasEducacionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

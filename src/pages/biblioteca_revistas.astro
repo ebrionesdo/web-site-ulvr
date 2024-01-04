@@ -1,0 +1,204 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import ShopPartBook from "../Components/ShopPartBook.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Revistas',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Revista LAICOS',
+    descripcion: []
+}
+
+const dataLibros = [
+    {
+        titulo:'Edición especial 2021: Graduaciones octubre',
+        url:'#',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - ESPECIAL GRAD OCT 2021.jpg'
+    },
+    {
+        titulo:'Edición especial 2021: Graduaciones septiembre',
+        url:'#',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - ESPECIAL GRAD SEPT 2021.jpg'
+    },
+    {
+        titulo:'Primera edición 2021',
+        url:'rev/file_1626713571.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2021.png'
+    },
+    {
+        titulo:'Tercera edición 2020',
+        url:'rev/tercera edición 2020.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - TERCERA ED 2020.png'
+    },
+    {
+        titulo:'Segunda edición 2020',
+        url:'rev/segunda edición 2020.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2020.png'
+    },
+    {
+        titulo:'Primera edición 2020',
+        url:'rev/primera edición 2020.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2020.png'
+    },
+    {
+        titulo:'Edición especial 2019: 53 aniversario ULVR',
+        url:'rev/edición especial 2019.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - EDI ESP 2019.jpg'
+    },
+    {
+        titulo:'Tercera edición 2019',
+        url:'rev/tercera edición 2019.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - TERCERA ED 2019.png'
+    },
+    {
+        titulo:'Segunda edición 2019',
+        url:'rev/segunda edición 2019.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2019.png'
+    },
+    {
+        titulo:'Primera edición 2019',
+        url:'rev/primera edición 2019.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2019.png'
+    },
+    {
+        titulo:'Tercera edición 2018',
+        url:'rev/tercera edición 2018.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - TERCERA ED 2018.png'
+    },
+    {
+        titulo:'Segunda edición 2018',
+        url:'rev/segunda edición 2018.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2018.png'
+    },
+    {
+        titulo:'Primera edición 2018',
+        url:'rev/primera edición 2018.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2018.png'
+    },
+    {
+        titulo:'Segunda edición 2017',
+        url:'rev/segunda edición 2017.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2017.png'
+    },
+    {
+        titulo:'Primera edición 2017',
+        url:'rev/primera edición 2017.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2017.png'
+    },
+    {
+        titulo:'Segunda edición 2015',
+        url:'rev/segunda edición 2015.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2015.png'
+    },
+    {
+        titulo:'Primera edición 2015',
+        url:'rev/primera edición 2015.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2015.png'
+    },
+    {
+        titulo:'Edición especial: Oferta académica 2015',
+        url:'rev/edición especial 2015.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - EDI ESP 2015.jpg'
+    },
+    {
+        titulo:'Tercera edición 2014',
+        url:'rev/tercera edición 2014.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - TERCERA ED 2014.png'
+    },
+    {
+        titulo:'Segunda edición 2014',
+        url:'rev/segunda edición 2014.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - SEGUNDA ED 2014.png'
+    },
+    {
+        titulo:'Primera edición 2014',
+        url:'rev/primera edición 2014.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/LAICOS - PRIMERA ED 2014.png'
+    },
+]
+
+export const catalogoRevistas = [
+    {
+        niveles:'24 Revistas',
+        carrera:'LAICOS',
+        librosDesc:'Noticias ULVR',
+        imagen: 'images/Editorial ULVR/investiga.JPG',
+        url: 'biblioteca_revistas'
+    },
+    {
+        niveles:'8 Revistas',
+        carrera:'S-Force',
+        librosDesc:'Comics ULVR',
+        imagen: 'images/Editorial ULVR/investiga.JPG',
+        url: 'biblioteca_revistas_sforce'
+    },
+    {
+        niveles:'17 Revistas',
+        carrera:'Yachana',
+        librosDesc:'Revista Científica',
+        imagen: 'images/Editorial ULVR/palabras2.jpg',
+        url: 'biblioteca_revistas_yachana'
+    }    
+]
+
+
+const catalogoRevistasFilter = catalogoRevistas.filter((revista:any) => revista.url !== 'biblioteca_revistas');
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        {
+            dataEncabezado.descripcion && (
+                <div class="desc">
+                    {
+                        dataEncabezado.descripcion.map((desc:any) =>
+                        <p class="text-justify">{desc}</p>
+                        )
+
+                    }
+                </div>	
+            )
+        }			
+    </div>
+
+    <!--Shop part start-->
+    <ShopPartBook {dataLibros} />
+    <!--Shop part end-->
+
+
+    
+    <!--Caeds List Editorial part end-->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoRevistasFilter}>
+            Otras revistas
+        </CarrerasPorFacultad/>
+    </div>
+    <!--Caeds List Editorial part end-->
+ 
+</LayoutVarios>

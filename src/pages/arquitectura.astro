@@ -1,0 +1,140 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadIngenieria } from '../layouts/LayoutListaGrado.astro';
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Arquitectura',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FIIC/Arquitectura/Arquitectura_Banner-Horizontal.jpg'
+}
+
+const carrerasIngenieriaFilter = carrerasFacultadIngenieria.filter((carrera:any) => carrera.url !== 'arquitectura');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Arquitecto de la ULVR es un profesional que responde a los cambios dinámicos de la sociedad actual; formado con conocimientos de vanguardia, pertinente, actualizado y con visión a futuro; orientado a la concepción y diseño de edificaciones y ciudades inteligentes en el marco de la planificación territorial con enfoque en la sostenibilidad, equidad social, salud y resiliencia.',
+                 'Durante su preparación académica, desarrolla las competencias que le permitirán proyectar espacios arquitectónico-urbanos funcionales, seguros y confortables, a través del estudio y análisis del medio físico circundante y de las necesidades del ser humano.', 
+                 'El título de Arquitecto de la ULVR también te permite continuar con tus estudios de posgrado.'],
+            duracion: '8 semestres',
+            modalidad:'Presencial.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Arquitecto(a).',
+            jornada:'Diurna, Vespertina y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'El Arquitecto de la ULVR podrá planificar, diseñar, construir, asesorar, fiscalizar y administrar edificaciones en entornos y espacios sustentables y sostenibles, en base a la aplicación de normas y técnicas innovadoras, que contribuyen favorablemente al desarrollo del entorno físico de las ciudades, y territorios urbanos y rurales.'
+                         ],
+            lista: ['A partir del 2° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 50% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como residente de obras, ayudante de presupuesto de obras o dibujante.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Ciencias de la Educación Básica de la ULVR será capaz de:'],
+            lista: ['Diseñar y gestionar proyectos arquitectónicos.',
+                    'Diseñar y gestionar proyectos urbanos.',
+                    'Diseñar y gestionar proyectos constructivos sostenibles.',
+                    'Desarrollar equipamientos a diferentes escalas territoriales.',
+                    'Desarrollar proyectos paisajísticos.',
+                    'Desarrollar proyectos integrales entre el usuario y el entorno construido.',
+                    'Investigar, innovar y gestionar la construcción con materiales sostenibles.',
+                    'Planificar y diseñar espacios públicos eficientes y funcionales.',
+                    'Planificar proyectos de Movilidad Sostenible.',
+                    'Gestionar y administrar obras de construcción',
+                    'Fiscalizar proyectos arquitectónicos y urbanísticos.',
+                    'Asesorar todo tipo de proyectos arquitectónicos y urbanísticos.',
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Arquitecto de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Diseñador.',
+                    'Planificador.',
+                    'Constructor.',
+                    'Gestor.',
+                    'Paisajista.',
+                    'Proyectista.',
+                    'Asesor.',
+                    'Administrador',
+                    'Fiscalizador',
+                    'Analista de presupuesto.',
+                    'Superintendente de obra.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Lissette Carolina Morales Robalino', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'211', 
+                    email:'lmoralesr@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Alan Ángel Valencia Burgos', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'209', 
+                    email:'avalenciab@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Raquel Fernanda Velásquez Suárez', 
+                    cargo:'Secretaria', 
+                    telefono:'(04) 2596 500', 
+                    ext:'260', 
+                    email:'rvelasquezs@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Edwin Xavier Sánchez Mazarán', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'260', 
+                    email:'esanchezm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Hilda Irene Vaque Guerrón', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'213', 
+                    email:'hvaqueg@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Tnlga. Lilia Annabell Barzola Muentes', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'213', 
+                    email:'lbarzolam@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Arquitectura.pdf';   
+
+const facultad='Carreras de la Facultad de Ingeniería, Industrial y Construcción'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasIngenieriaFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

@@ -1,0 +1,63 @@
+---
+import NavbarIndexHijo from './NavbarIndexHijo.astro';
+// import MenuStart from '../Components/MenuStart.astro';
+
+const {tema1, tema2} = Astro.props;
+---
+
+<div class="menu-area menu-sticky">
+    <div class="container-fluid">
+        <div class="row y-middle">
+            <div class="col-lg-3">
+                <div class="logo-cat-wrap">
+                    <div class="logo-part pr-30">
+                        {
+                            tema1 === true && (
+                            <a class="dark-logo" href="index.html">
+                                <img src="/images/logo-dark.png" alt="" />
+                            </a>
+                            <a class="light-logo" href="index.html">
+                                <img src="/images/logo.png" alt="" />
+                            </a>
+
+                            )
+                        }
+                        
+
+                        {
+                            tema2 === true && (
+                                <img class="normal-logo" src="/images/logo.png" alt="">
+                                <img class="sticky-logo" src="/images/logo-dark.png" alt="">
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 text-center">
+                <div class="rs-menu-area">
+                    <div class="main-menu pr-50">
+                        <div class="mobile-menu">
+                            <a class="rs-menu-toggle">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <!-- NAVBAR START -->
+                        <NavbarIndexHijo />
+                        <!-- NAVBAR END -->
+                    </div>
+                    <!-- //.main-menu -->
+
+                    <div class="expand-btn-inner">
+                        <ul>
+                            <li>
+                                <a class="hidden-xs rs-search" data-bs-toggle="modal" data-bs-target="#searchModal" href="#">
+                                    <i class="flaticon-search"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

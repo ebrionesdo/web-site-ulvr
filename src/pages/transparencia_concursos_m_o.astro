@@ -1,0 +1,234 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Transparencia',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Concurso de méritos',
+            tab:'prod-meritos-oposicion',
+            mostrar:true,
+            titulo:'Concurso de méritos y oposición',
+            titulo2:'',
+            parrafos:['Conoce más sobre los concursos de méritos y oposición'],
+            acordiones: [
+                {
+                    titulo:'Concurso de méritos y oposición 2020',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Convocatoria Concurso de Méritos y oposición 2020 - 1',
+                            url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/2 Concurso de Meritos y Oposición 2020/Convocatoria Concurso de Meritos y oposición 2020 (4).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Convocatoria Concurso de Méritos y oposición 2020 - 2',
+                            url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/2 Concurso de Meritos y Oposición 2020/Convocatoria Concurso de Meritos y oposición 2020 - 2 (2).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Copia certificada de ganadores de CMYO 2020',
+                            url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/2 Concurso de Meritos y Oposición 2020/COPIA CERTIFICADA GANADORES DE CMYO 2020.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'Concurso de méritos y oposición 2019',
+                    posicion:'Two',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Convocatoria Concurso de Méritos y oposición 2019 - 1',
+                            url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/1 Concurso de Meritos y Oposición 2019/Convocatoria Concurso de Meritos y oposición 2019 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Resolución de Consejo Universitario - CMYO 2019',
+                            url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/1 Concurso de Meritos y Oposición 2019/Resolucion de Consejo Universitario - CMYO 2019.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'Concurso de méritos y oposición 2020',
+                    posicion:'Three',
+                    acordionChild:[
+                        {
+                            titulo:'2017',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Acta C. universitario 12-Mayo-2017 CMO',
+                                    url:'#',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Concurso de méritos 2017',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2017/Concurso de meritos 2017.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Listado de cátedras 2017',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2017/Listado de catedras 2017.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Convocatoria',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2017/Convocatoria.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'2016',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Convocatoria a concurso público para selección de profesores',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/CONVOCATORIA A CONCURSO PUBLICO DE MÉRITOS Y OPOSICIÓN PARA LA SELECCION DE PROFESORES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Convocatoria para elecciones de los representantes para integrar el consejo universitario de la ULVR',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/CONVOCATORIA PARA ELECCIONES DE LOS REPRESENTANTES DE PROFESORES(AS), ESTUDIANTES, GRADUADOS, SERVIDORES(AS) Y TRABAJADORES PARA INTEGRAR EL CONSEJO UNIVERSITARIO DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Padrón electoral de estudiantes 2016',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/PADRÓN ELECTORAL DE ESTUDIANTES 2016.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Padrón electoral del personal administrativo 2016',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/PADRÓN ELECTORAL DE PERSONAL DE ADMINISTRATIVO 2016.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Padrón electoral del personal de servicios 2016',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/PADRÓN ELECTORAL DE PERSONAL DE SERVICIOS 2016.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Padrón electoral del personal docente 2016',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2016/PADRÓN ELECTORAL DE PERSONAL DOCENTE 2016.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'2015',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Acta C. universitario 12-Mayo-2017 CMO',
+                                    url:'#',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Acta C. Universitario 01-Abril-2015 CMO',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2015/ACTA C. UNIVERSITARIO 01-ABRIL-2015 CMO..pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para la selección de docentes en concurso de méritos y oposición </a>',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2015/INSTRUCTIVO PARA LA SELECCION DE DOCENTES EN CONCURSO DE MERITOS Y OPOSICIÓN.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Listado de cátedras para seleccionar profesores no titulares 2015',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2015/LISTADO DE CATEDRAS PARA SELECCIONAR PROFESORES NO TITULARES 2015.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'2014',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Acta C. Universitario 02-Mayo-2014 CMO',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2014/ACTA C. UNIVERSITARIO 02-MAYO-2014 CMO.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Concurso de méritos - DIARIO EL TELÉGRAFO',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2014/CONCURSO DE MERITOS - DIARIO EL TELÉGRAFO.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Documentación requerida para selección de docentes - 2014',
+                                    url:'documentos/Transparencia/3 Concurso de Meritos y Oposición/1 Información de todos los consursos realizados/3 Otros concurso de Merito y oposión/2014/DOCUMENTACION REQUERIDA PARA SELECCIÓN DE DOCENTES - 2014.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                    ]
+                },
+            ]
+        },
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+</LayoutVarios>

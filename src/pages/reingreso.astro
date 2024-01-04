@@ -1,0 +1,51 @@
+---
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Reingreso académico',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : '/images/breadcrumbs/oferta academica.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+---
+
+
+<LayoutVarios {breadcrumbs}>
+    <div class="contenedor">
+        <h3>Reingreso</h3>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items center">
+            <div class="col-md-6 col-sm-12 pt-4">
+                <div class="text-justify">
+                    <p>
+                        Nos complace que hayas decidido retomar tus estudios universitarios en tu querida universidad, por lo que te compartimos la información que debes conocer para reingresar a la ULVR, en el caso que dejaste de estudiar al menos un semestre:<br /><br />
+                        <b>1</b> Solicitar habilitación de usuario y contraseña de tu correo institucional y EKUDEMIC a:   soporte@ulvr.edu.ec remitir con el asunto REINGRESO.<br />
+                        <b>2</b> Llenar la solicitud de reingreso en el sistema EKUDEMIC; realizar el pago de veinte dólares en la cuenta corriente del Banco de Guayaquil # 00-320-12442 o en las ventanillas de Recaudación de la ULVR; y remitir el comprobante de pago al correo consultas_secretariageneral@ulvr.edu.ec con asunto: Reingreso, Apellidos/Nombres, Carrera.<br /><br />
+                        La Secretaría General te informará prontamente sobre el resultado de tu petición. Por favor estar atento a tu correo institucional.<br /><br />
+                        Nota: Si tienes alguna duda o inquietud, debes comunicarte al correo bienestaruniversitario@ulvr.edu.ec<br /><br />
+
+                        <div class="text-justify">
+                            
+                            </p>
+                        </div>
+                    
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <img src="/images/about/BANNER-REINGRESOok.jpg" alt="" class="img-fluid img-thumbnail w-85">
+          </div>
+        </div>
+    </div>	
+</LayoutVarios>

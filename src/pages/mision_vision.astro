@@ -1,0 +1,108 @@
+---
+import AboutTabSection from "../Components/AboutTabSection.astro";
+import DegreeSection from "../Components/DegreeSection.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Misión y Visión',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/about/history.png',
+        menu: [
+            {
+                nombre:'Misión',
+                tab:'mission',
+                img:"images/about/icon/4.png",
+                mostrar:true
+            },
+            {
+                nombre:'Visión',
+                tab:'vision',
+                img:"images/about/icon/5.png"
+            },
+            {
+                nombre:'Valores',
+                tab:'values',
+                img:"images/about/icon/4.png"
+            },
+            {
+                nombre:'Objetivos',
+                tab:'goals',
+                img:"images/about/icon/7.png"
+            },
+        ]
+
+    },
+
+    detalletab: [
+        {
+            nombre:'Misión',
+            tab:'mission',
+            imagen:'images/about/tab1.jpg',
+            mostrar:true,
+            descripcion: ['La Universidad Laica VICENTE ROCAFUERTE de Guayaquil es una institución de educación superior particular; que forma estudiantes, genera y difunde conocimientos a través de sus programas académicos, culturales, de investigación y de vinculación con la sociedad, sirviendo así a la comunidad en su conjunto.']
+        },
+        {
+            nombre:'Visión',
+            tab:'vision',
+            imagen:'images/about/tab2.jpg',
+            descripcion: ['Ser una Universidad en docencia de referencia nacional por su calidad en aplicación de modelos pedagógicos actualizados, docentes altamente formados, integridad y liderazgo de sus graduados basando su gestión en los principios del laicismo, del Sistema de Educación Superior y operando con humanismo, excelencia, ética y compromiso.']
+        },
+        {
+            nombre:'Valores Institucionales',
+            tab:'values',
+            imagen:'images/about/valores.png',
+            descripcion: [],
+            humanismo: 'La ULVR aspira a que el talento humano de la universidad guíe su accionar en los valores humanos.',
+            excelencia: 'El talento humano de la ULVR realiza sus actividades con una calidad superior.',
+            etica: 'El talento humano opera sobre la base  del conjunto de normas morales que rigen la conducta humana.',
+            compromiso: 'Entendido como el vínculo adecuado que existe entre el personal y la institución para conseguir los mejores resultados posibles.'
+        },
+        {
+            nombre:'Objetivos Estratégicos',
+            tab:'goals',
+            imagen:'images/about/objetivos.png',
+            descripcion: [],
+            lista: [
+                    'Incrementar la calidad académica de la ULVR.',
+                    'Incrementar la producción y difusión del conocimiento.',
+                    'Fortalecer el vínculo entre la comunidad universitaria laica y la sociedad.',
+                    'Incrementar la eficiencia, eficacia y efectividad de las operaciones de la universidad.',
+                    'Diversificar las fuentes de financiamiento que contribuyan a la sostenibilidad de la institución a largo plazo.',
+            ]
+        },
+    ]
+}
+
+const dataDegree = {
+    titulo:'Enlaces a información institucional',
+    recuadro: {
+        titulo:'Historia',
+        subtitulo:'Síntesis histórica de la ULVR',
+        boton:'Ver mas',
+        url:'documentos/Historia.pdf',
+    }
+}
+
+---
+
+<LayoutVarios {breadcrumbs}>
+    <!-- About Section Start -->
+    <AboutTabSection {dataAboutTab} />
+    <!-- About Section End -->
+
+    <!-- Degree Section Start -->
+    <DegreeSection {dataDegree} />
+    <!-- Degree Section End -->
+</LayoutVarios>

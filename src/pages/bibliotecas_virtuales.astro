@@ -1,0 +1,236 @@
+---
+
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Bibliotecas en General',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/oferta academica.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Bibliotecas Virtuales',
+            titulo:'Bibliotecas Virtuales',
+            tab:'prod-virtuales',
+            posicion:'One',
+            mostrar:true,
+            detalle:[
+                {
+                    titulo:'Manual de Uso de las Bibliotecas Virtuales',
+                    descripcion:['Documento descargable en PDF donde el usuario conocerá el manejo de las bibliotecas virtuales, repositorio digital DSPACE, bases de datos, buscadores especializados, y el sistema de integración de la Biblioteca “Dra. Elsa Alarcón Soto”, para la búsqueda en la base de datos de libros, revistas, tesis, entre otros.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'documentos/biblioteca/link biblio.pdf',
+                    imagen:'images/manualbiblio.JPG'
+                },
+                {
+                    titulo:'Biblioteca Lexis',
+                    descripcion:['Plataforma tecnológica, que permite consultar directamente una o varias normas legales de la legislación ecuatoriana en estado vigente: a texto completo; en estado histórico en resúmenes; y en la imagen digitalizada del Registro Oficial, simultáneamente.',
+                                'Para ingresar se debe coordinar con bibliotecageneral@ulvr.edu.ec desde el correo Institucional.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://www.lexis.com.ec/',
+                    imagen:'images/lexisfinder.JPG'
+                },
+                {
+                    titulo:'Portal del Conocimiento',
+                    descripcion:['Librería virtual en español con acceso a más de 22.000 libros electrónicos en texto completo, descargable en PDF por capítulos, páginas o texto completo, con amplia cobertura en las áreas de Arte, Economía y Negocios, Educación, Historia, Idiomas, Literatura y Filosofía en general, eBooks para niños (bilingües), Ciencia Ficción, entre otros.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://portalmasconocimiento.com/',
+                    imagen:'images/portalcono.JPG'
+                },
+                {
+                    titulo:'Pearson',
+                    descripcion:['Repositorio de eBooks listos para ser consultados vía Internet. Se basa en el modelo de una biblioteca tradicional con la diferencia de que los contenidos son digitales.',
+                                'Para ingresar se requiere iniciar sesión (email y contraseña) o registrarse.',
+                                'Se pueden hacer consultas en línea o descargar los eBooks.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://www.biblionline.pearson.com/Login.aspx?bv=HAd1rtUZbsmBBo0sEDuy4U2vPzpkTelv19DifeZ3rEY=',
+                    imagen:'images/person.JPG'
+                },
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Bibliotecas de acceso libre',
+            titulo:'Bibliotecas de acceso libre',
+            tab:'prod-acceso-libre',
+            posicion:'Two',
+            detalle:[
+                {
+                    titulo:'SciELO',
+                    descripcion:['Repositorio multidisciplinario para depositar, preservar y difundir datos de investigación de artículos enviados, aprobados para publicación o ya publicados en revistas de la Red SciELO o depositados en SciELO Preprints.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://scielo.org/es/',
+                    imagen:'images/scielo.JPG'
+                },
+                {
+                    titulo:'COBUEC',
+                    descripcion:['Recoge y almacena los trabajos de investigación que se desarrollan en las distintas instituciones académicas ecuatorianas, y que se han puesto a disposición del público. Se accede a través de un buscador de manera abierta. Ofrece en acceso abierto cerca de 60.000 registros a texto completo.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://www.bibliotecasdelecuador.com/cobuec/',
+                    imagen:'images/couibic.JPG'
+                },
+                {
+                    titulo:'Google Académico',
+                    descripcion:['Motor de búsqueda de Google enfocado y especializado en bibliografía científica y académica. El sitio indexa editoriales, bibliotecas, bases de datos bibliográficas, entre otros. Aquí se pueden encontrar citas, enlaces a libros, artículos de revistas científicas, comunicaciones, informes científicos, tesis, y archivos depositados en repositorios.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://scholar.google.com.ec/',
+                    imagen:'images/google acad.JPG'
+                }
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Turnitin & DSpace',
+            titulo:'Turnitin & DSpace',
+            tab:'prod-turnitin-dspace',
+            posicion:'Three',
+            detalle:[
+                {
+                    titulo:'Turnitin',
+                    descripcion:['Herramienta digital que utiliza la ULVR para detectar el plagio en los trabajos académicos y científicos.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://www.turnitin.com/es',
+                    imagen:'images/turni.JPG'
+                },
+                {
+                    titulo:'DSpace',
+                    descripcion:['DSpace ULVR permite la preservación y consulta digital de los trabajos de investigación desarrollados por los estudiantes de grado y posgrado; libros académicos escritos por los docentes; y trabajos de investigación publicados en YACHANA Revista Científica.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'#',
+                    imagen:'images/logo-dark2.png'
+                }
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Sistema de Biblioteca',
+            titulo:'Sistema de Integración de Biblioteca',
+            tab:'prod-sist-biblioteca',
+            posicion:'Four',
+            detalle:[
+                {
+                    titulo:'Sistema de integración de Biblioteca',
+                    descripcion:['Permite la búsqueda en la base de datos de la Biblioteca “Dra. Elsa Alarcón Soto”, de libros, tesis, revistas y demás acervos bibliográficos.',
+                                'Acceso para estudiantes matriculados y personal administrativo de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://ekubiblio.ulvr.edu.ec/',
+                    imagen:'images/portalcono.JPG'
+                },
+            ] 
+        }
+    }
+]
+
+
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <!-- Intro Courses -->
+    <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+        <div class="container">
+            <div class="row clearfix">
+                <!-- Content Column -->
+                <div class="col-lg-8 mx-auto md-mb-50">
+                    <!-- Intro Info Tabs-->
+                    <div class="intro-info-tabs">
+                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                            {
+                                dataBibliotecas.map((tabBibliotecas) => 
+                                    <li class="nav-item tab-btns" role="presentation">
+                                        <a class:list={[ 'nav-link tab-btn', { "active": tabBibliotecas.bibliotecas.mostrar }]}
+                                            id={`${tabBibliotecas.bibliotecas.tab}-tab`} data-bs-toggle="tab" href="#"
+                                            data-bs-target={`#${tabBibliotecas.bibliotecas.tab}`} role="tab" aria-controls={tabBibliotecas.bibliotecas.tab}
+                                            aria-selected="false">
+                                            {tabBibliotecas.bibliotecas.tituloTab}
+                                        </a>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                        <div class="tab-content tabs-content" id="myTabContent">
+                            {
+                                dataBibliotecas.map((tabBibliotecas) => 
+                                    <div class:list={[ 'tab-pane fade', { "show active": tabBibliotecas.bibliotecas.mostrar }]} id={tabBibliotecas.bibliotecas.tab} role="tabpanel" aria-labelledby={`${tabBibliotecas.bibliotecas.tab}-tab`}>
+                                        <div class="content white-bg pt-30">
+                                            <div class="course-overview">
+                                                <div class="inner-box">
+                                                    <div id="accordion" class="accordion-box">
+                                                        <div class="card accordion block">
+                                                            <div class="card-header" id={`heading${tabBibliotecas.bibliotecas.posicion}`}>
+                                                                <h5 class="mb-0">
+                                                                    <button class="btn btn-link acc-btn"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-target={`#collapse${tabBibliotecas.bibliotecas.posicion}`} aria-expanded="true"
+                                                                        aria-controls={`collapse${tabBibliotecas.bibliotecas.posicion}`}>
+                                                                        {tabBibliotecas.bibliotecas.titulo}
+                                                                    </button>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id={`collapse${tabBibliotecas.bibliotecas.posicion}`} class="collapse show" aria-labelledby={`heading${tabBibliotecas.bibliotecas.posicion}`} data-bs-parent="#accordion">
+                                                                <div class="card-body acc-content current">
+                                                                    <div class="container-fluid pt-4 pb-2">
+                                                                        <div class="border-none rounded">
+                                                                            {
+                                                                                tabBibliotecas.bibliotecas.detalle.map((det) =>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-4 col-sm-12 p-4">
+                                                                                            <img src={det.imagen} alt="" class="img-fluid rounded-circle w-75">
+                                                                                        </div>
+        
+                                                                                        <div class="col-md-8 col-sm-12 pt-4">
+                                                                                            <br />
+                                                                                            
+                                                                                            <h5>{det.titulo}</h5>
+                                                                                            {
+                                                                                                det.descripcion.map((desc) =>
+                                                                                                    <p>{desc}</p>
+                                                                                                    <br/>
+                                                                                                )
+                                                                                            }
+                                                                                            <br/>
+                                                                                            <p>
+                                                                                                <a href={det.url}> {det.botonNombre} </a>
+                                                                                            </p>
+                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- End intro Courses -->
+ 
+</LayoutVarios>

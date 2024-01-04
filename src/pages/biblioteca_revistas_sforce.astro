@@ -1,0 +1,116 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import ShopPartBook from "../Components/ShopPartBook.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+import { catalogoRevistas } from "./biblioteca_revistas.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Revistas',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Revista S-Force',
+    descripcion: []
+}
+
+const dataLibros = [
+    {
+        titulo:'S-Force Edición # 8',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/file_1603896369.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 8.png'
+    },
+    {
+        titulo:'S-Force Edición # 7',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/file_1572471946.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 7.png'
+    },
+    {
+        titulo:'S-Force Edición # 6',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1535554654.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 6.png'
+    },
+    {
+        titulo:'S-Force Edición # 5',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1520617482.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 5.png'
+    },
+    {
+        titulo:'S-Force Edición # 4',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1529093897.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 4.png'
+    },
+    {
+        titulo:'S-Force Edición # 3',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1529013230.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 3.png'
+    },
+    {
+        titulo:'S-Force Edición # 2',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1529092782.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 2.png'
+    },
+    {
+        titulo:'S-Force Edición # 1',
+        url:'https://www.ulvr.edu.ec/static/uploads/pdf/pdf_1522259023.pdf',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/SFORCE - 1.png'
+    },
+]
+
+
+const catalogoRevistasFilter = catalogoRevistas.filter((revista:any) => revista.url !== 'biblioteca_revistas_sforce');
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        {
+            dataEncabezado.descripcion && (
+                <div class="desc">
+                    {
+                        dataEncabezado.descripcion.map((desc:any) =>
+                        <p class="text-justify">{desc}</p>
+                        )
+
+                    }
+                </div>	
+            )
+        }			
+    </div>
+
+    <!--Shop part start-->
+    <ShopPartBook {dataLibros} />
+    <!--Shop part end-->
+
+
+    
+    <!--Caeds List Editorial part end-->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoRevistasFilter}>
+            Otras revistas
+        </CarrerasPorFacultad/>
+    </div>
+    <!--Caeds List Editorial part end-->
+ 
+</LayoutVarios>

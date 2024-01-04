@@ -1,0 +1,103 @@
+---
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import Layout from "./Layout.astro";
+import type { ICarrera } from "./LayoutCarrera.astro";
+
+const {breadcrumbs} = Astro.props;
+
+
+export const programasMaestrias:ICarrera[] = [
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Administración de Empresas',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Administración-de-Empresas.png',
+        url: 'programa_admin_emp'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Desarrollo Temprano y Educación Infantil',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Desarrollo-Temprano-y-Educación-Infantil.png',
+        url: 'programa_desarrollo_temp_edu_infantil'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Salud y Seguridad Ocupacional',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Salud-y-Seguridad-Ocupacional.png',
+        url: 'programa_salud_seguridad_ocupacional'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Marketing Digital',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Marketing-Digital.png',
+        url: 'programa_marketing_digital'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Gestión del Transporte',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Gestión-del-Transporte.png',
+        url: 'programa_gestion_transporte'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Derecho',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Banner-Cuadrado_Derecho.png',
+        url: 'programa_derecho'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Educación',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Educación.png',
+        url: 'programa_educacion'
+    },
+    // {
+    //     niveles:'2 Periodos',
+    //     carrera:'Maestría en Urbanismo',
+    //     modalidad:'Semipresencial',
+    //     profesion: 'Magíster',
+    //     imagen: 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Ingeniería-Civil.png',
+    //     url: 'programa_urbanismo'
+    // },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Ingeniería Civil',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Ingeniería-Civil.png',
+        url: 'programa_ing_civil'
+    },
+    {
+        niveles:'2 Periodos',
+        carrera:'Maestría en Contabilidad y Auditoría',
+        modalidad:'Semipresencial',
+        profesion: 'Magíster',
+        imagen: 'images/BANNERS POSGRADO/BANNER CUADRADOS/Contabilidad-y-Auditoría.png',
+        url: 'programa_contabilidad_auditoría'
+    }
+    
+]
+
+---
+
+<Layout {breadcrumbs}>
+
+    <div id="rs-categories" class="rs-categories main-home pt-20 pb-100 md-pt-60 md-pb-80">
+        <CarrerasPorFacultad carreras={programasMaestrias}>
+            Programas de Posgrado
+        </CarrerasPorFacultad>       
+    </div>
+    
+</Layout>

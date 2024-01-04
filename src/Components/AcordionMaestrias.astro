@@ -1,0 +1,194 @@
+---
+const { acordionData } = Astro.props;
+const acordionConContacto = acordionData.acordion.filter((data:any) => data.contacto && data.contacto.length > 0);
+const acordionConObjetivos = acordionData.acordion.filter((data:any) => data.generales && data.generales.length > 0);
+const acordionConLista = acordionData.acordion.filter((data:any) => data.lista && data.lista.length > 0);
+const acordionDescMaestria = acordionData.acordion.filter((data:any) => !data.lista && !data.contacto && !data.generales);
+---
+
+
+<div class="container">
+    <div class="sec-title3 text-center mt-30 mb-20">
+        
+        <h3>{acordionData.titulo}</h3>
+        
+    </div>
+    <div id="accordion" class="accordion-box">
+        { 
+            (acordionDescMaestria).map((data:any,) => 
+                <br/>
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${data.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${data.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${data.posicion}`}>{data.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${data.posicion}`} class="collapse"
+                        aria-labelledby={`heading${data.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        { 
+                                            (data.descripcion).map((desc:string) => 
+                                                <br/>
+                                                <span>{desc}</span>
+                                                <br/>
+                                            )
+                                        }                                
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            )
+        }
+        
+        { 
+            (acordionConObjetivos).map((data:any,) => 
+                <br/>
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${data.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${data.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${data.posicion}`}>{data.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${data.posicion}`} class="collapse"
+                        aria-labelledby={`heading${data.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <b>Objetivo general</b><br>
+                                        { 
+                                            (data.generales).map((desc:string) => 
+                                                <br/>
+                                                <span>{desc}</span>
+                                                <br/>
+                                            )
+                                        }                                
+                                        <br/>
+                                        <b>Objetivos específicos</b><br>
+                                        <div class="desc">
+                                            <br />
+                                            <ul style="list-style: unset">
+                                                { 
+                                                    (data.especificos).map((especifico:string) => 
+                                                        <br/>
+                                                        <li>{especifico}</li>
+                                                        <br/>
+                                                    )
+                                                } 
+                                            </ul>
+                                        </div>
+                                                                                                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+ 
+        {
+            (acordionConLista).map((lista:any) => 
+                // <span>{lista}</span>
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${lista.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${lista.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${lista.posicion}`}>{lista.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${lista.posicion}`} class="collapse"
+                        aria-labelledby={`heading${lista.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        {
+                                            (lista.descripcion).map((desc:any) => 
+                                                <br />
+                                                <span>{desc}</span>
+                                                <br />
+                                            )
+                                            
+                                        }
+
+                                        <br>
+                                        <div class="desc">
+                                            <ul style="list-style: unset">
+                                                {
+                                                    (lista.lista).map((list:any) => 
+                                                    <li>
+                                                        {list}
+                                                    </li>
+                                                    <br />
+                                                    )
+                                                    
+                                                }
+                                            </ul>
+                                        </div>
+                                                                                                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+
+        {
+            (acordionConContacto).map((contactos:any) => 
+            <div class="card accordion block">
+                <div class="card-header" id={`heading${contactos.posicion}`}>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link acc-btn collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#collapse${contactos.posicion}`} aria-expanded="false"
+                            aria-controls={`collapse${contactos.posicion}`}>{contactos.titulo}</button>
+                    </h5>
+                </div>
+                <div id={`collapse${contactos.posicion}`} class="collapse"
+                    aria-labelledby={`heading${contactos.posicion}`} data-bs-parent="#accordion">
+                    <div class="card-body acc-content">
+                        <div class="content">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <br/>
+
+                                    {
+                                        (contactos.contacto).map((contacto:any) => 
+                                        <span>{contacto.nombre}</span><br/>
+                                        <b>{contacto.cargo}</b><br/>
+                                        <b>Teléfono:</b> <span> {contacto.telefono} Ext. {contacto.ext}</span><br/>
+                                        <b>Email:</b> <a class="" href={contacto.email}> {contacto.email}</a><br/><br/>
+                                        
+                                    )}
+    
+                                    <b>Horario de atención</b><br/> <span> {contactos.horario}</span> br />
+                                                                                                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )
+        }
+
+    </div>
+</div>

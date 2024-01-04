@@ -1,0 +1,159 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadAdministracion } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Marketing',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FADM/Marketing/Marketing_Banner-Horizontal.jpg' 
+}
+
+const carrerasAdministracionFilter = carrerasFacultadAdministracion.filter((carrera:any) => carrera.url !== 'marketing');
+
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Marketing.pdf';   
+
+const facultad='Carreras de la Facultad de Administración'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Marketing de la ULVR será capaz de diseñar, desarrollar y aplicar estrategias innovadoras usando herramientas tecnológicas, medios digitales y convencionales para desarrollar nuevos mercados.',
+                         'El estudiante durante su preparación académica desarrolla competencias y habilidades desde el ámbito teórico-práctico del marketing a través de tutorías personalizadas, prácticas en laboratorios de informática dotados con software especializado y una planta docente altamente capacitada.',
+                         'El título en Licenciado en Marketing de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Marketing.',
+            jornada:'Diurna y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'El Licenciado en Marketing de la ULVR es un profesional creativo y dinámico, que desarrolla y aplica estrategias para la comercialización y posicionamiento de productos y servicios de las empresas, a partir de un correcto análisis del mercado.'
+                         ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como asistente de marketing, trade marketing, merchandiser, telemarketer y agente de marketing y ventas.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Marketing de la ULVR será capaz de:'],
+            lista: ['Dirigir procesos de marketing digital.',
+                    'Diseñar estrategias de comercialización.',
+                    'Realizar estudios de mercado',
+                    'Aplicar herramientas y plataformas digitales',
+                    'Establecer vínculos de comunicación en medios sociales.',
+                    'Implementar planes de marketing orientados al usuario',
+                    'Planificar estrategias de trade marketing.',
+                    'Diseñar estrategias de social media marketing.',
+                    'Diseñar y desplegar planes de marketing 360°.',
+                    'Manejar estrategias de segmentación de mercados.',
+                    'Identificar demandas específicas con la aplicación del neuromarketing.',
+                    'Desarrollar campañas de e-marketing.',
+                    'Aplicar técnicas de e-commerce.',
+                    'Desarrollar campañas de branding.',
+                    'Desarrollar y gestionar el lanzamiento o mantenimiento de productos en el mercado.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Marketing de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Gerente de Marketing.',
+                    'Gerente de Productos.',
+                    'Gerente de Comercialización.',
+                    'Gerente de Marca.',
+                    'Gerente de Medios.',
+                    'Gerente de Ventas.',
+                    'Director de Ventas.',
+                    'Jefe de Ventas.',
+                    'Key Account Manager.',
+                    'Gerente de Visual Merchandising.',
+                    'Gerente de Trade Marketing',
+                    'Gerente de Investigación de Mercados',
+                    'Social Media Manager',
+                    'Community Manager',
+                    'Digital Media Planner',
+                    'Trafficker',
+                    'Emprendedor',
+                    'Digital Content Manager.',
+                    'CopyWritter.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'gtr. Marisol Jacqueline Idrovo Avecillas', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'285', 
+                    email:'idrovoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Martha Beatriz Hernández Armendáriz', 
+                    cargo:'Coordinadora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'286', 
+                    email:'mhernandeza@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Augusto Morante Jiménez', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jmorantej@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Cristian Alexis Suriaga Sanabria', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'csuriagas@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Janet Ivonne Castillo Lindao', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jcastillol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Com. Gloria Alexandra Cárdenas Valencia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'gcardenasv@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Maira Azucena Ponce Asencio', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'205', 
+                    email:'mponcea@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

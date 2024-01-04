@@ -1,0 +1,131 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Marketing Digital',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Marketing-Digital.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_marketing_digital');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Marketing Digital_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Gracias a la revolución digital, las empresas se adaptaron aceleradamente a diversos procesos y modelos de negocios, lo que evidenció el desarrollo de líderes en la administración que estudian los fenómenos de los nuevos mercados.',
+                            'El Magíster en Marketing Digital de la ULVR,  es un profesional capaz de transformar  modelos tradicionales de negocios en novedosas propuestas con recursos  digitales  y multimedia gracias a las últimas tendencias del marketing, permitiéndole especializarse en los campos del e-commerce de su elección.',
+                            'Nuestros graduados, poseen amplios conocimientos en marketing y comercio electrónico con innovadoras competencias interdisciplinares, multidisciplinares y transdisciplinares que respondan a las demandas de las organizaciones y la comunidad.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Formar profesionales con sólidas competencias  necesarias para liderar y dirigir proyectos de marketing integrados en un mundo online, desarrollando en ellos el análisis crítico, investigativo y de innovación, para que identifiquen y resuelvan problemas en los diferentes niveles empresariales, demostrando un elevado compromiso con el desarrollo de la región y el país.'],
+            especificos: ['Desarrollar habilidades y capacidades de dirección en el ámbito del marketing, que sean determinantes a la hora de hacer frente a los desafíos del Departamento de Marketing en la empresa.',
+                          'Desarrollar y desplegar una sólida estrategia directiva con una visión moderna y 100% digital, que sea capaz de hacer frente a los desafíos a los que hoy día se enfrentan las empresas.',
+                          'Capacitar de forma efectiva a los profesionales del marketing para ser capaces de dirigir y liderar un Departamento de Marketing Digital, con todo lo que eso implica.',
+                          'Crear ambientes de aprendizaje colaborativo que desarrollen una visión creativa que ayude a conseguir hacer realidad proyectos complejos en un entorno marcado por la revolución digital.',
+                          'Desarrollar y profundizar en las herramientas y metodologías del marketing digital, con un enfoque orientado a resultados y que busque la mayor rentabilidad.',
+                          'Generar y transmitir una filosofía de empresa basada en el principio “customer first” y que ponga las ventas como objetivo fundamental de toda actividad de marketing digital y marketing online.',
+                          'Descubrir las tecnologías y las oportunidades de networking de los alumnos y contribuir a ampliar su red de contactos, de cara a que puedan aumentar sus conocimientos y alcanzar puestos directivos.',
+                          'Proporcionar y potenciar una concepción integral de las ventas, las finanzas y el marketing digital, que permita a los directivos establecer unos fundamentos sólidos para el crecimiento de la compañía.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Marketing Digital, al finalizar el programa estará en capacidad de:'],
+            lista: ['Atraer, convertir y optimizar la captación de clientes en el mundo digital.',
+                    'Analizar y valorar los sistemas gerenciales y procesos digitales.',
+                    'Interpretar resultados e indicadores de gestión de los procesos digitales.',
+                    'Estimar y ejecutar planes estratégicos y de negocios.',
+                    'Elaborar presupuestos de ventas y de gastos.',
+                    'Elaborar planes operativos para el logro de los objetivos organizacionales.',
+                    'Generar nuevos conocimientos y saberes con base en la investigación científica orientados al desarrollo de proyectos.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Director de Marketing.',
+                    'Jefe de Marketing Digital.',
+                    'SEM Manager.',
+                    'Traffic Manager.',
+                    'Consultor de Marketing digital.',
+                    'Ejecutivo de cuentas en agencia.',
+                    'Analista Digital.',
+                    'Docente de grado y posgrado. '
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Verónica Violeta Rodríguez Basantes', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)59446170', 
+                    ext:'', 
+                    email:'vrodriguezb@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

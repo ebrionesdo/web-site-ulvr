@@ -1,0 +1,44 @@
+---
+// import OfertaAcademicaSuscripcion from '../Components/OfertaAcademicaSuscripcion.astro';
+import type { ICarrera } from '../layouts/LayoutCarrera.astro';
+import Cards from './Cards.astro';
+
+interface Props { carreras:ICarrera[]; }
+
+const {carreras} = Astro.props;
+---
+
+<div class="container">
+    <div class="sec-title3 text-center mt-30 mb-20">
+        <h2 class="title black-color">
+            <slot />
+        </h2>
+    </div>
+    <!--<div class="row mb-35">-->
+    
+    <!-- Events Section Start -->
+    <div class="rs-event modify1 orange-color pt-20 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row">
+                {carreras.map((carrera:ICarrera) => 
+                    <Cards
+                        niveles={carrera.niveles}
+                        carrera={carrera.carrera}
+                        modalidad={carrera.modalidad}
+                        profesion={carrera.profesion}
+                        imagen={carrera.imagen}
+                        url={carrera.url}
+                        librosDesc={carrera.librosDesc}
+                    />
+                )}
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- Events Section End -->
+
+    <!-- Newsletter section start -->
+    <!-- <OfertaAcademicaSuscripcion /> -->
+    <!-- Newsletter section end -->
+</div>

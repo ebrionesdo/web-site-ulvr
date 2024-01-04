@@ -1,0 +1,98 @@
+---
+import AboutTabSection from "../Components/AboutTabSection.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Vinculación con la sociedad',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Vinculación',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/about/Vincuacion.JPG',
+        menu: [
+            {
+                nombre:'¿Qué hacemos?',
+                tab:'queHacemos',
+                img:"images/about/icon/4.png",
+                mostrar:true
+            },
+            {
+                nombre:'Consultorio Jurídico',
+                tab:'juridico',
+                img:"images/about/icon/ambito ico.png"
+            },
+            {
+                nombre:'Contactos',
+                tab:'contactos',
+                img:"images/about/icon/EJEMPLO.png"
+            }
+        ]
+
+    },
+
+    detalletab: [
+        {
+            nombre:'¿Qué hacemos?',
+            tab:'queHacemos',
+            imagen:'images/about/Vinculación 2.JPG',
+            descripcion: ['Desarrollamos programas y proyectos de vinculación, constituidos desde las Unidades Académicas, luego de haber establecido nexos con los organismos externos de cooperación, en base a un levantamiento de necesidades de la comunidad que aseguren un impacto social, expresado en la calidad de vida de los habitantes en una territorialidad determinada.'],
+            mostrar:true
+        },
+        {
+            nombre:'Consultorio Jurídico',
+            tab:'juridico',
+            imagen:'images/about/investigación.jpg',
+            descripcion: ['El Consultorio Jurídico Gratuito “Ab. Alfonso Leonidas Aguilar Álava”, creado el 23 de junio de 1987, entre sus fines tiene el formar y enseñar a los estudiantes de la carrera de Derecho de la ULVR, de una manera práctica, para su futuro desempeño profesional.'],
+            boton:'Conozca mas',
+            url:'consultorio_juridco'
+        },
+        {
+            nombre:'Contactos',
+            tab:'contactos',
+            imagen:'',
+            descripcion: [],
+            lista: [],
+            contacto: [
+                {
+                    nombre:'Mgtr. Ivette Rubio Miranda',
+                    cargo:'Directora',
+                    telefono:'04 2596-500 Ext. 139',
+                    email:'irubiom@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Nadia García Hinojosa',
+                    cargo:'Analista',
+                    telefono:'04 2596-500 Ext. 199',
+                    email:'ngarciah@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Evelyn García Flores',
+                    cargo:'Asistentes de Secretaría',
+                    telefono:'04 2596-500 Ext. 197',
+                    email:'egarciaf@ulvr.edu.ec'
+                },
+            ],
+            // direccion:'Hurtado 212, entre Av. Machala y Antepara, Edificio FURNAS, segundo piso. Guayaquil, Ecuador.',
+            horario:'De 08:00 a 17:00',
+            // whatsapp:'593968155213',
+            email:'vinculacion@ulvr.edu.ec'
+        },
+    ]
+}
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+    <!-- About Section Start -->
+    <AboutTabSection {dataAboutTab} />
+    <!-- About Section End -->
+</LayoutVarios>

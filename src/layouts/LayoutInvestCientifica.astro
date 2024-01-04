@@ -1,0 +1,128 @@
+---
+import AboutSectionServicios from "../Components/AboutSectionServicios.astro";
+import AcordionDinamico from "../Components/AcordionDinamico.astro";
+import Layout from "./Layout.astro";
+
+
+const {breadcrumbs} = Astro.props;
+
+
+const aboutData = {
+    imagen:'images/about/investigación.jpg',
+    descripcion: ['El departamento de Investigación Científica, Tecnológica e Innovación es responsable de gestionar, coordinar, controlar, evaluar y sistematizar el proceso de desarrollo de la investigación científica, tecnológica y la innovación de la Universidad Laica VICENTE ROCAFUERTE de Guayaquil y está en funcionamiento desde el año 2011.',
+                  'Fomenta la cultura de la investigación en todos los niveles; identificando las necesidades de investigación de la institución en relación con sus dominios y los requerimientos territoriales, sectoriales y nacionales; desarrollando toda la actividad de innovación en el marco de un sistema de investigación científica y tecnológica.']
+}
+const acordionData = {
+    titulo:'Conoce más acerca del DICTI',
+    acordion:[
+        {
+            titulo:'Convocatorias',
+            descripcion: ['La ULVR a través del DICTI convoca anualmente a la comunidad universitaria a la presentación de programas o proyectos de investigación científica; que serán sometidos a un proceso de preselección, evaluación por pares, selección y aprobación por parte del Consejo Universitario; los proyectos deberán enmarcarse en las líneas de investigación institucionales.',
+                        'La convocatoria tiene como objetivo contribuir a la solución de los principales problemas sociales, territoriales, locales y de la comunidad universitaria laica, fomentando el desarrollo científico e investigativo de docentes y estudiantes, a través de la realización de programas y proyectos de investigación científica, desarrollo e innovación (I+ D+ i).'],
+            buttonUrl:'',
+            buttonName:'Postula aquí',
+            posicion: 'One',
+            target: '#collapseOne',
+            controls: 'collapseOne'              
+        },
+        {
+            titulo:'Convenios',
+            descripcion: ['La actividad científica llega a generar vínculos de cooperación por las actividades realizadas en conjunto entre universidades, empresas pública y privada, gobiernos autónomos, institutos y centros de investigación, entre otros; a través de la firma de convenios que tienen como fin el mutuo fortalecimiento y la proyección institucional.',
+                        'El Departamento de Investigación Científica, Tecnológica e Innovación ha generado varios convenios institucionales que han servido para transferir los resultados de investigación al servicio de la sociedad.'],
+            buttonUrl:'',
+            buttonName:'conoce más...',
+            posicion: 'Two',
+            target: '#collapseTwo',
+            controls: 'collapseTwo'              
+        },
+        {
+            titulo:'Proyectos de investigación',
+            descripcion: ['Con la finalidad de potencializar el desarrollo de la actividad investigativa en la institución y atendiendo las necesidades y requerimientos, a fin de brindar una investigación científica pertinente, se lleva a cabo -debidamente- el desarrollo de los programas o proyectos de investigación a través de procesos que evidencien transparencia y calidad en la gestión basada en resultados.',
+                        'Estos proyectos de investigación están adheridos a grupos de investigación que fungen como la unidad básica de generación de conocimiento científico y desarrollo tecnológico, integrado por un equipo de investigadores, que se conforma de docentes, estudiantes e investigadores internos y externos invitados de una o varias disciplinas o instituciones comprometidos con un tema de investigación, orientados a generar conocimientos de calidad y pertinencia.'],
+            buttonUrl:'',
+            buttonName:'conoce más...',
+            posicion: 'Three',
+            target: '#collapseThree',
+            controls: 'collapseThree'              
+        },
+        {
+            titulo:'Producción Científica',
+            descripcion: ['El Departamento de Investigación Científica, Tecnológica e Innovación presenta los resultados y logros alcanzados en la producción científica de la institución a través de artículos publicados en revistas científicas indexadas en bases de datos regionales o mundiales, así como publicaciones de libros y capítulos de libros que contribuyen a la consecución de los objetivos estratégicos institucionales. La información se presenta e ilustra a través de tablas y gráficas comparativas.'],
+            buttonUrl:'',
+            buttonName:'conoce más...',
+            posicion: 'Four',
+            target: '#collapseFour',
+            controls: 'collapseFour'                 
+        },
+        {
+            titulo:'Eventos',
+            link:   [
+                        {
+                            url:'documentos/APARTADO INVESTIGACIÓN CIENTÍFICA/EVENTOS/Hoja de Inscripción INPIN/file_1583264671.pdf', 
+                            texto:'Hoja de Inscripción INPIN'
+                        },
+                        {
+                            url:'documentos/APARTADO INVESTIGACIÓN CIENTÍFICA/EVENTOS/VII Congreso Científico Internacional INPIN 2020/file_1583264704.pdf', 
+                            texto:'VII Congreso Científico Internacional INPIN 2020'
+                        }
+                    ],
+            posicion: 'Five',        
+            target: '#collapseFive',
+            controls: 'collapseFive'   
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Armenio Pérez Martínez,Ph.D.', 
+                    cargo:'Director', 
+                    telefono:'(04) 259 6500', 
+                    ext:'154', 
+                    email:'aperezm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Karen Stefanía Mosquera Galarza', 
+                    cargo:'Analista', 
+                    telefono:'(04) 259 6500', 
+                    ext:'155', 
+                    email:'kmosquerag@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Tnlga. Judith Guadalupe Garay Cárdenas', 
+                    cargo:'Analista', 
+                    telefono:'(04) 259 6500', 
+                    ext:'155', 
+                    email:'jgarayc@ulvr.edu.ec'
+                }
+            ],
+            horario:'Horario de atención</b><br />De lunes a viernes desde las 08:00 hasta las 17:00',
+            posicion: 'Six',
+            target: '#collapseSix',
+            controls: 'collapseSix'                 
+        },
+    ]
+}
+
+
+
+---
+
+<style> 
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+
+    </style>
+<Layout {breadcrumbs}>
+    <div class="contenedor">
+        <AboutSectionServicios {aboutData} />    
+        <AcordionDinamico {acordionData} />    
+    </div>
+</Layout>

@@ -1,0 +1,284 @@
+---
+import LayoutVarios from "../../layouts/LayoutVarios.astro";
+const { id } = Astro.params;
+
+
+console.log(id);
+
+export function getStaticPaths () {    
+    return [
+        {params:{id:'1'}},
+        {params:{id:'2'}},
+        {params:{id:'3'}},
+        {params:{id:'4'}},
+        {params:{id:'5'}},
+        {params:{id:'6'}},
+        {params:{id:'7'}},
+        {params:{id:'8'}},
+        {params:{id:'9'}},
+    ];
+};
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Noticias ULVR',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Noticias y Eventos ULVR',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : '/images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const noticiasCompletas =  [
+    {
+        id:'1',
+        titulo:'La Educación para el desarrollo sostenible',
+        fecha:'Junio 10, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        parrafosPrin:['“La educación para el desarrollo sostenible” es el nombre del coloquio que se desarrollará en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil, el jueves 16 de junio a las 09:00 en el auditorio principal de la Institución, con la participación de la viceministra de Educación, Dra. Cinthya Game Varas, y el Lcdo. Jorge Rodríguez Cuesta, concejal de Guayaquil. El evento se enmarca en la campaña ULVR Verde.'],
+        destacado:['La Mgtr. Kennya Guzmán Huayamave, decana de la Facultad de Educación indicó que se quiere “reflexionar en esta temática que dentro de la educación cobra impacto y se alinea con el ODS 4, que busca la calidad en la educación, y que posibilite la sensibilización y el reconocimiento de los derechos humanos y las necesidades del medioambiente”.'],
+        parrafosSec:[
+            'Por su parte, la Mgtr. Teresa Toledo Rojas, coordinadora del evento, mencionó que este espacio propicia un diálogo mutuo de reflexión para “crear conciencia del amor y el respeto hacia la naturaleza, y comenzar a sentir, desde esa conciencia y voluntad, el deseo de paliar el daño que las acciones del ser humano han ocasionado en el planeta”.',
+            'Los interesados se pueden registrar en el link que se publicará en los mensajes en redes sociales; la transmisión estará abierta al público por la fanpage de la ULVR; además se contará con la traducción simultánea por lenguaje de señas a cargo de la Mgtr. Gardenia González Orbea, con el objeto de integrar a un mayor grupo de personas interesados en este tema.',
+        ],
+        imagen1:'/images/blog/noticias/N-Educasostenible.JPG',
+        imagen2:'/images/blog/noticias/N-Educasostenible.JPG',
+    },
+    {
+        id:'2',
+        titulo:'La Educación para el desarrollo sostenible',
+        fecha:'Junio 10, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        parrafosPrin:['“La educación para el desarrollo sostenible” es el nombre del coloquio que se desarrollará en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil, el jueves 16 de junio a las 09:00 en el auditorio principal de la Institución, con la participación de la viceministra de Educación, Dra. Cinthya Game Varas, y el Lcdo. Jorge Rodríguez Cuesta, concejal de Guayaquil. El evento se enmarca en la campaña ULVR Verde.'],
+        destacado:['La Mgtr. Kennya Guzmán Huayamave, decana de la Facultad de Educación indicó que se quiere “reflexionar en esta temática que dentro de la educación cobra impacto y se alinea con el ODS 4, que busca la calidad en la educación, y que posibilite la sensibilización y el reconocimiento de los derechos humanos y las necesidades del medioambiente”.'],
+        imagen1:'/images/blog/noticias/N-Educacion%20sostenible.jpg',
+        imagen2:'/images/blog/noticias/N-Educacion%20sostenible.jpg',
+        parrafosSec:['Por su parte, la Mgtr. Teresa Toledo Rojas, coordinadora del evento, mencionó que este espacio propicia un diálogo mutuo de reflexión para “crear conciencia del amor y el respeto hacia la naturaleza, y comenzar a sentir, desde esa conciencia y voluntad, el deseo de paliar el daño que las acciones del ser humano han ocasionado en el planeta”.',
+                     'Los interesados se pueden registrar en el link que se publicará en los mensajes en redes sociales; la transmisión estará abierta al público por la fanpage de la ULVR; además se contará con la traducción simultánea por lenguaje de señas a cargo de la Mgtr. Gardenia González Orbea, con el objeto de integrar a un mayor grupo de personas interesados en este tema.']
+    },
+    {
+        id:'3',
+        titulo:'Consultorio Jurídico Gratuito de la ULVR sigue siendo “A”',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        parrafosPrin:['El Consultorio Jurídico Gratuito de la ULVR “Ab. Alfonso Leónidas Aguilar Álava” alcanzó la calificación de 98.93 equivalente a Altamente satisfactorio, Categoría A, otorgada por la Defensoría Pública del Ecuador, distinción que la mantiene desde el 2019.'],
+        destacado:['La Mgtr. Alexandra Jibaja Mora, directora del Consultorio Jurídico gratuito de la ULVR, manifestó que “esta calificación corresponde al trabajo arduo en equipo que se realizó, y que gracias a la organización que mantiene el consultorio se tuvo a tiempo toda la documentación requerida por la autoridad”, pero lo más importante es “haber mantenido la categoría A que la logramos en el 2019”.'],
+        parrafosSec:['Los estudiantes de la carrera de Derecho de la ULVR realizan sus prácticas preprofesionales, a quienes se les enseña lo mejor a través de la experiencia, y no solo se los lleva a las audiencias, sino también realizan trabajo administrativo y de servicio al público.',],
+        parrafosTer:['La evaluación consideró los ámbitos de gestión interna y externa; en la gestión interna se alcanzó la máxima calificación de 40 puntos, que abarca el desarrollo organizacional, gestión financiera y gestión académica. La gestión externa logró 58.93/60, en servicio, orientación/asesoría y patrocinio, y en relaciones externas.',],
+        imagen1:'/images/blog/noticias/N-ConsultorioJA.JPG',
+        imagen2:'/images/blog/noticias/N-consultorioA2.jpg',
+        imagen3:'/images/blog/noticias/N-consultorioA3.jpg',
+    },
+    {
+        id:'4',
+        titulo:'Proyecto de Investigación de la ULVR promueve Cultura Ambiental en Durán',
+        fecha:'Junio 07, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        parrafosPrin:['La a ULVR en colaboración con la Diócesis de San Jacinto desarrollaron la fase I del taller "Buenas Prácticas de Emprendimiento y Medioambiente”; actividad que es parte de la ejecución del proyecto de investigación "Cultura Ambiental y desarrollo sostenible en la ciudad de Durán, provincia del Guayas".'],
+        destacado:['En el taller participaron emprendedores del sector Divino Niño de Durán y de otras zonas de influencia del proyecto; se presentaron videos y se dictaron tres conferencias sobre temas de gran relevancia en cultura ambiental: “La cultura ambiental en pequeñas y medianas empresas del sector Divino Niño”; “Principales desechos y tiempo de descomposición”; y “¿Cómo se deben guardar los desechos (plásticos, papel, cartón, vidrio) para poderlos vender a las empresas recicladoras?”.'],
+        parrafosSec:['Como resultado general, se logró incentivar la práctica del reciclaje y principios de economía circular en los emprendimientos. Del mismo modo, se creó una base de datos de las percepciones de los emprendedores con relación a los factores que influyen en el desarrollo de la cultura ambiental para un comportamiento responsable en Durán.'],
+        parrafosTer:['Esta actividad contó con la participación de las economistas Gisella Alarcón Franco, gerente general de la empresa Reciclaje Ecológico Ecuador (RECICEC), y Vanessa Mora Bayas, graduada de la ULVR; así como del coordinador de la carrera de Economía de la ULVR, máster Rubén Paz Morales.'],
+        imagen1:'/images/blog/noticias/N-culturaambiental.JPG',
+        imagen2:'/images/blog/noticias/N-culturambiente2.jpg',
+        imagen3:'/images/blog/noticias/N-culturambiente3.jpg',
+    },
+    {
+        id:'5',
+        titulo:'Semana Mundial de la Educación Vial',
+        fecha:'Mayo 20, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        parrafosPrin:['Con motivo de la celebración de la Semana Mundial de la Educación Vial, en la ULVR se desarrolló la Casa Abierta organizada por la Comisión de Tránsito del Ecuador; que tuvo como finalidad fomentar una cultura vial que permita la prevención de accidentes de tránsito.'],
+        destacado:['En el evento participaron Ph.D. Rolando Villavicencio Santillán, Vicerrector Académico de la ULVR; Abogado Carlos Balarezo, director ejecutivo de la CTE y Abogado Fabricio Freire director provincial de la CTE y se contó con la presencia estudiantes y docentes.'],
+        imagen1:'/images/blog/noticias/N-Eeducavial.JPG',
+        imagen2:'/images/blog/noticias/N-Educavial2.jpg',
+    },
+    {
+        id:'6',
+        titulo:'Concurso de Ecoemprendimiento y conferencia magistral Actividades de FCSD en el mes ULVR verde',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        parrafosPrin:[
+            'Durante el mes de junio la Facultad de Ciencias Sociales y Derecho desarrolla actividades enmarcadas en el programa ULVR Verde.',
+            'Concurso de ideas de ecoemprendimientos',
+            'La FCSD busca ideas innovadoras para negocios de bienes de uso elaborados con materiales reciclados, a través del I Concurso de Ideas de Ecoemprendimientos.',
+            'La actividad que involucra a estudiantes, docentes y directivos de la ULVR busca aportar con creatividad al buen manejo de los materiales reciclados, fomentando al mismo tiempo ideas de negocios que tengan un impacto positivo en la sociedad, aplicando la Economía Circular.',
+            'Los participantes deben crear equipos de trabajo, entre 5 a 10 integrantes, que serán guiados por un docente-tutor. Pasarán a la final las 10 mejores ideas, para esto es necesario que los concursantes cumplan con dos reglas: generar un bien de uso (no comidas, ni bebidas, o similares); y que al menos el 50% de los materiales empleados sean reciclados.',
+            'Los finalistas deberán elaborar sus prototipos, los que serán evaluados por el jurado, en la gran final que se llevará a cabo el 29 de junio, a las 10:00, en la Plaza del Fundador.',
+            'Conferencia magistral',
+            'La Mgtr. María Emilia Limongi, abogada especialista en derecho ambiental, dictará la conferencia magistral “Laicos con responsabilidad ambiental” en el auditorio principal de la ULVR, el 23 de junio a las 09:00.',
+        ],
+        parrafosSec:[
+            'Esta charla tiene como objetivo principal analizar de una manera objetiva el impacto ambiental causado por distintos factores y cómo la ULVR, a través de acciones directas en sus procesos de enseñanza-aprendizaje, ratifica su compromiso con el cuidado del medioambiente.',
+            'La abogada Limongi tiene una maestría en derecho procesal y amplia trayectoria en el área de práctica y litigios ambientales.',
+        ],
+        imagen1:'/images/blog/noticias/N-Concurso ecoemprede FCSD ULVR verde.JPG',
+        imagen2:'/images/blog/noticias/E-FCSD ECOEMPRENDE2.jpg',
+    },
+    {
+        id:'7',
+        titulo:'ULVR presente en condecoración a la artista plástica Hellen Constante',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        parrafosPrin:[
+            'El Mgtr. Alex Salvatierra Espinoza, vicerrector administrativo, y el PhD. William Quimí Delgado, director de admisiones, de la ULVR asistieron al evento de reconocimiento a la artista plástica guayaquileña, Hellen Constante Palacios, quien recibió la condecoración Matilde Hidalgo de Procel, por parte de la Asamblea Nacional del Ecuador. Durante el mes de junio la Facultad de Ciencias Sociales y Derecho desarrolla actividades enmarcadas en el programa ULVR Verde.',
+            'La asambleísta Geraldine Weber, hizo entrega del galardón en representación del legislativo resaltando la trayectoria de la homenajeada de quien manifestó que “gracias a mujeres como Hellen Constante se reconoce la participación de la mujer en el arte guayaquileño y ecuatoriano”. La artista al recibir su galardón dijo que “durante toda su vida ha trabajado por el arte y lo seguirá haciendo” y lo dedicó a todos los que la han apoyado durante toda su vida.',
+        ],
+        destacado:['El Mgtr. Salvatierra manifestó que “es grato para nosotros, como ULVR, participar de este tipo de eventos donde prima el arte, y se da un justo reconocimiento a la artista guayaquileña de artes plásticas Hellen Constante Palacios, por parte de la Asamblea Nacional del Ecuador, con la entrega de la condecoración ‘Dra. Matilde Hidalgo de Procel’”.'],
+        parrafosSec:['El acto se dio lugar en el Salón de la Ciudad de la M. I. Municipalidad de Guayaquil, el lunes 6 de junio.'],
+        imagen1:'/images/blog/noticias/N-Condecoracion plastica.JPG',
+        imagen2:'/images/blog/noticias/E-Condecoracionplastic2.jpg',
+    },
+    {
+        id:'8',
+        titulo:'ULVR Verde: Sembratón en Manglaralto',
+        fecha:'Junio 06, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        parrafosPrin:['La Universidad Laica VICENTE ROCAFUERTE de Guayaquil, como parte de su programa de vinculación con la sociedad, realizó el sábado 4 de junio un SEMBRATÓN en el malecón del estero y manglar de la parroquia Manglaralto del cantón Santa Elena.'],
+        parrafosSec:['Los estudiantes de la Facultad de Ingeniería, Industria y Construcción en coordinación con la Junta Cívica de Manglaralto, sembraron 120 plántulas de manglar con lo cual se busca recuperar los espacios verdes de la comunidad, así como iniciar una serie de acciones de impacto ambiental positivo para mejorar el ecosistema de la zona.'],
+        parrafosTer:['Durante la jornada también se realizó una minga de limpieza con la colaboración de moradores del sector.'],
+        imagen1:'/images/blog/noticias/N-Sembraton.JPG',
+        imagen2:'/images/blog/noticias/E-Sembraton2.jpg',
+        imagen3:'/images/blog/noticias/E-Sembraton4.jpg',
+    },
+    {
+        id:'9',
+        titulo:'ULVR se viste de verde',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        parrafosPrin:[
+            'Junio será el mes verde en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil (ULVR) en homenaje al Día Mundial de Ambiente, que se recuerda cada 5 de junio desde 1973 que fue instituido por las Naciones Unidas y más ahora que es uno de los Objetivos de Desarrollo Sostenible (ODS).',
+            'La Primera Jornada Internacional de Sostenibilidad e Innovación, que organiza la ULVR en alianza estratégica con la Federación Ecuatoriana de Industrias del Metal (FEDIMETAL), tiene como objetivo entregar a partir de este año los Premios ULVR Verde a las industrias, comercios, instituciones y personalidades que contribuyen y están comprometidos con el cuidado del ambiente.Entre las actividades se han previsto disertaciones con panelistas internacionales, Día del Niño con temática ambiental, visitas de conciencia ecológica, Recreovía, Ecojuegos, Charlas, Sembratón en Manglaralto en el cantón Santa Elena, concurso de emprendimientos, exposiciones, coloquios, charlas, virtuales, paneles de discusión, conferencia magistral de Derecho Ambiental, entre otros.',
+            'La celebración arrancó el sábado 27 de mayo con la celebración del Día del Niño con temática ambiental que se efectuó con los alumnos de Vinculación con la Sociedad en los recintos Boca de Caña y Tarifa, en el cantón Samborondón, y el domingo 28 de mayo con la Recreovía de Guayaquil: Movilidad Sostenible, donde participaron los estudiantes laicos conduciendo sus bicicletas por las principales calles de la ciudad.',
+            'Al final de estas jornadas, la comunidad universitaria hará el cierre y clausura de la Primera Jornada Internacional de Sostenibilidad e Innovación el 30 de junio, a las 09:00, en sesión solemne, en el auditorio principal del claustro universitario, donde reconocerá en esta edición del evento las mejores prácticas ambientales y de sostenibilidad de las principales industrias de metal del país.',
+        ],
+        imagen1:'/images/blog/noticias/E-ULVRVERDE.png',
+    },
+    
+];
+
+
+const noticiasCompletasFilter = noticiasCompletas.find(not => not.id === id);
+
+---
+
+
+
+
+<LayoutVarios {breadcrumbs}>
+    <div class="rs-inner-blog orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row">
+                {
+                    noticiasCompletasFilter && (
+                        <div class="col-lg-8 pr-50 md-pr-15 mx-auto">
+                            <div class="blog-deatails">
+                                <div class="bs-img">
+                                    <a href="#"><img src={noticiasCompletasFilter.imagen1} alt=""></a>
+                                </div>
+                                <div class="blog-full">
+                                    <h3>{noticiasCompletasFilter.titulo}</h3>
+                                    <ul class="single-post-meta">
+                                        <li>
+                                            <span class="p-date"> <i class="fa fa-calendar-check-o"></i> {noticiasCompletasFilter.fecha}
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="p-date"> <i class="fa fa-user-o"></i> {noticiasCompletasFilter.usuario} </span>
+                                        </li>
+                                        <li class="Post-cate">
+                                            <div class="tag-line">
+                                                <i class="fa fa-book"></i>
+                                                <a href="noticias.html">{noticiasCompletasFilter.tipo}</a>
+                                            </div>
+                                        </li>
+                                        <li class="post-comment"> <i class="fa fa-comments-o"></i> 0</li>
+                                    </ul>
+                                    <div class="blog-desc">
+                                        <p>
+                                            { 
+                                                noticiasCompletasFilter.parrafosPrin.map((principal) =>
+                                                    <span>{principal}</span>
+                                                    <br/>
+                                                    <br/>
+                                                )
+                                            }
+                                        </p>
+                                    </div>
+                                    {
+                                        noticiasCompletasFilter.destacado && (
+                                        <blockquote>
+                                            <p>{ 
+                                                noticiasCompletasFilter.destacado.map((dest) =>
+                                                        <span>{dest}</span>
+                                                        <br/>
+                                                        <br/>
+                                                    )
+                                                }</p>
+                                        </blockquote>
+
+                                        )
+                                    }
+                                    
+                                    {
+                                        noticiasCompletasFilter.imagen2 && (
+                                                <div class="blog-img mb-40">
+                                                    <img src={noticiasCompletasFilter.imagen2} alt="">
+                                                </div>
+                                            )
+
+                                    }
+                                    <div class="blog-desc mb-40">
+                                        <p>
+                                            { 
+                                                noticiasCompletasFilter.parrafosSec && noticiasCompletasFilter.parrafosSec.map((secundario) =>
+                                                    <span>{secundario}</span>
+                                                    <br/>
+                                                    <br/>
+                                                )
+                                            }
+                                        </p>
+                                    </div>
+                                    {
+                                        noticiasCompletasFilter.imagen3 && (
+                                            <div class="blog-img mb-40">
+                                                <img src={noticiasCompletasFilter.imagen3} alt="">
+                                            </div>
+                                        )
+
+                                    }
+                                    <div class="blog-desc mb-40">
+                                        <p>
+                                            { 
+                                                noticiasCompletasFilter.parrafosTer && noticiasCompletasFilter.parrafosTer.map((tercer) =>
+                                                    <span> 
+                                                        {tercer} 
+                                                    </span>
+                                                    <br/>
+                                                    <br/>
+                                                )
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+
+
+</LayoutVarios>

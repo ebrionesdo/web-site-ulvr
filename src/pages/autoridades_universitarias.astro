@@ -1,0 +1,199 @@
+---
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Autoridades de la Universidad',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const consejoRegentes = {
+    presidencia: {
+        nombre:'Susana Hinojosa Dazza de Gordillo, Ph. D.',
+        cargo:'Presidenta Vitalicia del Consejo de Regentes',
+        imagen:'images/autoridades/consejo-regentes/web-sumahida.jpg',
+    },
+    mienbros: [
+        {
+            nombre:'Ing. Alfredo Aguilar Hinojosa',
+            cargo:'Miembro del Consejo de Regentes',
+            imagen:'images/autoridades/consejo-regentes/web-alfredoaguilar.jpg',
+        },
+        {
+            nombre:'Ing. Gustavo Aguilar Hinojosa',
+            cargo:'Miembro del Consejo de Regentes',
+            imagen:'images/autoridades/Gustavo-Aguilar-Hinojosa.jpg',
+        },
+        {
+            nombre:'Lcdo. Julián Aguilar Hinojosa',
+            cargo:'Miembro del Consejo de Regentes',
+            imagen:'images/autoridades/consejo-regentes/jose-julian.jpg',
+        },
+        {
+            nombre:'Ing. Hernán Alvarado Plaza',
+            cargo:'Miembro del Consejo de Regentes',
+            imagen:'images/autoridades/consejo-regentes/web-hernanalvarado.jpg',
+        },
+
+    ]
+
+}
+const autoridades = {
+    rectorado: [
+        {
+            nombre:'Aimara Rodríguez Fernández, Ph. D.',
+            cargo:'Rectora',
+            imagen:'images/autoridades/autoridades/Aimara Rodriguez Fernandez.png',
+        },
+        {
+            nombre:'Rolando Villavicencio Santillan, Ph. D.',
+            cargo:'Vicerrector Académico de Investigación, Grado y Posgrado',
+            imagen:'images/autoridades/Rolando-Villavicencio-Santillan.jpg',
+        },
+        {
+            nombre:'Alex Salvatierra Espinoza',
+            cargo:'Vicerrector Administrativo',
+            imagen:'images/autoridades/Alex-Salvatierra-Espinoza.jpg',
+        },
+    ],
+    decanatos: [
+        {
+            nombre:'Mgtr. Óscar Machado Álvarez',
+            cargo:'Decano, Facultad de Administración',
+            imagen:'images/autoridades/Óscar-Machado-Álvarez.jpg',
+        },
+        {
+            nombre:'Mgtr. Betty Aguilar Echeverría',
+            cargo:'Subdecana, Facultad Administración',
+            imagen:'images/autoridades/Betty-Aguilar-Echeverría.jpg',
+        },
+        {
+            nombre:'Mgtr. Diana Almeida Aguilera',
+            cargo:'Decana, Facultad de Ciencias Sociales y Derecho',
+            imagen:'images/autoridades/Diana-Almeida-Aguilera.jpg',
+        },
+        {
+            nombre:'Mgtr. Federico Varas Chiquito',
+            cargo:'Subdecano, Facultad de Ciencias Sociales y Derecho',
+            imagen:'images/autoridades/Federico-Varas-Chiquito.jpg',
+        },
+        {
+            nombre:'Mgtr. Kennya Guzmán Huayamave',
+            cargo:'Decana, Facultad de Educación',
+            imagen:'images/autoridades/Kennya-Guzmán-Huayamave.jpg',
+        },
+        {
+            nombre:'Mgtr. Dunia Barreiro Moreira',
+            cargo:'Sudecana, Facultad de Educación',
+            imagen:'images/autoridades/Dunia-Barreiro.jpg',
+        },
+        {
+            nombre:'Mgtr. Genaro Gaibor Espín',
+            cargo:'Decano, Facultad de Ingeniería Industria y construcción',
+            imagen:'images/autoridades/Milton-Andrade-Laborde.jpg',
+        },
+        {
+            nombre:'Mgtr. María Eugenia Dueñas Barberán',
+            cargo:'Subdecana, Facultad de Ingeniería Industria y construcción',
+            imagen:'images/autoridades/María-Eugenia-Dueñas-Barberán.jpg',
+        },
+
+    ]
+
+}
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <div id="rs-team" class="rs-team style1 orange-color pt-40 pb-40 white-bg">
+        <div class="container-fluid">
+            <div class="row clearfix d-flex justify-content-center">
+                <h3 class="title text-center">Consejo de regentes</h3>
+                <div class="item-container" >
+                    <div class="img-fluid img-thumbnail" style="width: 200px;">
+                        <img src={consejoRegentes.presidencia.imagen} alt=""  />
+                    </div>
+                    <br>
+                    <div class="personal-info">
+                    
+                    <h6 class="text-center" style="font-size: 13px;">{consejoRegentes.presidencia.nombre}</h6>
+                    <dd class="text-center text-secondary" style="font-size: 12px;"><i>{consejoRegentes.presidencia.cargo}</i></dd>
+                </div>
+                </div>						
+            </div>
+            <div class="row clearfix d-flex justify-content-center">
+                <div class="row d-flex justify-content-center">
+
+                    {
+                        (consejoRegentes.mienbros).map((mienbro:any) =>
+
+                            <div class="col-sm item-container">
+                                <div class="img-fluid img-thumbnail" style="width: 200px;">
+                                    <img src={mienbro.imagen} alt="" />
+                                </div>
+                                <div class="personal-info">
+                                    <h6 class="text-center mt-3" style="font-size: 13px;">{mienbro.nombre}</h6>
+                                    <dd class="text-center text-secondary" style="font-size: 12px;"><i>{mienbro.cargo}</i></dd>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+            <hr>
+						
+            <div class="row col-11 mx-auto clearfix d-flex justify-content-center">
+                <h3 class="title text-center mt-20">Autoridades</h3>
+                <div class="row d-flex justify-content-center">
+                    {
+                        (autoridades.rectorado).map((rect:any) => 
+                            <div class="col-sm item-container">
+                                <div class="img-fluid img-thumbnail" style="width: 200px;">
+                                    <img src={rect.imagen} alt="" />
+                                </div>
+                                            
+                                <div class="personal-info">
+                                    <h6 class="text-center mt-3" style="font-size: 13px;">{rect.nombre}</h6>
+                                    <dd class="text-center text-secondary"  style="font-size: 12px;"><i>{rect.cargo}</i></dd>
+                                    <br />
+                                </div>
+                            </div>
+                        )
+                    }
+                        
+                </div>				
+            </div>
+
+            <div class="row clearfix d-flex justify-content-center">
+                <div class="row justify-content-center">
+                    {
+                        autoridades.decanatos.map((dec:any) =>
+                            <div class="col-3 item-container"   >
+                                <div class="img-fluid img-thumbnail" style="width: 200px;">
+                                    <img src={dec.imagen} alt="" />
+                                </div>
+                                <div class="personal-info">
+                                    <h6 class="text-center mt-3" style="font-size: 13px;">{dec.nombre}</h6>
+                                    <dd class="text-center text-secondary" style="font-size: 12px;"><i>{dec.cargo}</i></dd>
+                                    <br />
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</LayoutVarios>
+
+

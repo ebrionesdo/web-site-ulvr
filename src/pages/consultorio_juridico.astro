@@ -1,0 +1,116 @@
+---
+import AboutTabSection from "../Components/AboutTabSection.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Consultorio Jurídico',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Vinculación',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/event/consultorioJ.png',
+        menu: [
+            {
+                nombre:'Misión',
+                tab:'mission',
+                img:"images/about/icon/4.png",
+                mostrar:true
+            },
+            {
+                nombre:'Ámbitos de atención',
+                tab:'ambitos',
+                img:"images/about/icon/ambito ico.png"
+            },
+            {
+                nombre:'Contactos',
+                tab:'contactos',
+                img:"images/about/icon/EJEMPLO.png"
+            }
+        ]
+
+    },
+
+    detalletab: [
+        {
+            nombre:'Misión',
+            tab:'mission',
+            imagen:'images/about/tab1.jpg',
+            mostrar:true,
+            descripcion: ['El Consultorio Jurídico Gratuito “Ab. Alfonso Leónidas Aguilar Álava”, creado el 23 de junio de 1987, tiene como objetivo principal ayudar a las personas de escasos recursos económicos, a través de la solución de sus problemas judiciales de una forma eficaz, veraz y oportuna, a la vez que forma y enseña a los estudiantes de la carrera de Derecho de la ULVR, de una manera práctica para su futuro desempeño profesional.']
+        },
+        {
+            nombre:'Ámbitos de atención',
+            tab:'ambitos',
+            imagen:'',
+            descripcion: [],
+            lista: [
+                    'Prestación de alimentos: Incidentes, aumento o rebaja. ',
+                    'Prestación de alimentos con declaratoria de paternidad.',
+                    'Extinción de pensión alimenticia.',
+                    'Menores en riesgo.',
+                    'Tenencia.',
+                    'Regulación de visitas. ',
+                    'Maltrato infantil.',
+                    'Pérdida de Patria Potestad.',
+                    'Divorcios por mutuo consentimiento y por causal.',
+                    'Violencia con la mujer y la familia.',
+                    'Mediación.'
+            ]
+        },
+        {
+            nombre:'Contactos',
+            tab:'contactos',
+            imagen:'',
+            descripcion: [],
+            lista: [],
+            contacto: [
+                {
+                    nombre:'Mgtr. Alexandra Jibaja Mora',
+                    cargo:'Directora',
+                    telefono:'04 2596-500 Ext. 174',
+                },
+                {
+                    nombre:'Mgtr. Elsie Viteri Espinoza',
+                    cargo:'Analista',
+                    telefono:'04 2596-500 Ext. 173',
+                },
+                {
+                    nombre:'Ab. María José Cadena Oyague',
+                    cargo:'Analista',
+                    telefono:'04 2596-500 Ext. 175',
+                },
+                {
+                    nombre:'Lcda. Mónica Chuchuca Agila',
+                    cargo:'Asistentes de Secretaría',
+                    telefono:'04 2596-500 Ext. 177',
+                },
+                {
+                    nombre:'Lcda. Yolanda Reinoso Argotti',
+                    cargo:'Asistentes de Secretaría',
+                    telefono:'04 2596-500 Ext. 177',
+                },
+            ],
+            direccion:'Hurtado 212, entre Av. Machala y Antepara, Edificio FURNAS, segundo piso. Guayaquil, Ecuador.',
+            horario:'De 08:00 a 17:00',
+            whatsapp:'593968155213',
+            email:'consultoriojuridico@ulvr.edu.ec'
+        },
+    ]
+}
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+    <!-- About Section Start -->
+    <AboutTabSection {dataAboutTab} />
+    <!-- About Section End -->
+</LayoutVarios>

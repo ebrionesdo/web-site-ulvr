@@ -1,0 +1,327 @@
+---
+import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
+import nodemailer from "nodemailer";
+
+export const prerender = true;
+
+
+
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const nombre = data.get("nombre");
+    const apellido = data.get("apellido");
+    const cedula = data.get("cedula");
+    const correo:any = data.get("correo");
+    const telefono = data.get("telefono");
+    const carrera = data.get("carrera");
+    const medio = data.get("medio");
+
+    if (nombre && apellido && cedula && correo && telefono && carrera && medio) {
+
+        console.log(data);
+
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
+            requireTLS: true,
+            auth: {
+                user: 'testvocacional@ulvr.edu.ec',
+                pass: 'udbtlbtugeuqcgms',
+            },
+            logger: true
+        });
+
+        // send mail with defined transport object
+        const info = await transporter.sendMail({
+            from: 'testvocacional@ulvr.edu.ec',
+            to: correo,
+            subject: "Proceso de admisión",
+            attachments: [
+                {
+                    filename: 'oferta_academica',
+                    path: './public/images/oferta_academica.png',
+                    cid:'oferta_academica'
+                },
+            ],
+            html: ` <h2><strong> Te Invitamos a ser parte de la ULVR. </strong></h2>
+                    <p>Hola,<strong> ${nombre} ${apellido}</strong>, revisa nuestra oferta académica para más información.</p>
+                    <div style='margin: auto; text-align: center;'>
+                        <img src='cid:oferta_academica' alt='oferta académica'>
+                    </div>`,
+            headers: { 'x-myheader': 'test header' }
+        });
+        const info2 = await transporter.sendMail({
+            from: 'testvocacional@ulvr.edu.ec',
+            to: 'testvocacional@ulvr.edu.ec',
+            // to: correo,
+            subject: "Proceso de admisión",
+            html: `<h1><strong>Proceso de admisión</strong></h1>
+                    <ul>
+                        <li><strong>Aspirante:</strong> ${nombre} ${apellido}</li>
+                        <li><strong>Cédula: </strong> ${cedula}</li>
+                        <li><strong>Correo: </strong> ${correo}</li>
+                        <li><strong>Celular: </strong> ${telefono}</li>
+                        <li><strong>Medio: </strong> ${medio}</li>
+                        <li><strong>Maestria: </strong> ${carrera}</li>
+                    </ul>`,
+            headers: { 'x-myheader': 'test header' }
+        });
+
+        
+        if (info.response && info2.response) {
+            // console.log("Message sent: %s", info.response);
+            // console.log("Message sent: %s", info2.response);
+            return Astro.redirect('/grado');
+            
+        }
+        
+    }
+ 
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+
+---
+
+<LayoutInscripcion>
+    
+    <!-- Banner Section Start -->
+    <div class="rs-banner style11">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="content-part">
+                        <span class="sub-title wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="2000ms">
+                            Grado ULVR
+                        </span>
+                        <h2 class="title wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="2000ms">
+                            ¡Tu Futuro te<br />
+                            espera, vamos<br />
+                            Juntos!
+                        </h2>
+                        <b><span class="sub-title wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="2000ms">
+                            Conviértete en el PROFESIONAL<br />
+                            que mereces ser.
+                        </span></b>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+
+                    
+                    <div class="free-course-contact text-center">
+                        <!-- <div class="spinners-envio div_hide pt-3 " id="spinners-envio">
+                            <div class="spinner-border text-info"></div>
+                        </div> -->
+                        <span class="mb-30">PROCESO DE ADMISIÓN</span>
+                        <!-- <h4>SEMESTRE B-2022</h4> -->
+                        <div id="form-messages"></div>
+                        <form method="POST" autocomplete="off" id="my-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Nombre*" id="nombre" name="nombre" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Apellido*" id="apellido" name="apellido" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Cédula de Identidad/Pasaporte*" id="cedula" name="cedula" required minlength="10" maxlength="13">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="email" placeholder="Email*" id="correo" name="correo" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Celular*" id="telefono" name="telefono" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <select name="carrera" id="carrera" required>
+                                            <option value="">Carrera</option>
+                                            <option value="Administración de Empresas">Administración de Empresas</option>
+                                            <option value="Comercio Exterior">Comercio Exterior</option>
+                                            <option value="Contabilidad y Auditoría">Contabilidad y Auditoría</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Comunicación">Comunicación</option>
+                                            <option value="Derecho">Derecho</option>
+                                            <option value="Economía">Economía</option>
+                                            <option value="Psicología">Psicología</option>
+                                            <option value="Educación Básica">Educación Básica</option>
+                                            <option value="Educación Inicial">Educación Inicial</option>
+                                            <option value="Psicopedagogía">Psicopedagogía</option>
+                                            <option value="Arquitectura">Arquitectura</option>
+                                            <option value="Ingeniería Civil">Ingeniería Civil</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-field">
+                                        <select name="medio" id="medio" required>
+                                            <option value="">¿Cómo supiste de nosotros?</option>
+                                            <option value="Internet">Buscando en internet</option>
+                                            <option value="Facebook">Por Facebook</option>
+                                            <option value="Instagram">Por Instagram</option>
+                                            <option value="Twitter">Por Twitter</option>
+                                            <option value="Amigos">Por amigos</option>
+                                            <option value="Otros">Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn submit-btn mt-30">
+                                <button class="readon2 upper" id="admisionesInscripciones" type="submit">Quiero estudiar en la ULVR</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Banner Section End -->
+
+
+    <!-- About Section Start -->
+    <div id="rs-about" class="rs-about style10 dark-red pt-100  md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 md-mb-30">
+                    <div class="about-img">
+                        <img src="/images/about/home13/admig1.png" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-80 md-pl-15">
+                    <div class="sec-title3 mb-32">
+                        <div class="sub-title">PROCESO DE ADMISIÓN</div>
+                        <h2 class="title title2 pr-56">REGISTRO EN LÍNEA</h2>
+                        <div class="desc white-color">
+                            En Admisiones te brindamos atención y guía especializada para que el proceso de ingreso
+                            a la ULVR cumpla todas tus
+                            expectativas y puedas empezar a formarte profesionalmente en el menor tiempo posible.
+                        </div>
+                    </div>
+                    <ul class="check-square">
+                        <li>Ingresa <a
+                                href="https://ekudemic.ulvr.edu.ec/ekudemic/web/pre_registro.php/aspirante_pre_registro/ingresoAspirante">AQUÍ.</a>
+                        </li>
+                        <li>Llena el formulario.</li>
+                        <li>Utiliza letras mayúsculas.</li>
+                        <li>Guarda la información al finalizar.</li>
+                    </ul>
+                    <div class="desc white-color mt-4">
+                        Se te enviará un correo electrónico con la fecha y hora de tu entrevista virtual.<br />
+                        <br />
+                        <b>¿Necesitas ayuda?</b><br /><br />
+                        Escribe o llámanos por las siguientes vías de atención:<br /><br />
+                        <b>WhatsApp:</b> (09) 6814-9901 / (09) 82694759 / (09) 82694572<br />
+                        <b>Llama:</b> (04) 259-6500 ext. 142, 143, 144<br />
+                        <b>E-mail:</b> <a
+                        href="mailto:admisiones@ulvr.edu.ec">admisiones@ulvr.edu.ec</a>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-icons">
+                <div class="shape one">
+                    <img class="up-down-new" src="/images/about/home13/shape.png" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section End -->
+
+    <!-- Categories Section Start -->
+    <div id="rs-categories" class="rs-categories main-home pt-90 pb-100 md-pt-60 md-pb-80">
+        <div class="container">
+            <div class="sec-title3 text-center mb-45">
+                <div class="sub-title">Carreras</div>
+                <h2 class="title black-color">Facultades de Grado</h2>
+            </div>
+            <div class="row mb-35">
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="categories-items">
+                        <div class="cate-images">
+                            <a href="#"><img src="/images/banners carreras/FADM/Administración de Empresas/Administración de Empresas_Banner Cuadrado.png" alt=""></a>
+                        </div>
+                        <div class="contents">
+                            <div class="img-part">
+                                <img src="/images/categories/main-home/icon/5.png" alt="">
+                            </div>
+                            <div class="content-wrap">
+                                <h2 class="title"><a href="grado">FADM</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="categories-items">
+                        <div class="cate-images">
+                            <a href="#"><img src="/images/banners carreras/FCSD/Comunicación/Comunicación_Banner Cuadrado.png" alt=""></a>
+                        </div>
+                         <div class="contents">
+                            <div class="img-part">
+                                <img src="/images/categories/main-home/icon/1.png" alt="">
+                            </div>
+                            <div class="content-wrap">
+                                <h2 class="title"><a href="grado">FCSD</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="categories-items">
+                        <div class="cate-images">
+                            <a href="#"><img src="/images/banners carreras/FEDU/Educación Básica/Educación Básica_Banner Cuadrado.png" alt=""></a>
+                        </div>
+                        <div class="contents">
+                            <div class="img-part">
+                                <img src="/images/categories/main-home/icon/4.png" alt="">
+                            </div>
+                            <div class="content-wrap">
+                                <h2 class="title"><a href="grado">FEDU</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="categories-items">
+                        <div class="cate-images">
+                            <a href="facultad.html"><img src="/images/banners carreras/FIIC/Ingeniería Civil/Ingeniería Civil_Banner Cuadrado.png" alt=""></a>
+                        </div>
+                        <div class="contents">
+                            <div class="img-part">
+                                <img src="/images/categories/main-home/icon/3.png" alt="">
+                            </div>
+                            <div class="content-wrap">
+                                <h2 class="title"><a href="grado">FIIC</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Categories Section End -->
+
+
+    </div>
+    <!-- Main content End -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</LayoutInscripcion>

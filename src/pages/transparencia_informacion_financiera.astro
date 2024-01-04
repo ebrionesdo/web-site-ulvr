@@ -1,0 +1,257 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Transparencia',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Proforma presupuestaria',
+            tab:'prod-proforma',
+            mostrar:true,
+            titulo:'Información Financiera',
+            acordiones: [
+                {
+                    titulo:'Proforma Presupuestaria por año',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2021',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2020.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2020',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2020.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2019',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2019.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2018',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2017',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2016',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'2015',
+                            url:'documentos/Transparencia/7 Información Financiera/1 Proforma Presupuestaria/PROFORMA PRESUPUESTARIA 2015.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Ejecución Presupuestaria',
+            titulo:'Información Financiera',
+            tab:'prod-ejecucion',
+            acordiones: [
+                {
+                    titulo:'Presupuesto Ejecutado',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Presupuesto Ejecutado 2018',
+                            url:'documentos/Transparencia/7 Información Financiera/2 Ejecución Presupuestaria/PRESUPUESTO EJECUTADO 2018.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Presupuesto Ejecutado 2017',
+                            url:'documentos/Transparencia/7 Información Financiera/2 Ejecución Presupuestaria/PRESUPUESTO EJECUTADO 2017.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Presupuesto Ejecutado 2016',
+                            url:'documentos/Transparencia/7 Información Financiera/2 Ejecución Presupuestaria/PRESUPUESTO EJECUTADO 2016.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Presupuesto Ejecutado 2015',
+                            url:'documentos/Transparencia/7 Información Financiera/2 Ejecución Presupuestaria/PRESUPUESTO EJECUTADO 2015.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Presupuesto Ejecutado 2014',
+                            url:'documentos/Transparencia/7 Información Financiera/2 Ejecución Presupuestaria/PRESUPUESTO EJECUTADO 2014.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Aranceles y Matrículas',
+            titulo:'Información Financiera',
+            tab:'prod-aranceles-matriculas',
+            acordiones: [
+                {
+                    titulo:'Aranceles y Matrículas',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2022',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES Y MATRÍCULA 2022.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2021',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES Y MATRICULA 2021.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2020 - 2021',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2020 2021.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2019 - 2020',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2019 2020.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2019',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES UNIDAD DE TITULACIÓN 2019.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2018 Semestre(B)',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2018 (B).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2018 Semestre(A)',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2018 (A).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2017 Semestre(B)',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2017 (B).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2017 Semestre(A)',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2017 (A).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2016 - 2017 Semestre(B) Excepto carreras con rediseño aprobado',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2016 - 2017 (B) - CARRERAS DE LA ULVR, EXCEPTO LAS QUE SE APERTURAN CON REDISEÑO APROBADO.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2016 - 2017 Semestre(B) Incluidas carreras con rediseño aprobado',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2016 - 2017 (B) - CARRERAS DE LA ULVR QUE SE APERTURAN CON REDISEÑO APROBADO.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2016 - 2017 Semestre(A) Excepto carreras con rediseño aprobado',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2016 - 2017 (A) - CARRERAS DE LA ULVR, EXCEPTO LAS QUE SE APERTURAN CON REDISEÑO APROBADO.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Aranceles y Matrículas 2016 - 2017 Semestre(A) Incluidas carreras con rediseño aprobado',
+                            url:'documentos/Transparencia/7 Información Financiera/3 Aranceles y Matrículas/ARANCELES DE MATRICULA 2016 - 2017 (A) - CARRERAS DE LA ULVR QUE SE APERTURAN CON REDISEÑO APROBADO.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                
+            ]
+        }
+    },
+ 
+
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+ 
+</LayoutVarios>

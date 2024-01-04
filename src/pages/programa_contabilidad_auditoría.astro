@@ -1,0 +1,130 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Contabilidad y Auditoría',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Contabilidad-y-Auditoría.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_contabilidad_auditoria');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Contabilidad y Auditoría_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Los negocios requieren de un profesional capaz de ayudar a las empresas en situaciones de crisis a gestionar sus finanzas, de manera efectiva, con sus propios recursos y cumpliendo los parámetros establecidos en las leyes y normas tributarias.',
+                            'El Magíster en Contabilidad y Auditoría con mención en Riesgos Operativos y Financieros de la ULVR es un profesional responsable en los negocios, apto para evaluar los riesgos que pueden estar presentes en el manejo económico de una empresa.',
+                            'Nuestros graduados, poseen las habilidades necesarias para integrarse al mercado bursátil, negociar activos, ejecutar auditorías, evaluar cualquier componente dentro del sistema financiero y realizar las diferentes actividades que permitan impulsar el estado general de cada entidad.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Especializar a profesionales de las áreas de Administración, Finanzas, Contabilidad, Auditoría y Tributación, en la profunda comprensión de las herramientas e instrumentos financieros que les permitan el desarrollo del análisis crítico e investigativo mediante la identificación de los problemas del giro del negocio y que posibiliten la correcta toma de decisiones.'],
+            especificos: ['Aplicar conocimientos, estrategias, métodos y técnicas que garanticen la toma de decisiones empresariales.',
+                          'Generar proyectos de emprendimiento sobre la base de los principios, normas y procedimientos vigentes.',
+                          'Organizar la información contable, tributaria y financiera de manera objetiva y técnica.',
+                          'Identificar instrumentos de negociación en el mercado bursátil y financiero mediante la evaluación y gestión de las inversiones.',
+                          'Gestionar y analizar el manejo de portafolios de inversión para la evaluación de fuentes de financiamiento, estimando el riesgo operativo, de crédito y de liquidez.',
+                          'Valorar la empresa o patrimonio del inversor desde el punto de vista del mercado bursátil.'
+                        ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Contabilidad y Auditoría con mención en Riesgos Operativos y Financieros de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Valorar el cumplimiento de procesos contables, financieros y de auditoría.',
+                    'Aplicar adecuadamente las normas internacionales vigentes: NIIF, NIC, entre otras.      ',
+                    'Optimizar el uso de la información contable y financiera.',
+                    'Diseñar y proponer estrategias que resuelvan problemas de inversión.',
+                    'Registrar los hechos económicos derivados de las instituciones financieras públicas y privadas.',
+                    'Reconocer la intervención del sistema financiero nacional y del mercado de valores en las operaciones de inversión y sus riesgos.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Gestor de negocios contable-financieros.',
+                    'Asesor contable, tributario, de costos de producción y evaluador de riesgos.',
+                    'Gestor de procesos de control interno.',
+                    'Desarrollador de proyecciones contables, financieras y tributarias.',
+                    'Diseñador de instrumentos de información contable, tributaria y financiera.',
+                    'Evaluador de procesos contables, tributarios, financieros, de auditoría, costos de producción y riesgos.',
+                    'Asesor y consultor en inversiones, crédito, finanzas, contables, tributarios y de auditoría.',
+                    'Perito contable y financiero en materia legal.',
+                    'Gestor de normas técnicas de auditoría.</li><li>Jefe de departamentos de contraloría, equipos de auditoría, de control y de regulación gubernamental.</li><li>Director de finanzas en empresas e instituciones, públicas y privadas.</li><li>Director de departamentos de contabilidad y de costos.',
+                    'Docente de grado y posgrado.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Ángel Guillermo Morán Ochoa', 
+                    cargo:'Coordinador de maestría', 
+                    telefono:'(09)82846945', 
+                    ext:'', 
+                    email:'amorano@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

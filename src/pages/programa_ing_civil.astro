@@ -1,0 +1,125 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Ingeniería Civil',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Ingeniería-Civil.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_ing_civil');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Ingeniería Civil_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'La construcción de obras civiles está en franco desarrollo por lo que se requiere profesionales capaces de liderar y gestionar proyectos que mejoren la calidad y el desarrollo de la industria de la construcción.',
+                            'El Magíster en Ingeniería Civil con mención en Gestión de la Construcción de la ULVR es un profesional que podrá gestionar adecuadamente la actividad de la construcción en distintas instituciones públicas y privadas; así como, desarrollar consultorías privadas para el diseño de Sistemas de Gestión de Obras Civiles. ',
+                            'Nuestros graduados, poseen las habilidades necesarias para dirigir, coordinar y gestionar obras de construcción, eficientemente. Además, podrán participar en el diseño, ejecución y supervisión de obras civiles en general y planificación de obras públicas y privadas.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Robustecer la formación profesional con niveles de conocimientos técnico-científicos que le permitan resolver problemas de infraestructura en los ámbitos de: planificación, diseño, construcción y evaluación; a fin de preservar los recursos y hacer sostenible las actividades antropogénicas.'],
+            especificos: ['Profundizar los conocimientos en lo referente a materiales y procesos de construcción con la finalidad de analizar el impacto en la economía local.',
+                          'Fortalecer el desarrollo de la investigación en el campo de la construcción.',
+                          'Proporcionar una formación sólida en aspectos gerenciales, administrativos y tecnológicos de la construcción.',
+                          'Evaluar la sostenibilidad en las edificaciones y desarrollar propuestas para la reducción de impactos.'
+                        ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Ingeniería Civil con mención en Gestión de la Construcción de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Dirigir, coordinar y participar en estudios y diseños de sistemas estructurales para diversas aplicaciones.',
+                    'Aplicar la metodología de la investigación científica, de tal manera que pueda plantear proyectos, para generar conocimientos en el campo de las construcciones civiles para buscar soluciones a problemas relacionados a las mismas.      ',
+                    'Evaluar y asesorar en forma independiente o como integrante de un equipo multidisciplinario, problemas relacionados con las construcciones civiles.',
+                    'Emplear la tecnología apropiada en el área de construcciones civiles de una manera racional y eficiente.',
+                    'Proponer planes de reparación o rehabilitación de construcciones de obras civiles sujetas a: deterioro por el tiempo, el ambiente o configuraciones de carga.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Director, coordinador o gestor de obras de construcción.',
+                    'Supervisor de obras civiles en general.',
+                    'Planificador de obras públicas y privadas.',
+                    'Fiscalizador de obras.',
+                    'Consultor privado para el desarrollo de obras civiles.',
+                    'Asesor independiente.',
+                    'Rehabilitador de obras civiles.',
+                    'Docente de grado y posgrado.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Kleber Alberto Moscoso Riera', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)78733512', 
+                    ext:'', 
+                    email:'kmoscosor@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

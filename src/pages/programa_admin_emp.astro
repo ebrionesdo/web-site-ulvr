@@ -1,0 +1,127 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Administración de Empresas',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Administración-de-Empresas.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_admin_emp');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Adm Empresas_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'La diversidad de los mercados y los nuevos modelos de negocios obligan a las empresas a buscar métodos dinámicos para resolver diversos problemas administrativos. Por esto, las compañías requieren de un profesional capaz de dar soluciones integrales a los diferentes retos que se presentan en la transformación digital.',
+                            'El Magíster en Administración de Empresas, mención en Dirección Estratégica de Proyectos de la ULVR, es un profesional que lidera y analiza proyectos administrativos en sectores públicos, privados y de emprendimiento, mediante el desarrollo de estrategias financieras, comerciales y otras, que permitirán la búsqueda de la viabilidad  de los negocios.',
+                            'Nuestros graduados obtienen las habilidades necesarias para la dirección y creación del proceso de crecimiento de las empresas, consolidando estrategias y métodos empresariales. Además, desarrollan los conocimientos, destrezas y actitudes que requieren los proyectos en general.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Formar profesionales con sólidas competencias en administración empresarial, gestión y definición estratégica de proyectos con una visión global, desarrollando en ellos el análisis crítico, investigativo y de innovación.'],
+            especificos: ['Desarrollar habilidades y competencias directivas.',
+                    'Desarrollar y desplegar una sólida estrategia empresarial, alineada con el modelo de negocio y la estrategia corporativa de la empresa.',
+                    'Generar proyectos de emprendimiento sobre la base de los principios, normas y procedimientos vigentes.',
+                    'Desarrollar el  liderazgo en las organizaciones a través de la dirección eficaz de equipos y proyectos.',
+                    'Desarrollar las capacidades analíticas y de resolución de problemas.',
+                    'Proporcionar una formación sólida, aplicada de herramientas de análisis y evaluación.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Administración de Empresas, mención en Dirección Estratégica de Proyectos de la ULVR, al finalizar el programa estará en  la capacidad de:'],
+            lista: ['Potenciar su capacidad de análisis crítico -  estratégico en los proyectos.',
+                    'Diseñar, implementar y evaluar proyectos de negocios, desde la dirección estratégica, a través de la transformación, el emprendimiento, la innovación y gestión del desarrollo tecnológico.',
+                    'Crear de manera firme, los procesos de crecimiento de la empresa, en especial la internacionalización de la compañía y su diversificación.',
+                    'Desarrollar distintos tipos de liderazgo que permitan la dirección eficaz de equipos y proyectos.',
+                    'Consolidar equipos de colaboradores que sean multidisciplinarios, interdisciplinarios y críticos de sus acciones.',
+                    'Brindar asesorías en Análisis y Evaluación de Proyectos innovadores en las organizaciones.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Director empresarial.',
+                    'Director o jefe de Producción.',
+                    'Director de Departamento de Proyectos.',
+                    'Planificador de Demanda o Producción.',
+                    'Director de Business Manager.',
+                    'Director de Departamento de Calidad e implementación de procesos.',
+                    'Docente de grado y posgrado.'  
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Mónica Margot Villamar Mendoza', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'264', 
+                    email:'mvillamarm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Luis González Márquez', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'265', 
+                    email:'jgonzalezm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Augusto Morante Jiménez', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jmorantej@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Janet Ivonne Castillo Lindao', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jcastillol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Com. Gloria Alexandra Cárdenas Valencia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'gcardenasv@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Maira Azucena Ponce Asencio', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'205', 
+                    email:'mponcea@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

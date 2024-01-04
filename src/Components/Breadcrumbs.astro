@@ -1,0 +1,57 @@
+---
+
+import { type Breadcrumb } from '../layouts/LayoutCarrera.astro';
+interface Props {
+    breadcrumbs: Breadcrumb;
+}
+// interface Props {
+//     title:        string;
+//     titleCarrera: string;
+//     menuAtras:    string;
+//     servicio:     string;
+//     nombreBoton:  string;
+//     img:          string;
+//     urlInscribete:string;
+//     urlAtras:     string;
+// }
+
+const {breadcrumbs} = Astro.props;
+---
+
+<div class="rs-breadcrumbs breadcrumbs-overlay">
+    <div class="breadcrumbs-img">
+        <img src={breadcrumbs.img} alt=`Breadcrumbs ${breadcrumbs.titleCarrera}`>
+    </div>
+    <div class="breadcrumbs-text white-color">
+        <div class="title">{breadcrumbs.title}</div>
+        <h1 class="page-title">{breadcrumbs.titleCarrera}</h1>
+        
+        <ul>
+            <li>
+                <a class="active" href={breadcrumbs.urlAtras}>{breadcrumbs.menuAtras}</a>
+            </li>
+            <li>{breadcrumbs.servicio}</li>
+            
+        </ul>
+        <div class="w-50 mx-auto wow fadeInUp mt-30">
+            <!--<div
+                class="btn-part pull-left"
+                data-wow-delay="400ms"
+                data-wow-duration="2000ms"
+            >
+                <a
+                    class="readon2"
+                    href="documentos/XQULVR.png"
+                    target="_blank"
+                    >Inscribete</a
+                >
+            </div>-->
+            {
+                breadcrumbs.nombreBoton && (
+                    <div class="btn-part pull-right" data-wow-delay="400ms" data-wow-duration="2000ms">
+                        <a class="readon2" href={breadcrumbs.urlInscribete} target="_blank">{breadcrumbs.nombreBoton}</a>
+                    </div>
+            )}
+        </div>
+    </div>    
+</div>

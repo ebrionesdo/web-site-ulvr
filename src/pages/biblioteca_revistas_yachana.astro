@@ -1,0 +1,178 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import ShopPartBook from "../Components/ShopPartBook.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+import { catalogoRevistas } from "./biblioteca_revistas.astro";
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Revistas',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Revista Yachana',
+    descripcion: []
+}
+
+const dataLibros = [
+    {
+        titulo:'Vol. 11. No. 1',
+        subtitulo:'Enero - Junio 2022',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/37',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2022.jpg'
+    },
+    {
+        titulo:'Vol. 10. No. 2',
+        subtitulo:'Julio - Diciembre 2021',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/36',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO DIC 2021.jpg'
+    },
+    {
+        titulo:'Vol. 10. No. 1',
+        subtitulo:'Enero - Junio 2021',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/35',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2021.jpg'
+    },
+    {
+        titulo:'Vol. 9. No. 3',
+        subtitulo:'Noviembre - Diciembre 2020',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/34',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - NOV DIC 2020.jpg'
+    },
+    {
+        titulo:'Vol. 9. No. 2',
+        subtitulo:'Julio - Octubre 2020',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/33',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO OCT 2020.jpg'
+    },
+    {
+        titulo:'Vol. 9. No. 1',
+        subtitulo:'Enero - Junio 2020',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/32',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2020.jpg'
+    },
+    {
+        titulo:'Vol. 8. No. 3',
+        subtitulo:'Noviembre - Diciembre 2019',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/31',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - NOV DIC 2019.jpg'
+    },
+    {
+        titulo:'Vol. 8. No. 2',
+        subtitulo:'Julio - Octubre 2019',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/30',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO OCT 2019.jpg'
+    },
+    {
+        titulo:'Vol. 7. No. 1',
+        subtitulo:'Enero - Junio 2018',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/26',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2018.jpg'
+    },
+    {
+        titulo:'Vol. 6. No. 3',
+        subtitulo:'Julio - Diciembre 2017',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/23',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO DIC 2017.jpg'
+    },
+    {
+        titulo:'Vol. 6. No. 2',
+        subtitulo:'Edición especial noviembre: INPIN 2017',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/24',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - EDI ESP 2017.jpg'
+    },
+    {
+        titulo:'Vol. 6 No. 1',
+        subtitulo:'Enero - Junio 2017',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/18',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2017.jpg'
+    },
+    {
+        titulo:'Vol. 5. No. 2',
+        subtitulo:'Julio - Diciembre 2016',
+        url:'#',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO DIC 2016.jpg'
+    },
+    {
+        titulo:'Vol. 5. No. 1',
+        subtitulo:'Edición especial noviembre: INPIN 2016',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/9',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - EDI ESP 2016.jpg'
+    },
+    {
+        titulo:'Vol. 4 No. 1',
+        subtitulo:'Junio 2015',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/6',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2015.jpg'
+    },
+    {
+        titulo:'Vol. 3. No. 2',
+        subtitulo:'Diciembre 2014',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/3',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - JULIO DIC 2014.jpg'
+    },
+    {
+        titulo:'Vol. 3. No. 1',
+        subtitulo:'Junio 2014',
+        url:'http://revistas.ulvr.edu.ec/index.php/yachana/issue/view/2',
+        imagen:'documentos/REVISTAS ULVR/IMG´S/YACHANA - ENERO JUNIO 2014.jpg'
+    },
+]
+
+
+const catalogoRevistasFilter = catalogoRevistas.filter((revista:any) => revista.url !== 'biblioteca_revistas_yachana');
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        {
+            dataEncabezado.descripcion && (
+                <div class="desc">
+                    {
+                        dataEncabezado.descripcion.map((desc:any) =>
+                        <p class="text-justify">{desc}</p>
+                        )
+
+                    }
+                </div>	
+            )
+        }			
+    </div>
+
+    <!--Shop part start-->
+    <ShopPartBook {dataLibros} />
+    <!--Shop part end-->
+
+
+    
+    <!--Caeds List Editorial part end-->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoRevistasFilter}>
+            Otras revistas
+        </CarrerasPorFacultad/>
+    </div>
+    <!--Caeds List Editorial part end-->
+ 
+</LayoutVarios>

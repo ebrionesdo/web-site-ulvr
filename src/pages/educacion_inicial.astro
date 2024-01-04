@@ -1,0 +1,137 @@
+---
+
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadEducacion } from '../layouts/LayoutListaGrado.astro';
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Educación Inicial',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FEDU/Educación Inicial/Educación-Inicial_Banner-Horizontal.jpg',        
+    descargarInformacion : 'documentos/Flyer de carreras 2022/Educación Inicial.pdf',  
+}
+
+const carrerasEducacionFilter = carrerasFacultadEducacion.filter((carrera:any) => carrera.url !== 'educacion_inicial');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Ciencias de la Educación Inicial de la ULVR crea el entorno adecuado en los aspectos cognitivo, motor y emocional de los niños y niñas de 0 a 5 años, para que continúen con su proceso de formación en los siguientes niveles educativos.',
+                 'Para su formación el estudiante cuenta con una sala de estimulación temprana; además vincula los conocimientos teóricos con la práctica a través de los proyectos investigativos, formativos e integradores de saberes, a los que se suman las prácticas preprofesionales y los programas de vinculación con la sociedad.', 
+                 'El título de Licenciado en Ciencias de la Educación Inicial de la ULVR también te permite continuar con tus estudios de posgrado.'],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Ciencias de la Educación Inicial',
+            jornada:'Vespertina (16:00 a 20:15).',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: ['El desarrollo de las habilidades y destrezas en la primera infancia es la base para los futuros aprendizajes dentro de un ambiente inclusivo y de equidad, con calidez y calidad.',
+                          'El Licenciado en Ciencias de la Educación Inicial de la ULVR estará preparado para comprender la complejidad de las estructuras cognitivas, afectivas y sociales, y guiar correctamente el proceso de desarrollo integral de los niños de 0 a 5 años, con un enfoque integral, sistémico, humanista e inclusivo.'],
+            lista: ['A partir del 4° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como auxiliar en centros de educación inicial y de estimulación temprana.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Ciencias de la Educación Inicial de la ULVR será capaz de:'],
+            lista: ['Diseñar proyectos para el desarrollo en la primera infancia.',
+                    'Facilitar los aprendizajes en educación general básica.',
+                    'Dirigir centros de estimulación temprana.',
+                    'Dirigir centros de educación inicial.',
+                    'Liderar emprendimientos en culturas recreativas.',
+                    'Crear recursos para el desarrollo de la primera infancia.',
+                    'Integrar equipos de trabajo multidisciplinarios.',
+                    'Dirigir programas de estimulación temprana.',
+                    'Dirigir programas de atención individualizada.',
+                    'Dirigir programas de animación y recreación infantil.',
+                    'Utilizar las TIC para guiar a los padres en los procesos de enseñanza-aprendizaje.',
+                    'Gestionar procesos de enseñanza-aprendizaje integrales e inclusivos.',
+                    'Brindar asistencia para el mejoramiento de los procesos de enseñanza-aprendizaje.',
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Ciencias de la Educación Inicial de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Directivo.',
+                    'Administrador educativo.',
+                    'Capacitador.',
+                    'Evaluador.',
+                    'Asesor académico.',
+                    'Diseñador de proyectos curriculares.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Dunia Lucía Barreiro Moreira', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'219', 
+                    email:'dbarreirom@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Norma Alexandra Hinojosa Garcés', 
+                    cargo:'Coordinadora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'209', 
+                    email:'nhinojosag@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Martín Maldonado Morán', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'155', 
+                    email:'jmaldonadomo@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Leonor Alexandra Muñoz García', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'221', 
+                    email:'lmunozg@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Econ. Lucía Narcisa Aroca Briones', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'larocab@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Ketty Elizabeth Rodríguez Barahona', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'krodriguezb@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Educación Inicial.pdf';   
+
+const facultad='Carreras de la Facultad de Educación'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasEducacionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

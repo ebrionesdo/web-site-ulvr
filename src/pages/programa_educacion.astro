@@ -1,0 +1,130 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Educación',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Educación.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_educacion');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Educación_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'La Educación requiere docentes capaces de atender a todos los educandos, especialmente a aquellos niños que presentan una Necesidad Educativa Especial o una discapacidad.',
+                            'El Magíster en Educación Mención inclusión educativa y atención a la diversidad de la ULVR es un profesional sensibilizado con los grupos vulnerables, apto para aplicar estrategias efectivas y eficaces que optimicen el proceso de enseñanza-aprendizaje de todos los discentes, con énfasis en los grupos diversos y sus diferentes capacidades.',
+                            'Nuestros graduados poseen las habilidades necesarias para ser líderes educativos, docentes de educación superior, coordinadores supervisores educativos, o cualquier cargo directivo dentro de la educación que favorezca una atención personalizada de calidad y calidez.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Formar a docentes, directivos y especialistas competentes que identifiquen dificultades de aprendizaje, problemas afectivos o de comportamiento; preparados para la aplicación de herramientas tecnológicas, metodológicas y didácticas que permitan el desarrollo de habilidades y destrezas en los educandos.'],
+            especificos: ['Fundamentar el enfoque inclusivo, social y pedagógico sobre la atención educativa a la diversidad intercultural, de género, intergeneracional y de capacidades.',
+                          'Identificar las necesidades y potencialidades de los educandos, así como las debilidades y fortalezas de la institución educativa, la familia y la comunidad.',
+                          'Crear recursos metodológicos, didácticos, de informática y tecnología educativa dirigidos a solucionar los problemas de la práctica educativa inclusiva.',
+                          'Diseñar proyectos en correspondencia con las tendencias actuales de la atención educativa a la diversidad, contribuyendo a perfeccionar el enfoque inclusivo.',
+                          'Aplicar conocimientos y estrategias en la atención educativa inclusiva a la diversidad de educandos y sus familias para la solución de los problemas prioritarios de su comunidad.',
+                          'Organizar ambientes de aprendizaje colaborativo, proactivo, desarrollador y en redes utilizando medios y metodologías participativas que fomenten la gestión educativa y social del conocimiento.',
+                          'Demostrar valores de responsabilidad social, amor, aceptación, solidaridad, compromiso, respeto y una actitud optimista para la formación intercultural e integral de los educandos.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Educación mención Inclusión Educativa y Atención a la Diversidad será capaz de:'],
+            lista: ['Actuar en su labor profesional con los nuevos conocimientos y saberes sobre la atención a la diversidad intercultural, de género, intergeneracional y de capacidades.',
+                    'Detectar, evaluar y caracterizar potencialidades y necesidades de los sujetos y contextos para brindar la respuesta educativa a la diversidad intercultural, de género, intergeneracional y de capacidades.      ',
+                    'Diseñar, planificar y realizar gestión educativa multi, inter y transdisciplinaria, a partir del desarrollo de investigaciones psicopedagógicas.',
+                    'Aplicar creativamente recursos psicológicos, pedagógicos, metodológicos, didácticos, tecnológicos y estrategias para perfeccionar la calidad del proceso educativo y la atención educativa integral.',
+                    'Demostrar ética en su profesión y potenciar la riqueza de valores de la diversidad intercultural, intergeneracional, de capacidades, religiones, razas, género y orientación sexual.',
+                    'Organizar el conocimiento disciplinar, profesional e investigativo de las ciencias de la educación, utilizando métodos, metodologías y modelos inclusivos acorde a los escenarios de aprendizajes en cada contexto socioeducativo.',
+                    'Implementar protocolos basados en acciones estratégicas para el direccionamiento interdisciplinario de individuos con Necesidades Educativas Especiales.',
+                    'Dominar e investigar los contenidos procedimentales, actitudinales y conceptuales en el ámbito disciplinar y curricular para generar aprendizajes que beneficien al contexto educativo inclusivo.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Director, coordinador, gestor educativo de la educación infantil.',
+                    'Docente de la educación inicial, básica o superior.',
+                    'Emprendedor de Centros de atención y estimulación temprana.',
+                    'Capacitador docente y familiar.',
+                    'Tutor en la atención de niños de 0 a 5 años.',
+                    'Investigador y planificador de proyectos educativos para la educación infantil.',
+                    'Docente particular para el acompañamiento de niños con NEE.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Santa Elizabeth Véliz Araujo', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)94859330', 
+                    ext:'', 
+                    email:'sveliza@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

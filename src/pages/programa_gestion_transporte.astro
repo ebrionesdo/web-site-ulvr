@@ -1,0 +1,125 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Gestión del Transporte',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Gestión-del-Transporte.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_gestion_transporte');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Gestión del Transporte_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Actualmente, el transporte y la seguridad vial representan un problema sin solución para la sociedad. Es por esto que se necesitan profesionales capaces de liderar y gestionar  equipos de alto rendimiento en materia de tránsito, movilidad y seguridad vial, con el fin de minimizar los accidentes.',
+                            'El Magíster en Gestión del Transporte con mención en Tráfico, Movilidad y Seguridad Vial de la ULVR podrá gestionar, adecuadamente, la planeación y el funcionamiento del sistema vial en las distintas instituciones públicas y privadas. También podrá participar en el diseño de la infraestructura vial local alineada con el modelo del plan vial nacional. ',
+                            'Nuestros graduados desarrollarán competencias directivas con liderazgo, para la gestión de equipos multifuncionales y multiculturales, para realizar auditorías a los sistemas de seguridad vial, formando parte activa en la investigación de accidentes de tránsito.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Desarrollar competencias, habilidades y destrezas, así como adquirir los conocimientos teóricos, técnicos y prácticos relacionados con el tráfico sostenible y la movilidad que permitan a los profesionales el análisis crítico, la planificación, evaluación e innovación del comportamiento del tráfico y la seguridad vial.'],
+            especificos: ['Desarrollar habilidades relacionadas con la planificación, regulación y gestión del transporte.',
+                          'Desarrollar capacidades técnicas y analíticas para la elaboración de diagnósticos, diseño, seguimiento y evaluación de políticas y programas de transporte.',
+                          'Proponer técnicas de tráfico relacionadas con las múltiples dimensiones del transporte y la movilidad.',
+                          'Generar proyectos para optimizar el tráfico y la seguridad vial.',
+                          'Potenciar los conocimientos sobre la competencia de la función de los agentes de tránsito en el contexto de la problemática del tránsito.',
+                          'Analizar las causas y los factores que inciden en los accidentes de tránsito.',
+                          'Desarrollar actividades de asesoría y asistencia técnica, propendiendo a la reducción de los índices de mortalidad, morbilidad y daños materiales.',
+                          'Proponer acciones preventivas, correctivas y de mejora continua para evitar los accidentes e incidentes de tránsito.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Gestión del Transporte con mención en Tráfico, Movilidad y Seguridad Vial de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Manejar adecuadamente el funcionamiento del sistema vial, la clasificación de las vías y distinguir la utilidad de estas, su capacidad vial y los distintos elementos que la conforman.',
+                    'Garantizar el cumplimiento de la normativa Constitucional y de Transporte Terrestre, Tránsito y Seguridad Vial identificando las distintas infracciones de tránsito, en delitos y contravenciones.',
+                    'Optimizar el uso de los recursos de infraestructura vial, para una adecuada y oportuna toma de decisiones.',
+                    'Evaluar con sentido crítico los factores de la Gestión del Tránsito y Movilidad, alcanzando la optimización de los sistemas viales y una mayor operatividad en la movilidad.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Coordinador de tránsito y movilidad.',
+                    'Gestor de movilidad en empresas públicas y privadas.',
+                    'Auditor interno de seguridad vial.',
+                    'Perito de investigación de accidentes de tránsito.',
+                    'Docente de grado y posgrado.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Kleber Alberto Moscoso Riera', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)78733512', 
+                    ext:'', 
+                    email:'kmoscosor@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

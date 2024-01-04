@@ -1,0 +1,151 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadAdministracion } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Administración de Empresas',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FADM/Administración de Empresas/Administración de Empresas_Banner Horizontal.png'
+}
+
+const carrerasAdministracionFilter = carrerasFacultadAdministracion.filter((carrera:any) => carrera.url !== 'administracion_empresas');
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Administración de Empresas.pdf';   
+
+const facultad='Carreras de la Facultad de Administración'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Administración de Empresas de la ULVR es un profesional ético y humanista, con amplios conocimientos que le permiten comprender el entorno empresarial y aplicar estrategias que consoliden el trabajo en equipo, para liderar con éxito las organizaciones del futuro.',
+                         'El estudiante durante su preparación académica desarrolla competencias y habilidades desde el ámbito teórico-práctico del campo de la administración a través de tutorías personalizadas, prácticas en laboratorios de informática dotados con software especializado y una planta docente altamente capacitada.',
+                         'El título en Licenciado en Administración de Empresas de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Administración de Empresas.',
+            jornada:'Diurna y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'Las organizaciones globales demandan Administradores de Empresas con liderazgo y amplio conocimiento en gestión de proyectos, marketing, administración estratégica, finanzas, emprendimiento y otros, que aporten directamente al crecimiento empresarial sostenible y rentable con un eficiente manejo de recursos.',
+                            'El Licenciado en Administración de Empresas de la ULVR será capaz de administrar, formular y evaluar proyectos de inversión, crear emprendimientos innovadores, promover la generación de empleo, enfrentar retos y tomar decisiones de manera oportuna.'
+                         ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 50% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como asistente administrativo, evaluador de proyectos, auxiliar de talento humano, administrador de bóveda y oficial bancario.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Administración de Empresas de la ULVR será capaz de:'],
+            lista: ['Elaborar procesos administrativos innovadores.',
+                    'Brindar asesoría en inversiones.',
+                    'Evaluar proyectos de inversión',
+                    'Crear emprendimientos innovadores.',
+                    'Administrar empresas públicas y privadas.',
+                    'Dirigir el talento humano.',
+                    'Autogestionar empleo.',
+                    'Administrar y dirigir proyectos.',
+                    'Interpretar normas ISO.',
+                    'Gestionar la creación de empresas.',
+                    'Asesorar en temas tributarios.',
+                    'Utilizar software especializado.',
+                    'Realizar prospección de negocios.',
+                    'Interpretar los estados financieros.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Administración de Empresas de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Gerente.',
+                    'Administrador.',
+                    'Director.',
+                    'Jefe de área.',
+                    'Analista financiero.',
+                    'Gestor de fondos de inversión.',
+                    'Asesor.',
+                    'Consultor.',
+                    'Emprendedor.',
+                    'Evaluador de proyectos.',
+                    'Docente.',
+                    'Investigador.' 
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Irma Angélica Aquino Onofre', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'203', 
+                    email:'iaquinoo@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Kelly Carlota León Tomalá', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'265', 
+                    email:'kleont@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Augusto Morante Jiménez', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jmorantej@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Cristian Alexis Suriaga Sanabria', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'csuriagas@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Janet Ivonne Castillo Lindao', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jcastillol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Com. Gloria Alexandra Cárdenas Valencia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'gcardenasv@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Maira Azucena Ponce Asencio', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'205', 
+                    email:'mponcea@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

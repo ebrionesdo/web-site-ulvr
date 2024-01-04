@@ -1,0 +1,197 @@
+---
+const { acordionData } = Astro.props;
+const acordionConLink = acordionData.acordion.filter((data:any) => data.link && data.link.length > 0);
+const acordionConDesc = acordionData.acordion.filter((data:any) => data.descripcion && data.descripcion.length > 0 && !data.item);
+const acordionConItem = acordionData.acordion.filter((data:any) => data.item && data.item.length > 0);
+const acordionConContacto = acordionData.acordion.filter((data:any) => data.contacto && data.contacto.length > 0);
+
+---
+
+
+<div class="container">
+    <div class="sec-title3 text-center mt-30 mb-20">
+        
+        <h3>{acordionData.titulo}</h3>
+        
+    </div>
+    <div id="accordion" class="accordion-box">
+        { 
+            (acordionConDesc).map((data:any,) => 
+                <br/>
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${data.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${data.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${data.posicion}`}>{data.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${data.posicion}`} class:list={['collapse', { 'show' : data.mostrar }]}
+                        aria-labelledby={`heading${data.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        { 
+                                            (data.descripcion).map((desc:string) => 
+                                                <br/>
+                                                <span>{desc}</span>
+                                                <br/>
+                                                )
+                                        }                                
+                                        <br/>
+                                                                                                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+ 
+        {
+            (acordionConLink).map((links:any) => 
+
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${links.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${links.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${links.posicion}`}>{links.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${links.posicion}`} class:list={[ 'collapse', { "show ": links.mostrar }]}
+                        aria-labelledby={`heading${links.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        {
+                                            (links.link).map((enlace:any) => 
+                                                <br/>
+                                                <a href={enlace.url} target="_blank">{enlace.texto}</a>
+                                                <br/>
+                                            )
+                                            
+                                        }
+                                                                                                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        {
+            (acordionConItem).map((items:any) => 
+
+                <div class="card accordion block">
+                    <div class="card-header" id={`heading${items.posicion}`}>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link acc-btn collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse${items.posicion}`} aria-expanded="false"
+                                aria-controls={`collapse${items.posicion}`}>{items.titulo}</button>
+                        </h5>
+                    </div>
+                    <div id={`collapse${items.posicion}`} class:list={[ 'collapse', { "show ": items.mostrar }]}
+                        aria-labelledby={`heading${items.posicion}`} data-bs-parent="#accordion">
+                        <div class="card-body acc-content">
+                            <div class="content">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <div class="desc">
+                                            {
+                                                items.descripcion && (
+                                                    <ul style="list-style: unset">
+                                                        {items.descripcion}
+                                                    </ul>
+                                                    <br />
+                                                )
+                                            }
+                                            {
+                                                items.buttonName && (
+                                                    <div class="btn-part pull-left" data-wow-delay="400ms" data-wow-duration="2000ms">
+                                                        <a class="readon2" href={items.buttonUrl} target="_blank">{items.buttonName}</a>
+                                                    </div>
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                )
+                                            }
+                                            <div class="desc">
+                                                {
+                                                    items.item.map((it:any) =>
+                                                        <h5>{it.titulo}</h5>
+                                                        <span>{it.descripcion}</span>
+                                                        <ul style="list-style: unset">
+                                                            {
+                                                                it.listas.map((lista:any) =>
+                                                                <li> {lista} </li>
+                                                                )
+                                                            }
+                                                            <br />
+                                                        </ul>
+                                                    )
+                                                }
+                                            </div>
+                                        </div>
+                                                                                                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+
+        {
+            (acordionConContacto).map((contactos:any) => 
+            <div class="card accordion block">
+                <div class="card-header" id={`heading${contactos.posicion}`}>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link acc-btn collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#collapse${contactos.posicion}`} aria-expanded="false"
+                            aria-controls={`collapse${contactos.posicion}`}>{contactos.titulo}</button>
+                    </h5>
+                </div>
+                <div id={`collapse${contactos.posicion}`} class:list={["collapse", {"show": contactos.mostrar}]}
+                    aria-labelledby={`heading${contactos.posicion}`} data-bs-parent="#accordion">
+                    <div class="card-body acc-content">
+                        <div class="content">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <br/>
+
+                                    {
+                                        (contactos.contacto).map((contacto:any) => 
+                                        <span>{contacto.nombre}</span><br/>
+                                        <b>{contacto.cargo}</b><br/>
+                                        <b>Teléfono:</b> <span> {contacto.telefono} Ext. {contacto.ext}</span><br/>
+                                        <b>Email:</b> <a class="" href={contacto.email}> {contacto.email}</a><br/><br/>
+                                        
+                                    )}
+    
+                                    {
+                                        contactos.horario && (
+                                            <b>Horario de atención</b><br/> <span>{contactos.horario}</span> <br />
+                                        )
+                                    }
+                                                                                                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+
+    </div>
+</div>

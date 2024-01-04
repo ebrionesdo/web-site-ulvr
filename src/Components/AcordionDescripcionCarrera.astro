@@ -1,0 +1,222 @@
+---
+import type { DescripcionCarrera } from '../layouts/LayoutCarrera.astro';
+interface Props {
+    dataDescripcion:DescripcionCarrera
+}
+
+const { dataDescripcion } = Astro.props;
+---
+<div id="accordion" class="accordion-box">
+    <div class="card accordion block">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link acc-btn"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">Descripción de la carrera</button>
+            </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show"
+            aria-labelledby="headingOne" data-bs-parent="#accordion">
+            <div class="card-body acc-content current">
+                <div class="content">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            {dataDescripcion.descripcion}
+                            <div class="desc">
+                                <br />
+                                <b>Duración:</b> {dataDescripcion.duracion} semestres<br />
+                                <b>Modalidad:</b> {dataDescripcion.modalidad}<br />
+                                <b>Tronco común:</b> {dataDescripcion.troncocomun} semestres.<br />
+                                <b>Título:</b> {dataDescripcion.titulo}<br />
+                                <b>Jornada:</b> {dataDescripcion.jornada}<br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card accordion block">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link acc-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">Objetivo de la carrera</button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse"
+            aria-labelledby="headingTwo" data-bs-parent="#accordion">
+            <div class="card-body acc-content">
+                <div class="content">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            El desarrollo de las competencias lingüísticas, lógico matemáticas, culturales y artísticas favorece el aprendizaje de los niños, niñas y adolescentes, dentro de un ambiente inclusivo y de equidad, con calidez y calidad.<br> <br> 
+                            El Licenciado en Ciencias de la Educación Básica de la ULVR es un profesional innovador, que diseña proyectos curriculares que promueven la construcción de conocimientos vinculando la teoría con la práctica en espacios de colaboración que favorezcan la autonomía, la reflexión y la metacognición.<br> <br>
+                            <div class="desc">
+                                <ul style="list-style: unset">
+                                    <li>
+                                        A partir del 4° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.
+                                    </li><br >
+                                    <li>
+                                        Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como auxiliar en centros de educación básica.
+                                    </li>
+                                    <!--<li>
+                                        Asesorías profesionales por especialistas en el campo amplio de la administración.
+                                    </li>
+                                    <li>
+                                        Identificación de oportunidades del entorno para impulsar la investigación, la innovación y el apoyo al emprendimiento local.
+                                    </li>
+                                    <li>
+                                        Identificación de capacidades de innovación en las carreras de la ULVR para poder dar una respuesta adaptada a las necesidades internas y del entorno.
+                                    </li>-->
+                                </ul>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card accordion block">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link acc-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree">Perfil de egreso</button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse"
+            aria-labelledby="headingThree" data-bs-parent="#accordion">
+            <div class="card-body acc-content">
+                <div class="content">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            El Licenciado en Ciencias de la Educación Básica de la ULVR será capaz de: <br> <br>
+                            <div class="desc">
+                            <ul style="list-style: unset">
+                                <li> Diseñar proyectos educativos para el desarrollo de niños, niñas y adolescentes. </li>
+                                <li> Facilitar los aprendizajes en educación general básica. </li>
+                                <li> Dirigir centros educativos.</li>
+                                <li> Crear recursos educativos. </li>
+                                <li> Gestionar procesos de enseñanza-aprendizaje integrales e inclusivos. </li>
+                                <li> Brindar asistencia para el mejoramiento de los procesos de enseñanza-aprendizaje. </li>
+                                <li> Diseñar adaptaciones curriculares. </li>
+                                <li> Integrar equipos de trabajo multidisciplinarios. </li>
+                                <li> Utilizar las TIC para guiar a los padres en los procesos de enseñanza-aprendizaje. </li>
+                                <li> Analizar las políticas públicas educativas para su correcta aplicación. </li>
+                                <li> Evaluar los procesos de aprendizaje, productos y contenidos de acuerdo a la realidad, ritmos y características de los niños, niñas y adolescentes. </li>
+                                
+                            </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card accordion block">
+        <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+                <button class="btn btn-link acc-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false"
+                    aria-controls="collapseFour">Perfil profesional</button>
+            </h5>
+        </div>
+        <div id="collapseFour" class="collapse"
+            aria-labelledby="headingFour" data-bs-parent="#accordion">
+            <div class="card-body acc-content">
+                <div class="content">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            El Licenciado en Ciencias de la Educación Básica de la ULVR podrá desempeñarse en el ámbito público y privado, como: <br> <br>
+                                <div class="desc">
+                                <ul style="list-style: unset">
+                                    <li> Directivo. </li>
+                                    <li> Administrador educativo. </li>
+                                    <li> Capacitador. </li>
+                                    <li> Evaluador. </li>
+                                    <li> Asesor académico. </li>
+                                    <li> Diseñador de proyectos curriculares. </li>
+                                    <li> Docente. </li>
+                                    <li> Investigador. </li>
+                                    <!--<li> Jefe de área. </li>
+                                    <li> Gerente. </li>
+                                    <li> Gestor de fondos de inversión. </li>
+                                    <li> Administrador. </li>-->
+                                    </ul>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card accordion block">
+        <div class="card-header" id="heading5">
+            <h5 class="mb-0">
+                <button class="btn btn-link acc-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5" aria-expanded="false"
+                    aria-controls="collapse5">Contactos</button>
+            </h5>
+        </div>
+        <div id="collapse5" class="collapse"
+            aria-labelledby="heading5" data-bs-parent="#accordion">
+            <div class="card-body acc-content">
+                <div class="content">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            
+                            <br />
+                            Mgtr. Dunia Lucía Barreiro Moreira<br />
+                            <b>Directora</b><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 219<br />
+                            <b>E-Mail:</b> <a href="mailto:dbarreirom@ulvr.edu.ec" target="_blank">dbarreirom@ulvr.edu.ec</a><br /><br />
+                            
+                            Mgtr. Norma Alexandra Hinojosa Garcés<br />
+                            <b>Coordinadora</b><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 209<br />
+                            <b>E-Mail:</b> <a href="mailto:nhinojosag@ulvr.edu.ec" target="_blank">nhinojosag@ulvr.edu.ec</a><br /><br />
+                            
+                            <b>Secretaría</b><br /><br />
+                            Mgtr. José Martín Maldonado Morán<br />
+                            <b>Secretario 1</b><br />
+                            <b>E-Mail:</b> <a href="mailto:jmaldonadomo@ulvr.edu.ec" target="_blank">jmaldonadomo@ulvr.edu.ec</a><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 221<br /><br />
+                            
+                            Mgtr. Leonor Alexandra Muñoz García<br />
+                            <b>Secretario 2</b><br />
+                            <b>E-Mail:</b> <a href="mailto:lmunozg@ulvr.edu.ec" target="_blank">lmunozg@ulvr.edu.ec</a><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 221<br /><br />
+                            
+                            Econ. Lucía Narcisa Aroca Briones<br />
+                            <b>Ayudante de secretaría</b><br />
+                            <b>E-Mail:</b> <a href="mailto:larocab@ulvr.edu.ec" target="_blank">larocab@ulvr.edu.ec</a><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 281<br /><br />
+                            
+                            Sra. Ketty Elizabeth Rodríguez Barahona<br />
+                            <b>Ayudante de secretaría</b><br />
+                            <b>E-Mail:</b> <a href="mailto:krodriguezb@ulvr.edu.ec" target="_blank">krodriguezb@ulvr.edu.ec</a><br />
+                            <b>Teléfono:</b> 04 2596-500 Ext. 281<br /><br />
+                            
+                            <b>Horario de atención</b><br />De lunes a viernes desde las 08:00 hasta las 20:00<br /> <br />
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,725 @@
+---
+
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Transparencia',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Legislación Vigente',
+            tab:'prod-legislacion-vigente',
+            mostrar:true,
+            titulo:'Legislación Vigente',
+            titulo2:'',
+            parrafos:['Conoce más sobre nuestros estatutos, reglamentos, protocolos, instructivos y guías'],
+            groupAcordion:[
+                {
+                    titulo:'Estatuto y Reglamentos',
+                    acordiones: [
+                        {
+                            titulo:'Estatuto',
+                            mostrar:true,
+                            posicion:'One1',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Estatuto vigente de la ULVR',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/ESTATUTO VIGENTE DE LA ULVR 20 DE NOVIEMBRE DE 2019.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Reglamentos',
+                            posicion:'Two1',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento General de la ULVR',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO GENERAL DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reformas al reglamento general de la ULVR',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REFORMAS AL REGLAMENTO GENERAL DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL EN EL TITULO V DE LOS ESTUDIANTES; CAPITULO I DE LA NORMATIVA ESTUDIANTIL GENERAL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de aranceles, matrículas y derechos',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE ARANCELES MATRICULAS Y DERECHOS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de beneficios del personal académico',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE BENEFICIOS DEL PERSONAL ACADÉMICO, POR LA EXPLOTACIÓN O CESIÓN DE DERECHOS SOBRE LOS MISMOS, CONSULTORÍAS Y SERVICIOS EXTERNOS REMUNERADOS.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de Biblioteca',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE BIBLIOTECA.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de Comunicaciones',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE COMUNICACIONES DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de espacios libres de humo de tabaco al 100%',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE ESPACIOS UNIVERSITARIOS CIEN POR CIENTO LIBRES DE HUMO DE TABACO.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de estímulos e incentivos para investigadores',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE ESTÍMULOS E INCENTIVOS PARA INVESTIGADORES DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de evaluación integral del desempeño docente',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE EVALUACIÓN INTEGRAL DEL DESEMPEÑO DOCENTE.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de higiene y Seguridad',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE HIGIENE Y SEGURIDAD DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de publicaciones',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE PUBLICACIONES DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de régimen académico',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE RÉGIMEN ACADÉMICO DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de sesiones para el funcionamiento del consejo universitario',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DE SESIONES PARA EL FUNCIONAMIENTO DEL H. CONSEJO UNIVERSITARIO DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de Titulación de pregado',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/Reglamento de titulación de la Universidad Laica VICENTE ROCAFUERTE de Guayaquil.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de Titulación de posgrado',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/Reglamento de titulación de los programas de posgrado.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de validación de trayectorias profesionales',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/Reglamento de validación de trayectorias profesionales.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento del departamento de Admisión',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DEL DEPARTAMENTO DE ADMISIÓN DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento del departamento de Planificación, Evaluación y Aseguramiento de la Calidad',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO DEL DEPARTAMENTO DE PLANIFICACIÓN, EVALUACIÓN Y ASEGURAMIENTO DE LA CALIDAD DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento interno de Higiene y Seguridad en el trabajo',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO INTERNO DE HIGIENE Y SEGURIDAD EN EL TRABAJO.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento interno de trabajo',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO INTERNO DE TRABAJO DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento Orgánico Funcional',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO ORGÁNICO FUNCIONAL DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento para becas y ayudas económicas para estudios de posgrado para docentes',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO PARA BECAS Y AYUDAS ECONOMICAS PARA ESTUDIOS DE POSGRADO DEL PERSONAL DOCENTE, DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento para la elaboración, aprobación y ejecución del Presupuesto General',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO PARA LA ELABORACIÓN, APROBACIÓN Y EJECUCIÓN DEL PRESUPUESTO GENERAL DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento para investigación científica, tecnológica e innovación',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO PARA LA INVESTIGACIÓN CIENTÍFICA, TECNOLÓGICA E INNOVACIÓN Y SABERES ANCESTRALES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento para la Organización y Gestión de archivos administrativos y académicos',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO PARA LA ORGANIZACIÓN Y GESTIÓN DE ARCHIVOS ADMINISTRATIVOS Y ACADÉMICOS DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento para los procesos de autoevaluación institucional, carreras y programas',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/REGLAMENTO PARA LOS PROCESOS DE AUTOEVALUACIÓN INSTITUCIONAL, CARRERAS Y PROGRAMAS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                    ]
+                },
+                {
+                    titulo:'Protocolos, Instructivos y Guías',
+                    acordiones: [
+                        {
+                            titulo:'Protocolos',
+                            posicion:'One2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Protocolo de atención para personas con discapacidad',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/PROTOCOLO DE ATENCIÓN PARA PERSONAS CON DISCAPACIDAD QUE TENGAN ALGUNA LIMITACIÓN FISICA TEMPORAL O QUE SE ENCUENTREN EN PERIODO DE GESTACIÓN.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Instructivos',
+                            posicion:'Two2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo del proceso de Admisiones',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PROCESO DE ADMISIONES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para garantizar la permanencia y continuidad de los estudiantes',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO AL PLAN PARA GARANTIZAR LA PERMANENCIA Y CONTINUIDAD DE LOS-LAS ESTUDIANTES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de la unidad de titulación',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE LA UNIDAD DE TITULACIÓN.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de manejo de fondos y bienes de generación propia de la ULVR',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE MANEJO DE FONDOS Y BIENES DE GENERACIÓN PROPIA DE LA INSTITUCIÓN Y DEL PATROCINADOR DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de reconocimiento y homologación',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE RECONOCIMIENTO Y HOMOLOGACIÓN DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de reconocimiento y homologación',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE RELACIONES INTERNACIONALES Y FIRMAS DE CONVENIOS DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de relaciones internacionales y firmas de convenios',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE RELACIONES INTERNACIONALES Y FIRMAS DE CONVENIOS DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo de viáticos, subsistencia, alimentación y movilización',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DE VIÁTICOS SUBSISTENCIA ALIMENTACIÓN Y MOVILIZACIÓN EN EL PAÍS Y EN EL EXTERIOR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo del sistema de seguimiento a graduados',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO DEL SISTEMA DE SEGUIMIENTO A GRADUADOS.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para conferir premios, reconocimientos y condecoraciones',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PARA CONFERIR PREMIOS, RECONOCIMIENTOS Y CONDECORACIONES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para el uso de la Biblioteca General',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PARA EL USO DE LA BIBLIOTECA GENERAL DR. HUMBERTO MIRANDA MIRANDA DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para el uso de vehículos institucionales',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PARA EL USO DE LOS VEHÍCULOS INSTITUCIONALES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para la concesión y renovación de Becas ',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PARA LA CONCESIÓN Y RENOVACIÓNDE BECAS DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para las relaciones interinstitucionales',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/INSTRUCTIVO PARA LAS RELACIONES INTERINSTITUCIONALES DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Guías',
+                            posicion:'Three2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Guías para la formación de archivos administrativos y académicos',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/GUÍA PARA LA FORMACIÓN DE ARCHIVOS ADMINISTRATIVOS Y ACADÉMICOS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Guías para el desarrollo metodológico de la unidad de integración curricular',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/GUÍAS PARA EL DESARROLLO METODOLÓGICO DE LA UNIDAD DE INTEGRACIÓN CURRICULAR TANTO PARA LA MODALIDAD DE PROYECTO DE INVESTIGACIÓN COMO DE EXAMEN COMPLEXIVO.pdf',
+                                    imagen:''
+                                },
+                            ] 
+
+                        },
+                    ]
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Legislación Histórica',
+            tab:'prod-legislacion-historica',
+            titulo:'Legislación Histórica',
+            titulo2:'',
+            parrafos:['Conoce más sobre nuestra Legislación Histórica'],
+            groupAcordion:[
+                {
+                    titulo:'Estatuto y Reglamentos',
+                    acordiones: [
+                        {
+                            titulo:'Estatuto',
+                            mostrar:true,
+                            posicion:'One1',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Estatuto de la ULVR (2013)',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/ESTATUTO DE LA ULVR (2013).pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Reglamentos',
+                            posicion:'Two1',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de Becas',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE BECAS DE LA ULVR (2014).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de capacitación docente, administrativo y educación continua',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE CAPACITACION DOCENTE CAPACITACION ADMINISTRATIVA Y EDUCACIÓN CONTINUA.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de carrera académica y escalafón docente',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE CARRERA ACADEMICA Y ESCALAFÓN DEL PROFESOR E INVESTIGADOR DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de concurso de precios para adquisición de bienes',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE CONCURSO DE PRECIOS PARA LA ADQUISICIÓN DE BIENES MUEBLES, BODEGAJE Y ENTREGA DE LOS MISMOS DE LA ULVR (2012).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de evaluación docente',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE EVALUACION DOCENTE DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de la unidad de nivelación y admisión',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE LA UNIDAD DE NIVELACIÓN Y ADMISIÓN.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de los procesos de presentación, aprobación, ejecución, seguimiento y evaluación de egresados',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE LOS PROCESOS DE PRESENTACIÓN, APROBACIÓN, EJECUCIÓN, SEGUIMIENTO Y EVALUACIÓN DE LOS SEMINARIOS DE ACTUALIZACIÓN DE CONOCIMIENTOS PARA EGRESADOS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de nivelación y admisión 2011',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE NIVELACIÓN Y ADMISIÓN (2011).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de sanciones por infracciones de estudiantes',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE SANCIONES PARA LAS INFRACCIONES EN QUE INCURRIEREN LOS ESTUDIANTES.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de sanciones por infracciones de docentes',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE SANCIONES PARA LAS INFRACCIONES EN QUE INCURRIEREN LOS(AS) PROFESORES(AS).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de titulación (2018)',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE TITULACIÓN (2018).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de titulación (2018)',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE TITULACIÓN 2018.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de titulación reformado (2019)',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE TITULACIÓN REFORMADO 2019.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de tutoría académica',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE TUTORIA ACADEMICA.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento de viáticos y subsistencias',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DE VIATICOS Y SUBSISTENCIAS, EN EL PAIS Y EN EL EXTERIOR DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento del manejo de los fondos de generación propia',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO DEL MANEJO DE LOS FONDOS DE GENERACIÓN PROPIA DE LA ULVR (2012).pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Reglamento marco para la obtención de títulos profesionales',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/REGLAMENTO MARCO PARA LA OBTENCIÓN DE TITULOS PROFESIONALES DE LAS FACULTADES Y ESCUELAS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                    ]
+                },
+                {
+                    titulo:'Protocolos, Instructivos y Guías',
+                    acordiones: [
+                        {
+                            titulo:'Protocolos',
+                            posicion:'One2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Protocolo de atención para personas con discapacidad',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/PROTOCOLO DE ATENCIÓN PARA PERSONAS CON DISCAPACIDAD QUE TENGAN ALGUNA LIMITACIÓN FISICA TEMPORAL O QUE SE ENCUENTREN EN PERIODO DE GESTACIÓN.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Instructivos',
+                            posicion:'Two2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para el uso del Auditorio de la ULVR',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/INSTRUCTIVO PARA EL USO DEL AUDITORIO DR. ANGEL ANDRÉS GARCÍA Y GARCÍA Y DEMÁS SALONES DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para la concesión y renovación de becas',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/INSTRUCTIVO PARA LA CONCESIÓN Y RENOVACIÓN DE BECAS DE LA UNIVERSIDAD LAICA VICENTE ROCAFUERTE DE GUAYAQUIL.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Instructivo para la selección de docentes',
+                                    url:'documentos/Transparencia/5 Legislación Histórica/1 Normativa Derogadas/INSTRUCTIVO PARA LA SELECCIÓN DE DOCENTES EN CONCURSO DE MERITOS Y OPOSICIÓN.pdf',
+                                    imagen:''
+                                },
+                            ] 
+                        },
+                        {
+                            titulo:'Guías',
+                            posicion:'Three2',
+                            detalle:[
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Guías para la formación de archivos administrativos y académicos',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/GUÍA PARA LA FORMACIÓN DE ARCHIVOS ADMINISTRATIVOS Y ACADÉMICOS DE LA ULVR.pdf',
+                                    imagen:''
+                                },
+                                {
+                                    titulo:'',
+                                    descripcion:[],
+                                    botonNombre:'Guías para el desarrollo metodológico de la unidad de integración curricular',
+                                    url:'documentos/Transparencia/4 Legislación Vigente/GUÍAS PARA EL DESARROLLO METODOLÓGICO DE LA UNIDAD DE INTEGRACIÓN CURRICULAR TANTO PARA LA MODALIDAD DE PROYECTO DE INVESTIGACIÓN COMO DE EXAMEN COMPLEXIVO.pdf',
+                                    imagen:''
+                                },
+                            ] 
+
+                        },
+                    ]
+                },
+            ]
+        },
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-lg-8 mx-auto md-mb-50">
+                    <div class="intro-info-tabs">
+                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                            {
+                                dataBibliotecas.map((tabBibliotecas:any) => 
+                                    <li class="nav-item tab-btns" role="presentation">
+                                        <a class:list={[ 'nav-link tab-btn', { "active": tabBibliotecas.bibliotecas.mostrar }]}
+                                            id={`${tabBibliotecas.bibliotecas.tab}-tab`} data-bs-toggle="tab" href="#"
+                                            data-bs-target={`#${tabBibliotecas.bibliotecas.tab}`} role="tab" aria-controls={tabBibliotecas.bibliotecas.tab}
+                                            aria-selected="false">
+                                            {tabBibliotecas.bibliotecas.tituloTab}
+                                        </a>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                        <div class="tab-content tabs-content" id="myTabContent">
+                            {
+                                dataBibliotecas.map((tabBibliotecas:any) => 
+                                    <div class:list={[ 'tab-pane fade', { "show active": tabBibliotecas.bibliotecas.mostrar }]} 
+                                         id={tabBibliotecas.bibliotecas.tab} role="tabpanel" 
+                                         aria-labelledby={`${tabBibliotecas.bibliotecas.tab}-tab`}>
+                                        <div class="content white-bg pt-30">
+                                            <div class="course-overview">
+                                                <div class="inner-box">
+                                                    <h4>{tabBibliotecas.bibliotecas.titulo}</h4>
+                                                    {
+                                                        tabBibliotecas.bibliotecas.parrafos && tabBibliotecas.bibliotecas.parrafos.map((parrafo:any) => 
+                                                        <p>{parrafo}</p>
+                                                        )
+                                                    }
+                                                    
+                                                    <h4>{tabBibliotecas.bibliotecas.titulo2}</h4>
+    
+                                                    <div id="accordion" class="accordion-box">
+                                                        {
+                                                            tabBibliotecas.bibliotecas.groupAcordion.map( (group:any) =>
+                                                                <h4>{group.titulo}</h4>
+                                                                <div>
+                                                                    {
+                                                                        group.acordiones.map( (acordion:any) => 
+                
+                                                                            <div class="card accordion block">
+                                                                                <div class="card-header" id={`heading${acordion.posicion}`}>
+                                                                                    <h5 class="mb-0">
+                                                                                        <button class="btn btn-link acc-btn"
+                                                                                            data-bs-toggle="collapse"
+                                                                                            data-bs-target={`#collapse${acordion.posicion}`} aria-expanded="false"
+                                                                                            aria-controls={`collapse${acordion.posicion}`}>{acordion.titulo}
+                                                                                        </button>
+                                                                                    </h5>
+                                                                                </div>
+                
+                                                                                <div id={`collapse${acordion.posicion}`} class:list={["collapse", {"show":acordion.mostrar}]}
+                                                                                     aria-labelledby={`heading${acordion.posicion}`} data-bs-parent="#accordion">
+                                                                                    <div class="card-body acc-content current">
+                                                                                        <div class="content">
+                                                                                            <div class="clearfix">
+                                                                                                <div class="pull-left">
+                                                                                                    {
+                                                                                                        !acordion.acordionChild && acordion.detalle.map((det:any) =>
+                                                                                                            <br/>
+                                                                                                            <a href={det.url}>  {det.botonNombre} </a>
+                                                                                                            <br/>
+                                                                                                        )
+                                                                                                    }
+                                                                                                    {
+                                                                                                        acordion.acordionChild && acordion.acordionChild.map((child:any) =>
+                                                                                                            <br/>
+                                                                                                            <br/>
+                                                                                                            <h5>{child.titulo}</h5>
+                                                                                                            <div>
+                                                                                                                {
+                                                                                                                    child.detalle.map((det:any) =>
+                                                                                                                        <a href={det.url}>  {det.botonNombre} </a>
+                                                                                                                        <br/>
+                                                                                                                        <br/>
+                                                                                                                    )
+                
+                                                                                                                }
+                                                                                                            </div>
+                                                                                                        )
+                                                                                                    }
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <br/>
+                                                                <br/>
+                                                            )
+                                                            
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+
+</LayoutVarios>

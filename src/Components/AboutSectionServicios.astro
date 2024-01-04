@@ -1,0 +1,33 @@
+---
+const {aboutData} = Astro.props;
+---
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 padding-0 md-pl-15 md-pr-15 md-mb-30">
+            <div class="img-part">
+                <img class="" src={aboutData.imagen} alt="About Image"/>
+            </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+            <div class="tab-content tabs-content" id="myTabContent">
+                <div class="tab-pane tab fade show active" id="about-history" role="tabpanel" aria-labelledby="about-history-tab">
+                    <div class="sec-title mb-25">
+                        <div class="desc">
+                            
+                            { 
+                                (aboutData.descripcion).map((desc:string) => 
+                                    <br/>
+                                    <p class="text-justify">
+                                        <span>{desc}</span>
+                                    </p>
+                                )
+                            }
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

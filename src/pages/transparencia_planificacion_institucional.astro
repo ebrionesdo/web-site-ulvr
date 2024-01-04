@@ -1,0 +1,196 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Planificación Institucional',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Planes Estratégicos',
+            tab:'prod-plan-estrategico',
+            mostrar:true,
+            titulo:'Plan Estratégico de Desarrollo Institucional',
+            titulo2:'PEDI',
+            parrafos:['Conoce más sobre el Plan Estratégico de Desarrollo Institucional'],
+            acordiones: [
+                {
+                    titulo:'PEDI 2022 - 2026',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Documento (Actualizado al 2022)',
+                            url:'documentos/Transparencia/1 Planificación Institucional/1 PEDI/PEDI 2022-2026.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'PEDI Histórico',
+                    posicion:'Two',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'PEDI 2017 - 2021 (Actualizado al 2019)',
+                            url:'documentos/Transparencia/1 Planificación Institucional/1 PEDI/PEDI 2017 - 2021 (Actualizado al 2019).pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'PEDI 2017 - 2021 (13 de diciembre de 2017)',
+                            url:'documentos/Transparencia/1 Planificación Institucional/1 PEDI/PEDI 2017 - 2021 (13 de Diciembre 2017).pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Planes de mejoras',
+            tab:'prod-plan-mejoras',
+            titulo:'Planes de mejoras de carreras',
+            titulo2:'Planes de Mejoras 2021',
+            parrafos:['Conoce más sobre los planes de mejoras de las carreras'],
+            acordiones: [
+                {
+                    titulo:'Enero a Diciembre',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Administración',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Administración.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Arquitectura',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Arquitectura.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Comercio Exterior',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Comercio Exterior.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Contabilidad y Auditoría',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Contabilidad y Auditoría.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Derecho',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Derecho.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Economía',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Economía.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Educación Inicial',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Educación Inicial.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Ingeniería Civil',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Ingeniería Civil.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Mercadotecnia',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Mercadotecnia.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Periodismo',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Periodismo.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Plan de Mejoras 2021 - Carrera Psicopedagogía',
+                            url:'documentos/Transparencia/1 Planificación Institucional/2 Planes de Mejoras de carreras 2021/Plan de Mejoras 2021 - Carrera Psicopedagogía.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Planes de aseguramiento',
+            tab:'prod-plan-aseguramiento',
+            titulo:'Planes de Aseguramiento de la Calidad',
+            titulo2:'',
+            parrafos:['Conoce más sobre los Planes de Aseguramiento de la Calidad'],
+            acordiones: [
+                {
+                    titulo:'Plan de aseguramiento de la calidad 2021-2023',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Documento 2021 - 2023',
+                            url:'documentos/Transparencia/1 Planificación Institucional/3 Planes de Aseguramiento de la Calidad/Plan de Aseguramiento de la Calidad 2021-2023.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        },
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+ 
+</LayoutVarios>

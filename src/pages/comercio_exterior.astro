@@ -1,0 +1,142 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadAdministracion } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Comercio Exterior',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FADM/Comercio Exterior/Comercio-Exterior_Banner-Horizontal.jpg' 
+}
+
+const carrerasAdministracionFilter = carrerasFacultadAdministracion.filter((carrera:any) => carrera.url !== 'comercio_exterior');
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Comercio Exterior.pdf';   
+
+const facultad='Carreras de la Facultad de Administración'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Comercio Exterior de la ULVR está en capacidad de desempeñarse en entornos complejos y globales, aprovechar las oportunidades comerciales de la oferta exportable, satisfacer las necesidades del país de materias primas, bienes de capital y tecnología, aplicando técnicas innovadoras para el desarrollo de nuevas empresas y emprendimientos en el Ecuador',
+                         'En su proceso de formación el estudiante cuenta con laboratorios con software especializado, visitas a las terminales portuarias y aeroportuarias, prácticas y pasantías en empresas de comercio exterior, bajo la dirección de docentes con amplia experiencia profesional.',
+                         'El título en Licenciado en Comercio Exterior de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Comercio Exterior.',
+            jornada:'Diurna y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'El Licenciado en Comercio Exterior de la ULVR estará preparado para supervisar presupuestos, elaborar contratos, desarrollar planes de importación y exportación, iniciar estudios de mercados y analizar las ventajas para determinar las oportunidades de negocios.'
+                         ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 50% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como asistente de importación/exportación, auxiliar de agente de aduanas, analista de operaciones, in house en comercio exterior y asistente comercial.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Comercio Exterior de la ULVR será capaz de:'],
+            lista: ['Anticipar los problemas en la cadena logística para proponer soluciones proactivas.',
+                    'Incorporar valor agregado en los procesos de exportación e importación.',
+                    'Organizar el flujo de procesos comerciales en una operación internacional',
+                    'Integrar conocimientos teóricos y prácticos en los negocios internacionales.',
+                    'Realizar análisis prospectivos de mercados.',
+                    'Desarrollar planes de logística, importación y exportación.',
+                    'Aplicar técnicas aduaneras en los procesos de exportación e importación.',
+                    'Implementar estrategias de comercio exterior.',
+                    'Gestionar procesos de calidad internacional.',
+                    'Uilizar software especializado como ECUAPASS, TradeMap, ExportPotencialMap, AccessMarket Map, entre otros.',
+                    'Emplear tecnologías de punta en el desarrollo de los negocios internacionales.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Comercio Exterior de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Asistente de importación, exportación, operaciones logísticas, operaciones aduaneras, entre otros.',
+                    'Agente de importación / exportación.',
+                    'Gerente de logística.',
+                    'Gerente de comercio exterior.',
+                    'Evaluador de calidad.',
+                    'Representante de ventas al exterior.',
+                    'Consultor de gestión internacional.',
+                    'Operador Logístico.',
+                    'Agente Nacional de Aduanas.',
+                    'Fedatario Público.',
+                    'Operador de Seguros',
+                    'Emprendedor',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Mónica Margot Villamar Mendoza', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'264', 
+                    email:'mvillamarm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Luis González Márquez', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'265', 
+                    email:'jgonzalezm@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Augusto Morante Jiménez', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jmorantej@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Janet Ivonne Castillo Lindao', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jcastillol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Com. Gloria Alexandra Cárdenas Valencia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'gcardenasv@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Maira Azucena Ponce Asencio', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'205', 
+                    email:'mponcea@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

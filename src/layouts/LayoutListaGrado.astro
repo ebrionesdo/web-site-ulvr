@@ -1,0 +1,151 @@
+---
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+
+import Layout from "./Layout.astro";
+import type { ICarrera } from "./LayoutCarrera.astro";
+
+import "../assets/style.css";
+
+
+const {breadcrumbs} = Astro.props;
+
+
+export const carrerasFacultadAdministracion:ICarrera[] = [
+    {
+        niveles:'8 Semestres',
+        carrera:'Administración de Empresas',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FADM/Administración de Empresas/Administración de Empresas_Banner Cuadrado.png',
+        url: 'administracion_empresas'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Comercio Exterior',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FADM/Comercio Exterior/Comercio Exterior_Banner Cuadrado.png',
+        url: 'comercio_exterior'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Contabilidad y Auditoría',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FADM/Contabilidad y Auditoría/Contabilidad y Auditoría_Banner Cuadrado.png',
+        url: 'contabilidad_auditoria'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Marketing',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FADM/Marketing/Marketing_Banner Cuadrado.png',
+        url: 'marketing'
+    }
+    
+]
+
+export const carrerasFacultadDerecho:ICarrera[] = [
+    {
+        niveles:'8 Semestres',
+        carrera:'Comunicación',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FCSD/Comunicación/Comunicación_Banner Cuadrado.png',
+        url: 'comunicacion'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Derecho',
+        modalidad:'Híbrida',
+        profesion: 'Abogado',
+        imagen: 'images/banners carreras/FCSD/Derecho/Derecho_Banner Cuadrado.png',
+        url: 'derecho'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Economía',
+        modalidad:'Híbrida',
+        profesion: 'Economista',
+        imagen: 'images/banners carreras/FCSD/Economía/Economía_Banner Cuadrado.png',
+        url: 'economia'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Psicología',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FCSD/Psicología/Psicología_Banner Cuadrado.png',
+        url: 'psicologia'
+    }
+    
+]
+
+export const carrerasFacultadEducacion:ICarrera[] = [
+    {
+        niveles:'8 Semestres',
+        carrera:'Educación Básica',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FEDU/Educación Básica/Educación Básica_Banner Cuadrado.png',
+        url: 'educacion_basica'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Educación Inicial',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FEDU/Educación Inicial/Educación Inicial_Banner Cuadrado.png',
+        url: 'educacion_inicial'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Psicopedagogía',
+        modalidad:'Híbrida',
+        profesion: 'Licenciado',
+        imagen: 'images/banners carreras/FEDU/Psicopedagogía/Psicopedagogía_Banner Cuadrado.png',
+        url: 'psicopedagogia'
+    }
+    
+]
+
+export const carrerasFacultadIngenieria:ICarrera[] = [
+    {
+        niveles:'8 Semestres',
+        carrera:'Arquitectura',
+        modalidad:'Presencial',
+        profesion: 'Arquitecto',
+        imagen: 'images/banners carreras/FIIC/Arquitectura/Arquitectura_Banner Cuadrado.png',
+        url: 'arquitectura'
+    },
+    {
+        niveles:'8 Semestres',
+        carrera:'Ingeniería Civil',
+        modalidad:'Presencial',
+        profesion: 'Ingeniero',
+        imagen: 'images/banners carreras/FIIC/Ingeniería Civil/Ingeniería Civil_Banner Cuadrado.png',
+        url: 'ing_civil'
+    }
+    
+]
+---
+
+<Layout {breadcrumbs}>
+
+    <div id="rs-categories" class="rs-categories main-home pt-20 pb-100 md-pt-60 md-pb-80">
+        <CarrerasPorFacultad carreras={carrerasFacultadAdministracion}>
+            Facultad de Administración
+        </CarrerasPorFacultad>
+        <CarrerasPorFacultad carreras={carrerasFacultadDerecho}>
+            Facultad de Ciencias Sociales y Derecho
+        </CarrerasPorFacultad>
+        <CarrerasPorFacultad carreras={carrerasFacultadEducacion}>
+            Facultad de Educación
+        </CarrerasPorFacultad>
+        <CarrerasPorFacultad carreras={carrerasFacultadIngenieria}>
+            Facultad de Ingeniería, Industria y Construcción
+        </CarrerasPorFacultad>        
+    </div>
+    
+</Layout>

@@ -1,0 +1,145 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadAdministracion } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Contabilidad y Auditoría',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FADM/Contabilidad y Auditoría/Contabilidad-y-Auditoría_Banner-Horizontal.jpg' 
+}
+
+const carrerasAdministracionFilter = carrerasFacultadAdministracion.filter((carrera:any) => carrera.url !== 'contabilidad_auditoria');
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Contabilidad y Auditoría.pdf';   
+
+const facultad='Carreras de la Facultad de Administración'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Contabilidad y Auditoría de la ULVR es un especialista en la preparación, análisis, comunicación y uso estratégico de la información sobre los resultados de la gestión financiera en las empresas y los gobiernos.',
+                         'En su proceso de formación el estudiante cuenta con laboratorios con software especializado, prácticas y pasantías, y tutorías personalizadas de docentes con amplia experiencia profesional.',
+                         'El título en Licenciado en Contabilidad y Auditoría de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Contabilidad y Auditoría',
+            jornada:'Diurna y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                            'El Licenciado en Contabilidad y Auditoría de la ULVR podrá contar con conocimientos teórico-prácticos, con responsabilidad socio-empresarial, capaces de registrar, controlar y analizar la información financiera de manera oportuna que permita a las organizaciones la toma eficiente de decisiones.'
+                         ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 40% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como asistente contable, analista contable, auditor jr., asistente financiero, auxiliar tributario y ayudante administrativo.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Contabilidad y Auditoría de la ULVR será capaz de:'],
+            lista: ['Aplicar técnicas contables y financieras.',
+                    'Dictaminar la razonabilidad de los estados financieros y el control interno.',
+                    'Participar en el diseño y evaluación de las funciones de planificación administrativa y financiera',
+                    'Analizar el adecuado registro, control y obtención de la información financiera',
+                    'Analizar y valorar los sistemas gerenciales, aspectos legales, contables, tributarios y de auditoría.',
+                    'Seleccionar, entre varias opciones, la toma de decisiones de forma consciente y acertada',
+                    'Manejar las plataformas de recaudaciones tributarias (SRI, ATS, SENAE, IESS, GAD, entre otros).',
+                    'Manejar software contable.',
+                    'Gestionar facturación electrónica.',
+                    'Realizar el levantamiento de inventarios físicos.',
+                    'Interpretar y aplicar las NIIF y demás normas contables.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Contabilidad y Auditoría de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Gerente de Área.',
+                    'Administrador.',
+                    'Jefe Departamental.',
+                    'Auditor.',
+                    'Analista.',
+                    'Asesor.',
+                    'Emprendedor.',
+                    'Profesional de libre ejercicio.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. José Roberto Bastidas Romero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'271', 
+                    email:'jbastidasr@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Carlos Alberto Correa González', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'272', 
+                    email:'ccorreag@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Augusto Morante Jiménez', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jmorantej@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Cristian Alexis Suriaga Sanabria', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'csuriagas@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Janet Ivonne Castillo Lindao', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'274', 
+                    email:'jcastillol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ing. Com. Gloria Alexandra Cárdenas Valencia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'275', 
+                    email:'gcardenasv@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Maira Azucena Ponce Asencio', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'205', 
+                    email:'mponcea@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

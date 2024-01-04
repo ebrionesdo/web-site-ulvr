@@ -1,0 +1,312 @@
+---
+
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Plataformas Institucionales',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/oferta academica.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Acceso Estudiantes',
+            titulo:'Plataformas para Estudiantes',
+            tab:'prod-acceso-estudiantes',
+            posicion:'One',
+            mostrar:true,
+            detalle:[
+                {
+                    titulo:'Sistema académico de Estudiantes',
+                    descripcion:['Acceso al sistema académico.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://academico.ulvr.edu.ec/#/login',
+                    imagen:'images/plataformas/ekudemic.JPG'
+                },
+                {
+                    titulo:'Sistema de Enseñanza Virtual SEV',
+                    descripcion:['Acceso al sistema de Enseñanza Virtual SEV. Pregrado'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://sevpregrado.ulvr.edu.ec/',
+                    imagen:'images/plataformas/MEV.JPG'
+                },
+                {
+                    titulo:'Correo Institucional',
+                    descripcion:['Acceso al correo institucional.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://mail.google.com/',
+                    imagen:'images/plataformas/GMail.JPG'
+                },
+                {
+                    titulo:'Wiki Laica',
+                    descripcion:['Repositorio de respuestas de los sistemas y servicios de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://sites.google.com/a/ulvr.edu.ec/faq-wikiulvr/home?pli=1',
+                    imagen:'images/plataformas/wiki.JPG'
+                },
+                {
+                    titulo:'Biblioteca Catálogo Online',
+                    descripcion:['Acceso al catálogo en línea de la biblioteca ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://ekubiblio.ulvr.edu.ec/',
+                    imagen:'images/plataformas/CATALOGO.JPG'
+                },
+                {
+                    titulo:'Repositorio Digital',
+                    descripcion:['Acceso al repositorio digital para estudiantes de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://repositorio.ulvr.edu.ec/',
+                    imagen:'images/plataformas/Repositorio.JPG'
+                },
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Acceso Docentes',
+            titulo:'Plataformas para Docentes',
+            tab:'prod-acceso-docentes',
+            posicion:'Two',
+            detalle:[
+                {
+                    titulo:'Sistema académico docentes',
+                    descripcion:['Acceso al sistema académico para docentes.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://www.ulvr.edu.ec/servicios/online/accesos-docentes',
+                    imagen:'images/plataformas/ekudemic.JPG'
+                },
+                {
+                    titulo:'Sistema de Enseñanza Virtual SEV',
+                    descripcion:['Acceso al sistema de Enseñanza Virtual SEV.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://sevpregrado.ulvr.edu.ec/',
+                    imagen:'images/plataformas/MEV.JPG'
+                },
+                {
+                    titulo:'Correo Institucional',
+                    descripcion:['Acceso al correo institucional.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://mail.google.com/',
+                    imagen:'images/plataformas/GMail.JPG'
+                },
+                {
+                    titulo:'Wiki Laica',
+                    descripcion:['Repositorio de respuestas de los sistemas y servicios de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://sites.google.com/a/ulvr.edu.ec/faq-wikiulvr/home?pli=1',
+                    imagen:'images/plataformas/wiki.JPG'
+                },
+                {
+                    titulo:'URKUND',
+                    descripcion:['Acceso al Sistema Antiplagio urkund.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://secure.urkund.com/account/Auth/Login?ReturnUrl=%2faccount%2f',
+                    imagen:'images/plataformas/urkund.JPG'
+                },
+                {
+                    titulo:'Revistas ULVR',
+                    descripcion:['Acceso a la revista científica Yachana de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://revistas.ulvr.edu.ec/index.php/yachana',
+                    imagen:'images/plataformas/revista ulvr.JPG'
+                },
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Acceso Administrativos',
+            titulo:'Plataformas para Administrativos',
+            tab:'prod-acceso-administrativos',
+            posicion:'Three',
+            detalle:[
+                {
+                    titulo:'Sistema Académico Administrativo',
+                    descripcion:['Acceso al sistema académico administrativo.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://ekudemic.ulvr.edu.ec/ekudemic/web/backend.php',
+                    imagen:'images/plataformas/ekudemic.JPG'
+                },
+                {
+                    titulo:'Sistema de Control de Oficios',
+                    descripcion:['Acceso al sistema de control de oficios.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://ekudemic.ulvr.edu.ec/ekudemic/web/control_oficios.php',
+                    imagen:'images/plataformas/control ofice.JPG'
+                },
+                {
+                    titulo:'Correo Institucional',
+                    descripcion:['Acceso al correo institucional.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://mail.google.com/',
+                    imagen:'images/plataformas/GMail.JPG'
+                },
+                {
+                    titulo:'Wiki Laica',
+                    descripcion:['Repositorio de respuestas de los sistemas y servicios de la ULVR.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://sites.google.com/a/ulvr.edu.ec/faq-wikiulvr/home?pli=1',
+                    imagen:'images/plataformas/wiki.JPG'
+                },
+                {
+                    titulo:'Sistema Técnico Administrativo',
+                    descripcion:['Acceso al sistema técnico administrativo.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://irissistemas.ulvr.edu.ec/',
+                    imagen:'images/plataformas/CATALOGO.JPG'
+                },
+                {
+                    titulo:'Sistema de Enseñanza Virtual SEV',
+                    descripcion:['Acceso al sistema de Enseñanza Virtual SEV.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://sevpregrado.ulvr.edu.ec/?fbclid=IwAR2w5tsNOsIN3VJw7M29C0Kysl4-46gdJkesiHkDZ3eR0M--TW2JHgDsowY',
+                    imagen:'images/plataformas/MEV.JPG'
+                },
+            ] 
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Acceso Posgrado',
+            titulo:'Plataformas para Posgrado',
+            tab:'prod-acceso-posgrado',
+            posicion:'Four',
+            detalle:[
+                {
+                    titulo:'Módulo de Enseñanza Virtual MEV',
+                    descripcion:['Acceso al módulo de Enseñanza Virtual de posgrado.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'http://mevposgrado.ulvr.edu.ec/',
+                    imagen:'images/plataformas/MEV.JPG'
+                },
+                {
+                    titulo:'Correo Institucional',
+                    descripcion:['Acceso al correo institucional.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://mail.google.com/',
+                    imagen:'images/plataformas/GMail.JPG'
+                },
+                {
+                    titulo:'Sistema Académico para Administrativos',
+                    descripcion:['Acceso al sistema académico para administrativos de posgrado.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://ekudemic.ulvr.edu.ec/ekudemic/web/maestria_ulvr.php',
+                    imagen:'images/plataformas/ekudemic.JPG'
+                },
+                {
+                    titulo:'Sistema Académico para Estudiantes',
+                    descripcion:['Acceso al sistema académico para estudiantes de posgrado.'],
+                    botonNombre:'Ingresar aquí',
+                    url:'https://ekudemic.ulvr.edu.ec/ekudemic/web/posgrado.php',
+                    imagen:'images/plataformas/ekudemic.JPG'
+                },
+            ] 
+        }
+    }
+]
+
+
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-lg-8 mx-auto md-mb-50">
+                    <div class="intro-info-tabs">
+                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                            {
+                                dataBibliotecas.map((tabBibliotecas) => 
+                                    <li class="nav-item tab-btns" role="presentation">
+                                        <a class:list={[ 'nav-link tab-btn', { "active": tabBibliotecas.bibliotecas.mostrar }]}
+                                            id={`${tabBibliotecas.bibliotecas.tab}-tab`} data-bs-toggle="tab" href="#"
+                                            data-bs-target={`#${tabBibliotecas.bibliotecas.tab}`} role="tab" aria-controls={tabBibliotecas.bibliotecas.tab}
+                                            aria-selected="false">
+                                            {tabBibliotecas.bibliotecas.tituloTab}
+                                        </a>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                        <div class="tab-content tabs-content" id="myTabContent">
+                            {
+                                dataBibliotecas.map((tabBibliotecas) => 
+                                    <div class:list={[ 'tab-pane fade', { "show active": tabBibliotecas.bibliotecas.mostrar }]} id={tabBibliotecas.bibliotecas.tab} role="tabpanel" aria-labelledby={`${tabBibliotecas.bibliotecas.tab}-tab`}>
+                                        <div class="content white-bg pt-30">
+                                            <div class="course-overview">
+                                                <div class="inner-box">
+                                                    <div id="accordion" class="accordion-box">
+                                                        <div class="card accordion block">
+                                                            <div class="card-header" id={`heading${tabBibliotecas.bibliotecas.posicion}`}>
+                                                                <h5 class="mb-0">
+                                                                    <button class="btn btn-link acc-btn"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-target={`#collapse${tabBibliotecas.bibliotecas.posicion}`} aria-expanded="true"
+                                                                        aria-controls={`collapse${tabBibliotecas.bibliotecas.posicion}`}>
+                                                                        {tabBibliotecas.bibliotecas.titulo}
+                                                                    </button>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id={`collapse${tabBibliotecas.bibliotecas.posicion}`} class="collapse show" aria-labelledby={`heading${tabBibliotecas.bibliotecas.posicion}`} data-bs-parent="#accordion">
+                                                                <div class="card-body acc-content current">
+                                                                    <div class="container-fluid pt-4 pb-2">
+                                                                        <div class="border-none rounded">
+                                                                            {
+                                                                                tabBibliotecas.bibliotecas.detalle.map((det) =>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-4 col-sm-12 p-4">
+                                                                                            <img src={det.imagen} alt="" class="img-fluid rounded-circle w-75">
+                                                                                        </div>
+        
+                                                                                        <div class="col-md-8 col-sm-12 pt-4">
+                                                                                            <br />
+                                                                                            
+                                                                                            <h5>{det.titulo}</h5>
+                                                                                            {
+                                                                                                det.descripcion.map((desc) =>
+                                                                                                    <p>{desc}</p>
+                                                                                                    <br/>
+                                                                                                )
+                                                                                            }
+                                                                                            <br/>
+                                                                                            <p>
+                                                                                                <a href={det.url}> {det.botonNombre} </a>
+                                                                                            </p>
+                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+ 
+</LayoutVarios>

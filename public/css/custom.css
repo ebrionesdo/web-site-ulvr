@@ -1,0 +1,73 @@
+.full-width-header .rs-header .logo-part .normal-logo {
+	max-height: 90px !important;
+}
+
+.full-width-header .rs-header .logo-part .sticky-logo {
+	max-height: 60px !important;
+}
+
+.full-width-header .rs-header .right_menu_togle {
+	background: rgba(18, 50, 71, 0.8);
+	color: #fff;
+}
+
+.rs-menu li {
+	display: block;
+}
+
+#myVideo {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.rs-menu ul ul li > ul {
+	left: initial;
+	right: 0%;
+}
+
+.video-container {
+	min-height: 500px !important;
+}
+
+.item-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 420px;
+	padding: 20px;
+	text-align: center;
+	width: 90%;
+}
+
+.photo-container {
+	border-radius: 50%;
+	height: 225px !important;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 225px;
+}
+
+.photo-container img {
+	object-fit: cover;
+	width: 150%;
+}
+
+.personal-info {
+	margin-bottom: 20px;
+}
+
+.personal-info h3,
+p {
+	margin: 0;
+}
+.personal-info h3 {
+	color: #35a8e0;
+	margin-bottom: 10px;
+}
+
+.personal-info p {
+	font-size: 18px;
+	line-height: 19px;
+	text-transform: uppercase;
+}

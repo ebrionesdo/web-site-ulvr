@@ -1,0 +1,530 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Publicaciones',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Investigación',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'Boletines',
+            tab:'prod-boletines',
+            mostrar:true,
+            titulo:'Boletines',
+            acordiones: [
+                {
+                    titulo:'2015',
+                    mostrar:true,
+                    posicion:'One1',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Enfoque Administrativo. Marzo 2015',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2014',
+                    posicion:'Two1',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Contador Laico. Octubre 2014',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Enfoque Administrativo. Marzo 2014',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2013',
+                    posicion:'Three1',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Circo Laico',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Control Niño Sano',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Pauta Impresa',
+            titulo:'Pautas en medios Impresos',
+            tab:'prod-pautas-impresos',
+            acordiones: [
+                {
+                    titulo:'2023',
+                    mostrar:true,
+                    posicion:'One2',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2023',
+                            url:'documentos/Pauta en medios/2023/ENERO 2023.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Marzo 2023',
+                            url:'documentos/Pauta en medios/2023/MARZO 2023.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2022',
+                    posicion:'Two2',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'La Revista. Febrero 2022',
+                            url:'documentos/Pauta en medios/2022/FEBRERO 2022 -1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Febrero 2022',
+                            url:'documentos/Pauta en medios/2022/FEBRERO 2022- 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Marzo 2022',
+                            url:'documentos/Pauta en medios/2022/MARZO 2022.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Julio 2022',
+                            url:'documentos/Pauta en medios/2022/JULIO 2022-1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Julio 2022',
+                            url:'documentos/Pauta en medios/2022/JULIO 2022 -2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Julio 2022',
+                            url:'documentos/Pauta en medios/2022/JULIO 2022-3.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Julio 2022',
+                            url:'documentos/Pauta en medios/2022/JULIO 2022- 4.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Septiembre 2022',
+                            url:'documentos/Pauta en medios/2022/SEPTIEMBRE 2022 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Septiembre 2022',
+                            url:'documentos/Pauta en medios/2022/SEPTIEMBRE 2022 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Noviembre 2022',
+                            url:'documentos/Pauta en medios/2022/NOVIEMBRE 2022 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Noviembre 2022',
+                            url:'documentos/Pauta en medios/2022/NOVIEMBRE 2022 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Noviembre 2022',
+                            url:'documentos/Pauta en medios/2022/NOVIEMBRE 2022 - 3.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2021',
+                    posicion:'Three2',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Julio 2021',
+                            url:'documentos/Pauta en medios/2021/JULIO 2021 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'iario El Universo. Agosto 2021',
+                            url:'documentos/Pauta en medios/2021/AGOSTO 2021 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Agosto 2021',
+                            url:'documentos/Pauta en medios/2021/AGOSTO 2021 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Agosto 2021',
+                            url:'documentos/Pauta en medios/2021/AGOSTO 2021 - 3.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Agosto 2021',
+                            url:'documentos/Pauta en medios/2021/AGOSTO 2021- 4.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Agosto 2021',
+                            url:'documentos/Pauta en medios/2021/AGOSTO 2021- 5.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Septiembre 2021',
+                            url:'documentos/Pauta en medios/2021/SEPTIEMBRE 2021 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Septiembre 2021',
+                            url:'documentos/Pauta en medios/2021/SEPTIEMBRE 2021- 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Octubre 2021',
+                            url:'documentos/Pauta en medios/2021/OCTUBRE 2021 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Octubre 2021',
+                            url:'documentos/Pauta en medios/2021/OCTUBRE 2021 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Noviembre 2021',
+                            url:'documentos/Pauta en medios/2021/NOVIEMBRE 2021 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Noviembre 2021',
+                            url:'documentos/Pauta en medios/2021/NOVIEMBRE 2021 - 2.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2020',
+                    posicion:'Four2',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Telégrafo. Enero 2020',
+                            url:'documentos/Pauta en medios/2020/ENERO 2020 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2020',
+                            url:'documentos/Pauta en medios/2020/ENERO 2020 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2020',
+                            url:'documentos/Pauta en medios/2020/ENERO 2020 - 3.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2020',
+                            url:'documentos/Pauta en medios/2020/ENERO 2020 -4.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Telégrafo. Febrero 2020',
+                            url:'documentos/Pauta en medios/2020/FEBRERO 2020 -1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Febrero 2020',
+                            url:'documentos/Pauta en medios/2020/FEBRERO 2022 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Telégrafo. Marzo 2020',
+                            url:'documentos/Pauta en medios/2020/MARZO 2020 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Noviembre 2020',
+                            url:'documentos/Pauta en medios/2020/NOVIEMBRE 2021 -1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Noviembre 2020',
+                            url:'documentos/Pauta en medios/2020/NOVIEMBRE 2021 - 2.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2019',
+                    posicion:'Five2',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2019',
+                            url:'documentos/Pauta en medios/2019/ENERO 2019 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Enero 2019',
+                            url:'documentos/Pauta en medios/2019/ENERO 2019 - 3.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 3.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 4.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario EXPPRESO. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 5.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Febrero 2019',
+                            url:'documentos/Pauta en medios/2019/FEBRERO 2019 - 6.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario El Universo. Octubre 2019',
+                            url:'documentos/Pauta en medios/2019/OCTUBRE 2019 - 1.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Octubre 2019',
+                            url:'documentos/Pauta en medios/2019/OCTUBRE 2019 - 2.pdf',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Diario Expreso. Octubre 2019',
+                            url:'documentos/Pauta en medios/2019/OCTUBRE 2019 - 3.pdf',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+    {
+        bibliotecas:{
+            tituloTab:'Pauta digital',
+            titulo:'Pauta en medios digitales',
+            tab:'prod-pauta-digital',
+            acordiones: [
+                {
+                    titulo:'2020',
+                    mostrar:true,
+                    posicion:'One3',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Facebook®. 16/09/2020',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Instagram®. 16/09/2020',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Instagram®. 09/09/2020',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Instagram®. 17/08/2020',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'2016',
+                    posicion:'Two3',
+                    mostrar:false,
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'El Universo. Mayo 2016',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'Facebook®. 2016',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        }
+    },
+ 
+
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+ 
+</LayoutVarios>

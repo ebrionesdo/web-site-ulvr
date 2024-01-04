@@ -1,0 +1,125 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Salud y Seguridad Ocupacional',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Salud-ocupacional.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_salud_seguridad_ocupacional');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Seguridad Ocupacional_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Todo centro de trabajo debe tener como objetivo la prevención, disminución o eliminación de los riesgos del trabajo y el mejoramiento del ambiente de trabajo, de acuerdo al Reglamento de Seguridad y Salud de los trabajadores, emitido por el Ministerio del Trabajo del Ecuador.',
+                            'El Magíster en Salud y Seguridad Ocupacional con mención en Prevención de Riesgos Laborales de la ULVR es un experto en identificar, documentar y prevenir con responsabilidad todo tipo de riesgos laborales en entornos tan diversos como oficinas, fábricas, obras de construcción y demás, fomentando un ambiente seguro y protegiendo los derechos de cada trabajador.',
+                            'Nuestros graduados tendrán la habilidad de liderar y gestionar equipos de alto rendimiento en materia de salud y seguridad ocupacional, promoviendo en el ámbito empresarial diversos programas que mejoren la calidad del ambiente laboral saludable.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Desarrollar competencias, habilidades y destrezas, así como los conocimientos teóricos, técnicos y prácticos relacionados con la Salud y Seguridad Ocupacional que permitan a los profesionales el análisis crítico, la planificación, evaluación e innovación en la prevención de riesgos laborales.'],
+            especificos: ['Desarrollar habilidades relacionadas con la planificación, regulación y gestión de la salud y seguridad ocupacional.',
+                          'Desarrollar capacidades técnicas y analíticas para la elaboración de diagnósticos, diseño, seguimiento y evaluación de políticas y programas de prevención de riesgos.',
+                          'Proponer técnicas de prevención de riesgos.',
+                          'Generar proyectos para optimizar la salud ocupacional.',
+                          'Potenciar los conocimientos sobre la competencia de la función de los responsables de la salud y seguridad ocupacional en las empresas.',
+                          'Analizar las causas y los factores que inciden en los riesgos laborales.',
+                          'Desarrollar actividades de asesoría y asistencia técnica, propendiendo a la reducción de los índices de mortalidad, morbilidad y daños materiales en las empresas.',
+                          'Proponer acciones preventivas, correctivas y de mejora continua para evitar los accidentes e incidentes laborales.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Salud y Seguridad Ocupacional con mención en Prevención de Riesgos Laborales de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Gestionar adecuadamente la salud y seguridad ocupacional de las empresas.',
+                    'Velar por el cumplimiento de la normativa Constitucional, de Salud y Seguridad Ocupacional.',
+                    'Optimizar el uso de los recursos de infraestructura para una adecuada salud y seguridad ocupacional empresarial.',
+                    'Evaluar con sentido crítico los factores de la Gestión de Salud y Seguridad Ocupacional.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Funcionario de la Salud y Seguridad Ocupacional, en las distintas instituciones públicas y privadas.',
+                    'Director, coordinador o gestor de Programas de Salud y Seguridad Ocupacional.',
+                    'Supervisor de seguridad ocupacional.',
+                    'Auditor interno.',
+                    'Perito en seguridad ocupacional y prevención de riesgos.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Kleber Alberto Moscoso Riera', 
+                    cargo:'Coordinadora de maestría', 
+                    telefono:'(09)78733512', 
+                    ext:'', 
+                    email:'kmoscosor@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

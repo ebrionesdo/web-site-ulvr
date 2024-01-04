@@ -1,0 +1,33 @@
+---
+const { dataLibros } = Astro.props;
+---
+<style>
+    .img2p {
+        max-width: 70%;
+        margin: auto;
+        height: auto;
+    }
+</style>
+
+<div class="rs-shop-part orange-color md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row">
+            {
+                dataLibros.map((libro:any) =>
+                    <div class="col-lg-3 col-md-6 col-12 mb-53">
+                        <div class="product-list">
+                            <div class="img2p">
+                                <img src={libro.imagen} alt="" />
+                            </div>
+                            <div class="content-desc text-center">
+                                <h2 class="loop-product-title pt-15">
+                                    <a href={`libro/${libro.url}`}>{libro.titulo} <br/> {libro.subtitulo}</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }                
+        </div>
+    </div>
+</div>

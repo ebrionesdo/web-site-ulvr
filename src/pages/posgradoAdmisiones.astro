@@ -1,0 +1,329 @@
+---
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+
+
+import nodemailer from "nodemailer";
+
+export const prerender = true;
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const nombre = data.get("nombre");
+    const apellido = data.get("apellido");
+    const cedula = data.get("cedula");
+    const fechaNac = data.get("fechaNac");
+    const nacionalidad = data.get("nacionalidad");
+    const residencia = data.get("residencia");
+    const ocupacion = data.get("ocupacion");
+    const profesion = data.get("profesion");
+    const correo:any = data.get("correo");
+    const telefono = data.get("telefono");
+    const maestria = data.get("maestria");
+    const medio = data.get("medio");
+
+    if (nombre && apellido && fechaNac && nacionalidad && residencia && ocupacion && profesion && cedula && correo && telefono && maestria && medio) {
+
+        console.log(data);
+
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
+            requireTLS: true,
+            auth: {
+                user: 'testvocacional@ulvr.edu.ec',
+                pass: 'udbtlbtugeuqcgms',
+            },
+            logger: true
+        });
+
+        // send mail with defined transport object
+        const info = await transporter.sendMail({
+            from: 'testvocacional@ulvr.edu.ec',
+            to: correo,
+            subject: "Registro de postgrado",
+            attachments: [
+                {
+                    filename: 'oferta_academica',
+                    path: './public/images/oferta_academica.png',
+                    cid:'oferta_academica'
+                },
+            ],
+            html: ` <h2><strong> Te Invitamos a ser parte de la ULVR. </strong></h2>
+                    <p>Hola,<strong> ${nombre} ${apellido}</strong>, revisa nuestra oferta académica para más información.</p>
+                    <div style='margin: auto; text-align: center;'>
+                        <img src='cid:oferta_academica' alt='oferta académica'>
+                    </div>`,
+            headers: { 'x-myheader': 'test header' }
+        });
+        const info2 = await transporter.sendMail({
+            from: 'testvocacional@ulvr.edu.ec',
+            to: 'testvocacional@ulvr.edu.ec',
+            // to: correo,
+            subject: "Registro de postgrado",
+            html: `<h1><strong>Registro de Postgrado</strong></h1>
+                    <ul>
+                        <li><strong>Aspirante:</strong> ${nombre} ${apellido}</li>
+                        <li><strong>Cédula: </strong> ${cedula}</li>
+                        <li><strong>Correo: </strong> ${correo}</li>
+                        <li><strong>Celular: </strong> ${telefono}</li>
+                        <li><strong>Fecha de nacimiento:</strong> ${fechaNac}</li>
+                        <li><strong>Nacionalidad: </strong> ${nacionalidad}</li>
+                        <li><strong>Residencia: </strong> ${residencia}</li>
+                        <li><strong>Ocupación: </strong> ${ocupacion}</li>
+                        <li><strong>Profesión:</strong> ${profesion}</li>
+                        <li><strong>Medio: </strong> ${medio}</li>
+                        <li><strong>Maestria: </strong> ${maestria}</li>
+                    </ul>`,
+            headers: { 'x-myheader': 'test header' }
+        });
+
+        
+        if (info.response && info2.response) {
+            // console.log("Message sent: %s", info.response);
+            // console.log("Message sent: %s", info2.response);
+            return Astro.redirect('/posgrado');
+            
+        }
+        
+    }
+ 
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+
+---
+
+<LayoutInscripcion>
+
+     <!-- Banner Section Start -->
+    <div class="rs-banner stylepaco">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="content-part">
+
+                        <h2 class="title wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="2000ms">
+                            ¡Bienvenidos al <br />
+                            Pre-registro para Posgrados!
+                        </h2>
+
+                        <h4 class="sl-sub-title wow fadeInLeft mb-2">
+                            ¡Tu futuro te espera, vamos juntos!
+                        </h4>
+
+                        <br />
+
+                        <span class="sub-title wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="2000ms">
+                            Conviértete en el PROFESIONAL<br />
+                            que mereces ser.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="free-course-contact text-center">
+                        <!-- <div class="spinners-envio div_hide pt-3 " id="spinners-envio">
+                            <div class="spinner-border text-info"></div>
+                        </div> -->
+                        <span class="mb-30">PRE-REGISTRO</span>
+                        <!-- <h4>Periodo 2023</h4> -->
+                        <!-- <div id="form-messages"></div> -->
+                        <form method="POST" autocomplete="off" id="my-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Nombre*" id="nombre" name="nombre" required minlength="3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Apellidos*" id="apellido" name="apellido" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Cédula de Identidad/Pasaporte*" id="cedula" name="cedula" required minlength="10" maxlength="13">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="date" placeholder="Fecha de Nacimiento*" id="fechaNac" name="fechaNac" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Nacionalidad*" id="nacionalidad" name="nacionalidad" required minlength="3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Lugar de Residencia" id="residencia" name="residencia" required minlength="3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Ocupación*" id="ocupacion" name="ocupacion" required minlength="3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Profesión" id="profesion" name="profesion" required minlength="3">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Celular*" id="telefono" name="telefono" required minlength="10">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <input type="email" placeholder="Email*" id="correo" name="correo" required minlength="3">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <select name="medio" id="medio" required>
+                                            <option value="">¿Por qué medio te enteraste?</option>
+                                            <option value="Internet">Buscando en internet</option>
+                                            <option value="Facebook">Por Facebook</option>
+                                            <option value="Instagram">Por Instagram</option>
+                                            <option value="Twitter">Por Twitter</option>
+                                            <option value="Amigos">Por amigos</option>
+                                            <option value="Otros">Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-field">
+                                        <select name="maestria" id="maestria" required>
+                                            <option value="">¿En qué maestría estás interesado(a)?:</option>
+                                            <option value="Administración de Empresas">Administración de Empresas</option>
+                                            <option value="">Desarrollo Temprano y Educación Infantil</option>
+                                            <option value="Desarrollo Temprano y Educación Infantil">Salud y Seguridad Ocupacional</option>
+                                            <option value="Marketing Digital">Marketing Digital</option>
+                                            <option value="Gestión del Transporte">Gestión del Transporte</option>
+                                            <option value="Derecho">Derecho</option>
+                                            <option value="Educación">Educación</option>
+                                            <option value="Ingeniería Civil">Ingeniería Civil</option>
+                                            <option value="Contabilidad y Auditoría">Contabilidad y Auditoría</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-btn submit-btn mt-30">
+                                <button class="readon2 upper" type="submit">Enviar Pre-registro</button>
+                            </div>
+                        </form>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Section End -->
+
+    <!-- Faq Section Start -->
+    <div class="rs-faq-part style1 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 padding-0">
+                    <div class=" main-part">
+                        <div class="title mb-40 md-mb-15">
+                            <h2 class="text-part">Preguntas Frecuentes</h2>
+                        </div>
+                        <div class="faq-content">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item card">
+                                    <div class="accordion-header card-header" id="headingOne">
+                                        <button class="accordion-button card-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            ¿Se puede pagar con tarjeta de crédito?
+                                        </button>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            Si cuentas con una tarjeta Visa, Mastercard, Pacificard, American y Diners Club puedes pagar el costo del programa de acuerdo a las políticas de financiamiento, contempladas en la información general del programa.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item card">
+                                    <div class="accordion-header card-header" id="headingTwo">
+                                        <button class="card-link accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            ¿Existen becas para los programas de maestría?
+                                        </button>
+                                    </div>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            No se ha  contemplado  por parte las autoridades de la ULVR otorgar becas, debido al costo accesible del programa.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item card">
+                                    <div class="accordion-header card-header" id="headingThree">
+                                        <button class="card-link accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            ¿Cuáles son los requisitos de ingreso?
+                                        </button>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            El ingreso a los programas de Posgrado, se sujeta al cumplimiento de las
+                                            siguientes condiciones:
+                                            <br />
+                                            <br />
+                                            - Acreditar un título académico de tercer nivel. Los estudiantes que hayan obtenido su título académico en el extranjero se sujetarán a las disposiciones pertinentes y a la normativa de la ULVR.
+                                            <br />
+                                            - Experiencia profesional acreditada de, al menos, tres años.
+                                            <br />
+                                            - Entrevista de admisión.
+                                            <br />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item card">
+                                    <div class="accordion-header card-header" id="headingFour">
+                                        <button class="card-link accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            ¿A quiénes están dirigidos los programas de maestría?
+                                        </button>
+                                    </div>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            Los programas de maestría de la ULVR está abiertos a todos los profesionales, que acrediten un título académico de tercer nivel, en las áreas correspondientes a cada programa de estudios de posgrado vigente.<br />
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-column col-lg-6 align-self-center">
+                    <div class="inner-column">
+                        <!-- Video Box -->
+                        <div class="intro-video media-icon orange-color1">
+                            <img class="video-img" src="/images/about/VIDEOSBANER.JPG" alt="Video Image">
+                            <a class="popup-videos" href="https://www.youtube.com/watch?v=Mtt4iB4cXz8">
+                                <i class="fa fa-play mx-4 "></i>
+                            </a>
+                        </div>
+                        <!-- End Video Box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- faq Section Start -->
+
+    <div id="rs-categories" class="rs-categories main-home pt-20 pb-100 md-pt-60 md-pb-80">
+        <CarrerasPorFacultad carreras={programasMaestrias}>
+            Programas de Posgrado
+        </CarrerasPorFacultad>       
+    </div>
+</LayoutInscripcion>

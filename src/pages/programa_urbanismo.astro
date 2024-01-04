@@ -1,0 +1,126 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Urbanismo',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Ingeniería-Civil.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_urbanismo');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Urbanismo.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'Nuestros graduados, poseen las habilidades necesarias para dirigir, coordinar y gestionar obras de construcción, eficientemente. Además, podrán participar en el diseño, ejecución y supervisión de obras civiles en general y planificación de obras públicas y privadas.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['La Maestría en Maestría en Urbanismo con Mención en Planificación Territorial y Gestión Urbana Sostenible, ofrece a la sociedad profesionales de cuarto nivel con amplios conocimientos técnico-científicos que permitan el asesoramiento estratégico y toma de decisiones en problemas de planificación, gestión y sostenibilidad territorial – urbana con innovadoras competencias interdisciplinares, multidisciplinares y transdisciplinares que respondan a las demandas de la comunidad y del ejercicio profesional.'],
+            especificos: ['Aplicar una planificación urbana que cumpla con los objetivos de mejoramiento social, económico y sostenible.',
+                          'Definir soluciones enfocadas a una mejor calidad de vida de los ciudadanos, la conservación del medio ambiente y una correcta administración de los recursos disponibles.',
+                          'Describir la ciudad como un espacio dinámico donde las actividades humanas, el medio ambiente y el entorno construido interactúan y se influyen mutuamente en busca del bienestar de sus habitantes.',
+                          'Analizar la normativa urbana actual mediante el estudio de su marco legal para promover el desarrollo sostenible.',
+                          'Investigar en planificación urbana sostenible con enfoques sistémicos para competir en el mercado.'
+                        ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Urbanismo de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Valorar el cumplimiento de procesos contables, financieros y de auditoría.',
+                    'Aplicar adecuadamente las normas internacionales vigentes: NIIF, NIC, entre otras.      ',
+                    'Optimizar el uso de la información contable y financiera.',
+                    'Diseñar y proponer estrategias que resuelvan problemas de inversión.',
+                    'Registrar los hechos económicos derivados de las instituciones financieras públicas y privadas.',
+                    'Reconocer la intervención del sistema financiero nacional y del mercado de valores en las operaciones de inversión y sus riesgos.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Asesor contable, tributario, de costos de producción y evaluador de riesgos.',
+                    'Gestor de procesos de control interno.',
+                    'Desarrollador de proyecciones contables, financieras y tributarias.',
+                    'Diseñador de instrumentos de información contable, tributaria y financiera.',
+                    'Evaluador de procesos contables, tributarios, financieros, de auditoría, costos de producción y riesgos.',
+                    'Asesor y consultor en inversiones, crédito, finanzas, contables, tributarios y de auditoría.',
+                    'Perito contable y financiero en materia legal.',
+                    'Gestor de normas técnicas de auditoría.</li><li>Jefe de departamentos de contraloría, equipos de auditoría, de control y de regulación gubernamental.</li><li>Director de finanzas en empresas e instituciones, públicas y privadas.</li><li>Director de departamentos de contabilidad y de costos.',
+                    'Docente de grado y posgrado.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Ángel Guillermo Morán Ochoa', 
+                    cargo:'Coordinador de maestría', 
+                    telefono:'(09)82846945', 
+                    ext:'', 
+                    email:'amorano@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

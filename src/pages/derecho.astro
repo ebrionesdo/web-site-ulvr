@@ -1,0 +1,144 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadDerecho } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Derecho',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FCSD/Derecho/Derecho_Banner-Horizontal.jpg'
+}
+
+const carrerasDerechoFilter = carrerasFacultadDerecho.filter((carrera:any) => carrera.url !== 'derecho');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Abogado de la ULVR es un profesional con alta formación jurídica, en principios y conceptos esenciales del Derecho y la Jurisprudencia, con capacidades específicas en las diferentes áreas del Derecho, que se desempeña acertadamente en la búsqueda de la solución de conflictos, que permitan reconstruir el tejido social a través de una administración adecuada de justicia y métodos alternativos de mediación.',
+                         'Durante su preparación académica desarrolla competencias y habilidades desde el ámbito teórico-práctico para llegar a interpretar, integrar y aplicar el ordenamiento jurídico nacional y comparado, desde los ámbitos sustantivos y procesales.',
+                         'El título de Abogado de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Abogado(a).',
+            jornada:'Diurna, Vespertina y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                          'El Abogado de la ULVR podrá desempeñarse adecuadamente al enfrentar conflictos en procesos de mediación, administrativos, mercantiles, civiles, penales y demás áreas de especialidad del Derecho mediante la aplicación del ordenamiento y jurisprudencia nacional.' 
+                          ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como auxiliar notarial, asistente de talento humano, auxiliar judicial, ayudante de despacho y asistente administrativo de estudio jurídico.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Abogado de la ULVR será capaz de::'],
+            lista: ['Ejercer la representación judicial y extrajudicialmente.',
+                    'Elaborar diligencias, demandas, escritos y denuncias.',
+                    'Proponer garantías constitucionales y jurisdiccionales',
+                    'Elaborar cálculos de liquidaciones laborales y tributarias.',
+                    'Administrar negocios fiduciarios.',
+                    'Constituir compañías.',
+                    'Registrar propiedades.',
+                    'Elaborar contratos civiles, mercantiles y laborales.',
+                    'Registrar derechos de propiedad intelectual.',
+                    'Asesorar en todas las áreas del Derecho.',
+                    'Llevar procesos de mediación.',
+                    'Manejar los diferentes procesos adjetivos en las áreas del Derecho.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Abogado de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Juez.',
+                    'Fiscal.',
+                    'Procurador',
+                    'Contralor',
+                    'Notario',
+                    'Asesor legal.',
+                    'Consultor jurídico externo.',
+                    'Perito legal.',
+                    'Liquidador societario.',
+                    'Director de departamento legal.',
+                    'Director de talento humano.',
+                    'Administrador de fideicomiso.',
+                    'Profesional en libre ejercicio.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Cristina Elizabeth Franco Cortázar', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'234', 
+                    email:'cfrancoc@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Esp. Carlos Manuel Pérez Leyva', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'300', 
+                    email:'cperezl@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. María Gabriela De Grau Ávila', 
+                    cargo:'Secretaria', 
+                    telefono:'(04) 2596 500', 
+                    ext:'253', 
+                    email:'mdegraua@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Ana María Vélez Silva', 
+                    cargo:'Secretaria', 
+                    telefono:'(04) 2596 500', 
+                    ext:'253', 
+                    email:'avelezs@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Karina Magdalena Chiriguayo Almeida', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'229', 
+                    email:'kchiriguayoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Sheila Ariana Zamora Rendón', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'237', 
+                    email:'szamorar@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Derecho.pdf';   
+
+const facultad='Carreras de la Facultad de Ciencias Sociales y Derecho'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasDerechoFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

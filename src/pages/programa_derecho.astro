@@ -1,0 +1,129 @@
+---
+import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
+import LayoutMaestrias from "../layouts/LayoutMaestrias.astro";
+
+const breadcrumbs = {
+    title : 'Maestría en',
+    titleCarrera : 'Derecho',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Oferta Académica',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/postgrado',
+    img : 'images/BANNERS POSGRADO/BANNER HORIZONTALES/Derecho.png' 
+}
+
+const carrerasAdministracionFilter = programasMaestrias.filter((carrera:any) => carrera.url !== 'programa_derecho');
+
+const descargarInformacion = 'documentos/Brochure carreras y programas/Maest.nuev/Folleto Digital_Maestría en Derecho_23012023.pdf';   
+
+const facultad='Programas de Posgrado'
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción del Programa',
+            descripcion: [
+                            'La empresa  pública, privada  y la sociedad  en general  requieren de un profesional que aplique los  conocimientos jurídicos en estricto apego a las normas generales del debido proceso.',
+                            'El Magíster en Derecho mención Derecho Procesal de la ULVR es un profesional que actuará con responsabilidad social y ética profesional para aplicar de forma correcta y eficaz las normas legales nacionales. ',
+                            'Nuestros graduados, poseen las habilidades jurídicas necesarias para desempeñar cualquier cargo público o privado relacionado con la aplicación del Derecho con eficacia y eficiencia.'
+                         ],
+            posicion: 'One'             
+        },
+        {
+            titulo:'Objetivos de la Maestría',
+            generales: ['Especializar a profesionales  en áreas del derecho procesal  constitucional, penal, civil y laboral para que estén altamente capacitados en el desempeño y cumplimiento de la responsabilidad profesional, y dar solución a los problemas basados en la legislación vigente en el país.'],
+            especificos: ['Ampliar los conocimientos jurídicos en el área constitucional, derechos humanos, penal, civil, familiar, laboral, notarial/registral, administrativo y tributario.',
+                          'Desarrollar habilidades y destrezas relacionadas con cada uno de los procesos que se estudian.',
+                          'Construir pensamiento jurídico orientado hacia la investigación jurídica.<',
+                          'Aportar soluciones a los problemas jurídicos y sociales.',
+                          'Fomentar la práctica del Derecho desde el proceso oral por audiencia.',
+                          'Crear ambientes de aprendizajes colaborativos para la construcción del análisis crítico en base a las fuentes del Derecho.',
+                          'Promover la cultura jurídica como parte de su formación personal, con responsabilidad, honestidad y compromiso social.',
+                          'Conocer y aplicar la pluralidad jurídica en materia procesal.',
+                          'Fomentar la comunicación libre, intercultural, incluyente, diversa y participativa, en todos los ámbitos de la interacción social.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de Egreso',
+            descripcion: ['El Magíster en Derecho mención Derecho procesal de la ULVR, al finalizar el programa estará en capacidad de:'],
+            lista: ['Valorar la importancia del Derecho Procesal para emplearlo en el ejercicio diario de la profesión con integridad y honestidad.',
+                    'Fomentar la inclusión respetando la cultura y los derechos humanos.',
+                    'Diseñar y proponer estrategias de reformas procesales mediante la investigación en el área jurídica.'
+                ],
+            posicion: 'Three'               
+        },
+        {
+            titulo:'Ámbito de desempeño',
+            descripcion: [],
+            lista: ['Asesor jurídico en materia fiscal, laboral, mercantil, civil, penal, niñez y adolescencia, etc.',
+                    'Juez.',
+                    'Fiscal.',
+                    'Registrador de la propiedad o mercantil.',
+                    'Notario.',
+                    'Inspector jurídico del SRI.',
+                    "Asesor de ONG's",
+                    'Asesor de partidos políticos.',
+                    'Director jurídico de empresas públicas y privadas.</li><li>Director de bancos.</li><li>Director de cooperativas de ahorro y crédito.</li><li>Docente de pregrado y posgrado.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'PhD. Eva Marjoriet López Guerrero', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'313', 
+                    email:'eguerrerol@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Luis Andrés Suárez Piñeiro', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'118', 
+                    email:'lsuarezp@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Fernando Brito Aguilar', 
+                    cargo:'Coordinador de proyectos', 
+                    telefono:'(04) 2596 500', 
+                    ext:'327', 
+                    email:'fbritoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'PhD. Mario Martínez Hernández', 
+                    cargo:'Coordinador de maestría', 
+                    telefono:'(09)86942010', 
+                    ext:'', 
+                    email:'mmartinezh@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Jacqueline Rosario Serrano Aulestia', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'170', 
+                    email:'jserranoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Soc. Ninoska Marisol Pico Solórzano', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'326', 
+                    email:'npicos@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde 09:00 hasta las 17:00. Sábados y domingos, atención directa con los coordinadores de maestría.',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+---
+
+<LayoutMaestrias {facultad} carreras={carrerasAdministracionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutMaestrias>

@@ -1,0 +1,12 @@
+---
+import Layout from "./Layout.astro";
+
+const {breadcrumbs, topBar} = Astro.props;
+---
+
+<Layout {breadcrumbs} {topBar}>
+
+    <slot />
+    
+</Layout>
+

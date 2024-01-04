@@ -1,0 +1,190 @@
+---
+
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Noticias ULVR',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Noticias y Eventos ULVR',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const noticias = [
+    {
+        imagen:'images/blog/noticias/N-Educasostenible.JPG',
+        titulo:'Ejemplo de nueva noticia La Educación para el desarrollo sostenible',
+        fecha:'Junio 10, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        descripcion:['"La educación para el desarrollo sostenible” es el nombre del coloquio que se desarrollará en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'1'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-Educasostenible.JPG',
+        titulo:'La Educación para el desarrollo sostenible',
+        fecha:'Junio 10, 2022',
+        usuario:'admadminin',
+        tipo:'Noticias',
+        descripcion:['“La educación para el desarrollo sostenible” es el nombre del coloquio que se desarrollará en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'2'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-ConsultorioJA.JPG',
+        titulo:'Consultorio Jurídico Gratuito de la ULVR sigue siendo "A"',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        descripcion:['El Consultorio Jurídico Gratuito de la ULVR “Ab. Alfonso Leónidas Aguilar Álava” alcanzó la calificación de 98.93 equivalente a Altamente satisfactorio, Categoría A ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'3'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-culturaambiental.JPG',
+        titulo:'Proyecto de Investigación de la ULVR promueve Cultura Ambiental en Durán',
+        fecha:'Junio 07, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        descripcion:['La a ULVR en colaboración con la Diócesis de San Jacinto desarrollaron la fase I del taller "Buenas Prácticas de Emprendimiento y Medioambiente”; actividad que es parte de la ejecución del proyecto de investigación "Cultura Ambiental y desarrollo sostenible en la ciudad de Durán, provincia del Guayas" ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'4'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-Educavial1.jpg',
+        titulo:'Semana Mundial de la Educación Vial',
+        fecha:'Mayo 20, 2022',
+        usuario:'admin',
+        tipo:'Noticias',
+        descripcion:['Con motivo de la celebración de la Semana Mundial de la Educación Vial, en la ULVR se desarrolló la Casa Abierta organizada por la Comisión de Tránsito del Ecuador ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'5'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-Concurso ecoemprede FCSD ULVR verde.JPG',
+        titulo:'Concurso de Ecoemprendimiento y conferencia magistral: Actividades de la FCSD en el mes ULVR verde',
+        fecha:'Junio 09, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        descripcion:['Durante el mes de junio la Facultad de Ciencias Sociales y Derecho desarrolla actividades enmarcadas en el programa ULVR Verde ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'6'
+
+    },
+    {
+        imagen:'images/blog/noticias/E-Condecoracionplastica1.jpg',
+        titulo:'Condecoración a la artista plástica Hellen Constante',
+        fecha:'Junio 08, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        descripcion:['El Mgtr. Alex Salvatierra Espinoza, vicerrector administrativo, y el PhD. William Quimí Delgado, director de admisiones, de la ULVR asistieron al evento de reconocimiento a la artista plástica guayaquileña, Hellen Constante Palacios ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'7'
+
+    },
+    {
+        imagen:'images/blog/noticias/N-Sembraton.JPG',
+        titulo:'ULVR Verde: Sembratón en Manglaralto',
+        fecha:'Junio 08, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        descripcion:['La Universidad Laica VICENTE ROCAFUERTE de Guayaquil, como parte de su programa de vinculación con la sociedad, realizó el sábado 4 de junio un SEMBRATÓN en el malecón del estero y manglar de la parroquia Manglaralto del cantón Santa Elena ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'8'
+
+    },
+    {
+        imagen:'images/blog/noticias/E-ULVRVERDE.png',
+        titulo:'ULVR se viste de verde',
+        fecha:'Junio 01, 2022',
+        usuario:'admin',
+        tipo:'Eventos',
+        descripcion:['Junio será el mes verde en la Universidad Laica VICENTE ROCAFUERTE de Guayaquil (ULVR) en homenaje al Día Mundial de Ambiente, que se recuerda cada 5 de junio desde 1973 que fue instituido por las Naciones Unidas y más ahora que es uno de los Objetivos de Desarrollo Sostenible (ODS) ...'],
+        btnNombre:'Continuar leyendo',
+        link:'',
+        id:'9'
+
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="rs-inner-blog orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row">
+                <!--  -->
+                <div class="col-lg-8 mx-auto">
+                    <div class="row">
+                        {
+                            noticias.map((noticia) =>
+                                <div class="col-lg-12 mb-70" >
+                                    <div class="blog-item">
+                                        <div class="blog-img">
+                                            <a href={`/noticia/${noticia.id}`}><img src={noticia.imagen} alt=""></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <h3 class="blog-title"><a href={`/noticia/${noticia.id}`}>{noticia.titulo}</a></h3>
+                                            <div class="blog-meta">
+                                                <ul class="btm-cate">
+                                                    <li>
+                                                        <div class="blog-date">
+                                                            <i class="fa fa-calendar-check-o"></i> {noticia.fecha}
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="author">
+                                                            <i class="fa fa-user-o"></i> {noticia.usuario}
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tag-line">
+                                                            <i class="fa fa-book"></i>
+                                                            <a href="#">{noticia.tipo}</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="blog-desc">
+                                                { 
+                                                    noticia.descripcion.map((desc) =>
+                                                        <span>{desc}</span>
+                                                    )
+                                                }
+                                            </div>
+                                            <div class="blog-button">
+                                                <a class="blog-btn" href={`/noticia/${noticia.id}`} > {noticia.btnNombre} </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</LayoutVarios>

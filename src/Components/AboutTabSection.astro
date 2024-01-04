@@ -1,0 +1,277 @@
+---
+const { dataAboutTab } = Astro.props;
+const objetivos = dataAboutTab.detalletab.filter((val:any) => val.lista && val.lista.length > 0 )
+const tabDesc = dataAboutTab.detalletab.filter((val:any) => val.descripcion && val.descripcion.length > 0 )
+const tabContacto = dataAboutTab.detalletab.filter((val:any) => val.contacto && val.contacto.length > 0 )
+const tabItem = dataAboutTab.detalletab.filter((val:any) => val.items )
+// console.log(tabItem);
+
+const tabValores: { nombre: string,
+                    tab: string,
+                    imagen: string,
+                    descripcion: string[],
+                    humanismo: string,
+                    excelencia: string,
+                    etica: string,
+                    compromiso: string}[] = dataAboutTab.detalletab.filter((val:any) => val.humanismo)
+// console.log(objetivos);
+// console.log(tabDesc);
+// console.log(tabContacto);
+// console.log(tabValores);L
+
+---
+<div class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6 padding-0 md-pl-15 md-pr-15 md-mb-30">
+                <div class="img-part">
+                    <img class="" src={dataAboutTab.cabeceraTab.imagen} alt="About Image"/>
+                </div>
+                {
+                    dataAboutTab.cabeceraTab.menu && (
+                        <ul class="nav nav-tabs histort-part" id="myTab" role="tablist">
+                            {
+                                (dataAboutTab.cabeceraTab.menu).map( (menu:any) =>
+                                <li class="nav-item tab-btns single-history last-item" role="presentation">
+                                    <a  class:list={[ 'nav-link tab-btn', { "active": menu.mostrar }]}
+                                        href="#"
+                                        id={`about-${menu.tab}-tab`}
+                                        data-bs-toggle="tab"
+                                        data-bs-target={`#about-${menu.tab}`}
+                                        role="tab"
+                                        aria-controls={`about-${menu.tab}`}
+                                        aria-selected="false">
+                                        <span class="icon-part">
+                                            <img src={menu.img} alt="" />
+                                        </span>
+                                        {menu.nombre}
+                                    </a>
+                                </li>
+                                <br/>
+                                )
+                            }
+                        </ul>
+                    )
+                }
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="tab-content tabs-content" id="myTabContent">
+                    {
+                        tabDesc.map((desc:any) =>
+                        // <div class="tab-pane fade"
+                        <div class:list={[ 'tab-pane fade', { "show active": desc.mostrar }]}
+                             id={`about-${desc.tab}`}
+                             role="tabpanel"
+                             aria-labelledby={`about-${desc.tab}-ta`}>
+                            <div class="sec-title mb-25">
+                                <h2 class="title">{desc.nombre}</h2>
+                                {
+                                    desc.descripcion.map((parrafos:any) =>
+                                        <p class="text-justify"> {parrafos} </p>
+                                        <br />
+                                    )
+                                }
+                            </div>
+                            <div class="tab-img">
+                                {
+                                    desc.imagen && (
+                                        <img class="" src={desc.imagen} alt={`Tab {desc.tab}`} />
+                                    )
+                                }
+                            </div>
+                        </div>
+                        )
+                    }
+                    {
+                        tabValores.map((valor:any) =>
+                            <div class="tab-pane fade"
+                                id={`about-${valor.tab}`}
+                                role="tabpanel"
+                                aria-labelledby={`about-${valor.tab}-tab`} >
+                                <div class="sec-title mb-25">
+                                    <h2 class="title">{valor.nombre}</h2>
+                                    <div class="text-justify">
+                                        <br />
+                                        <b>Humanismo:</b> {valor.humanismo}<br />
+                                        <br />
+                                        <b>Excelencia:</b> {valor.excelencia}<br />
+                                        <br />
+                                        <b>Ética:</b> {valor.etica}<br />
+                                        <br />
+                                        <b>Compromiso:</b> {valor.compromiso}
+                                    </div>
+                                </div>
+
+                                <div class="tab-img">
+                                    {
+                                        valor.imagen && (
+                                        <img class="" src={valor.imagen} alt={`Tab ${valor.tab}`}/>
+                                    )}
+                                </div>
+
+                            </div>
+                        )
+                    }
+
+                    {
+                        objetivos.map((objetivo:any) =>
+                            <div class="tab-pane fade"
+                                id={`about-${objetivo.tab}`}
+                                role="tabpanel"
+                                aria-labelledby={`about-${objetivo.tab}-tab`}>
+                                <div class="sec-title mb-25">
+                                    <h2 class="title">{objetivo.nombre}</h2>
+                                    <div class="desc">
+                                        <ul style="list-style: unset">
+                                            {
+                                                (objetivo.lista).map((list:string) =>
+                                                    <li> {list} </li>
+                                                    <br />
+                                                )
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-img">
+                                    {
+                                        objetivo.imagen && (
+                                        <img class="" src={objetivo.imagen} alt={`Tab ${objetivo.tab}`} />
+                                    )}
+                                </div>
+                            </div>
+                        )
+                    }
+
+                    {
+                        tabContacto.map((contacto:any) =>
+                            <div class="tab-pane fade"
+                                id={`about-${contacto.tab}`}
+                                role="tabpanel"
+                                aria-labelledby={`about-${contacto.tab}-tab`}>
+                                <div class="sec-title mb-25">
+                                    <h2 class="title">{contacto.nombre}</h2>
+                                    <div class="text-justify">
+                                        {
+                                            (contacto.contacto).map((cont:any) =>
+                                                <br />
+                                                <span>{cont.nombre}</span>
+                                                <br />
+                                                <b>{cont.cargo}</b><br />
+                                                <b>Teléfono:</b> <span>{cont.telefono}</span> <br/>
+
+                                                <span>{cont.atencion}</span> <br />
+                                            )
+                                        }
+
+                                        <br />
+                                        <br />
+                                        {
+                                            contacto.direccion  && (
+                                                <b>Dirección:</b> <span>{contacto.direccion}</span><br />
+                                            )
+                                        }
+                                        {
+                                            contacto.horario  && (
+                                                <b>Horario de atención:</b><span> {contacto.horario}</span><br />
+                                            )
+                                        }
+                                        {
+                                            contacto.whatsapp  && (
+                                                <b>Celular/WhatsApp:</b> <a href={`https://wa.me/${contacto.whatsapp}?text=¡Estoy+interesado+en+recibir+información!`}>+{contacto.whatsapp}</a><br />
+                                            )
+                                        }
+                                        {
+                                            contacto.email  && (
+                                                <b>E-Mail:</b> <a href={`mailto:${contacto.email}`} target="_blank"> {contacto.email}</a><br />
+                                            )
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="tab-img">
+                                    {
+                                        contacto.imagen && (
+                                            <img class="" src={contacto.imagen} alt={`Tab ${contacto.tab}`} />
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        )
+                    }
+                    {
+                        tabItem.map((it:any) =>
+                            <div class="tab-pane fade"
+                                id={`about-${it.tab}`}
+                                role="tabpanel"
+                                aria-labelledby={`about-${it.tab}-tab`}>
+                                <div class="sec-title mb-25">
+                                    <h2 class="title">{it.nombre}</h2>
+                                    <div class="sec-title mb-25">
+										<div class="desc">
+
+                                            {
+                                                it.descripcionItem.map((desc:any) =>
+                                                    <span>{desc}</span> <br/>
+                                                )
+                                            }
+
+                                            <br/>
+
+                                            {
+                                                it.items.map((item:any) => 
+                                                <b><span>{item.nombre}</span></b>
+                                                <div>{ 
+                                                        item.atencion && ( 
+                                                            <span>{item.atencion}</span>
+                                                            <br /> <br />
+                                                        )
+                                                       }
+                                                </div> 
+                                                <div>{ 
+                                                        item.descripcion && ( 
+                                                            <span>{item.descripcion}</span>
+                                                            <br /> <br />
+                                                        )
+                                                       }
+                                                </div> 
+                                                
+                                                
+                                                <span>
+                                                    {
+                                                        item.whatsApp && (
+                                                            <b>WhatsApp:</b> <a href={`https://wa.me/${item.whatsApp}?text=¡Estoy+interesado!`}> +{item.whatsApp}</a><br />
+                                                        )
+                                                    }
+                                                </span>
+                                                <span>
+                                                    {
+                                                        item.email && (
+                                                            <b>E-mail:</b> <a href={`mailto:${item.email}`} target="_blank"> {item.email}</a><br/>
+                                                        )
+                                                    }
+                                                </span>
+                                                
+                                                )
+                                            }
+                                               
+
+                                            
+
+
+
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- Intro Info Tabs-->
+        <div class="intro-info-tabs"></div>
+    </div>
+</div>

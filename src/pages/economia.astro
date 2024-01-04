@@ -1,0 +1,144 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadDerecho } from '../layouts/LayoutListaGrado.astro';
+
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Economía',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FCSD/Economía/Economía_Banner-Horizontal.jpg'
+}
+
+const carrerasDerechoFilter = carrerasFacultadDerecho.filter((carrera:any) => carrera.url !== 'economia');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Economista de la ULVR será capaz de aplicar los conocimientos teórico-prácticos en la generación de bienes y servicios, la administración pública, así como la gestión de empresas, emprendimientos y organizaciones productivas.',
+                         'El estudiante de Economía recibirá una sólida formación conceptual y doctrinaria para comprender a fondo los principios que rigen el ser económico del individuo y la sociedad, aportando al desarrollo territorial con base en un correcto análisis económico y financiero.',
+                         'El título de Economista de la ULVR también te permitirá cursar estudios a nivel de posgrado.'
+                        ],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Economista.',
+            jornada:'Diurna, Vespertina y Nocturna.',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: [
+                          'La transformación social requiere de Economistas con visión ético-profesional capaces de resolver problemas socioeconómicos y comprender los contextos nacionales e internacionales que dinamizan el funcionamiento de los Estados y las unidades productivas.',
+                          'El Economista de la ULVR estará preparado para dominar la teoría económica, contable, tributaria y financiera, con apoyo en la matemática y la estadística, para evaluar acertadamente las políticas fiscales, financieras y de inversiones en entornos nacionales e internacionales.'
+                          ],
+            lista: ['A partir del 3° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 50% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como asistente administrativo, administrador de emprendimientos y técnico en proyectos.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Abogado de la ULVR será capaz de::'],
+            lista: ['Investigar mercados y analizar sus oportunidades comerciales.',
+                    'Manejar cartera y cuentas individuales y corporativas.',
+                    'Elaborar planes estratégicos de organizaciones y empresas',
+                    'Establecer metas y responsabilidades por áreas.',
+                    'Diseñar estructuras de cargos, puestos y funciones.',
+                    'Establecer procesos adecuados de los flujos de información.',
+                    'Gestionar la información al interior de la organización.',
+                    'Administrar negocios fiduciarios y operaciones bursátiles.',
+                    'Sistematizar la información histórica de la organización.',
+                    'Desarrollar métodos y procesos de planificación territorial.',
+                    'Manejar la ejecución presupuestaria de organismos públicos y privados.',
+                    'Elaborar y evaluar proyectos de inversión pública y privada.',
+                    'Planificar las finanzas públicas y diseñar la política monetaria y fiscal.',
+                    'Gestionar las relaciones de comercio exterior e integración.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Economista de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Gestor de negocios.',
+                    'Planificador y programador económico.',
+                    'Coordinador organizacional.',
+                    'Director de proyectos.',
+                    'Gestor de información económica.',
+                    'Perito económico.',
+                    'Asesor económico.',
+                    'Evaluador.',
+                    'Analista económico.',
+                    'Estratega.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Rosa Susana Salinas Heredia', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'226', 
+                    email:'rsalinash@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Rubén Darío Paz Morales', 
+                    cargo:'Coordinador', 
+                    telefono:'(04) 2596 500', 
+                    ext:'300', 
+                    email:'rpazmorales@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. María Gabriela De Grau Ávila', 
+                    cargo:'Secretaria', 
+                    telefono:'(04) 2596 500', 
+                    ext:'253', 
+                    email:'mdegraua@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Ab. Ana María Vélez Silva', 
+                    cargo:'Secretaria', 
+                    telefono:'(04) 2596 500', 
+                    ext:'253', 
+                    email:'avelezs@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Karina Magdalena Chiriguayo Almeida', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'229', 
+                    email:'kchiriguayoa@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Lcda. Sheila Ariana Zamora Rendón', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'237', 
+                    email:'szamorar@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Economía.pdf';   
+
+const facultad='Carreras de la Facultad de Ciencias Sociales y Derecho'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasDerechoFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

@@ -1,0 +1,238 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import ShopPartBook from "../Components/ShopPartBook.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+import { catalogoBibliotecaVirtual } from "./editorial_ulvr.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Biblioteca Digital "Dra. Elsa Alarcón Soto"',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Editorial ULVR',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/investigacion.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Académicos',
+    descripcion: ['El libro es el motor del conocimiento, lo ha preservado de la destrucción y el olvido. Los libros que te presentamos en Académicos, son escritos por docentes de la ULVR pensando en dotar a sus estudiantes de las mejores herramientas de aprendizaje. Sus apuntes de clase se convierten en la base bibliográfica que les ayudará a desarrollar sus competencias profesionales. Están disponibles en formato PDF. Recuerda dar crédito al autor cuando lo utilices en tus trabajos.']
+}
+
+const dataLibros = [
+    {
+        titulo:'Recomendaciones metodológicas para la evaluación curricular de contenidos en las carreras de Educación de la Universidad Laica VICENTE ROCAFUERTE de Guayaquil',
+        url:'academico1',
+        imagen:'images/Editorial ULVR/recomendaciones.jpg'
+    },
+    {
+        titulo:'Guía para el desarrollo de las habilidades del pensamiento',
+        url:'academico2',
+        imagen:'images/Editorial ULVR/guía.png'
+    },
+    {
+        titulo:'Percepciónes, Gestión y Comunicación de la Filosofía e Identidad Universitaria Ecuatoriana',
+        url:'academico3',
+        imagen:'images/Editorial ULVR/percepciones_1.png'
+    },
+    {
+        titulo:'Introducción a la comunicación política',
+        url:'academico4',
+        imagen:'images/Editorial ULVR/Introducción a la comunicación política PORTADA.jpg'
+    },
+    {
+        titulo:'El Discurso Político',
+        url:'academico5',
+        imagen:'images/Editorial ULVR/El Discurso Político.png'
+    },
+    {
+        titulo:'Procesos continuos y sistemáticos de la auditoría financiera',
+        url:'academico6',
+        imagen:'images/Editorial ULVR/Procesos continuos y sistemáticos portada.jpg'
+    },
+    {
+        titulo:'Resolución de Casos Prácticos de ejercicios para Estados Financieros',
+        url:'academico7',
+        imagen:'images/Editorial ULVR/Resolución de Casos Prácticos.jpg'
+    },
+    {
+        titulo:'Manual de Auditoría Tributaria',
+        url:'academico8',
+        imagen:'images/Editorial ULVR/Manual de Auditoría Tributaria.png'
+    },
+    {
+        titulo:'Proyectos de Inversión',
+        url:'academico9',
+        imagen:'images/Editorial ULVR/Proyectos de Inversión.jpg'
+    },
+    {
+        titulo:'Fundamentos de Innovación y Tecnología',
+        url:'academico10',
+        imagen:'images/Editorial ULVR/Innovación tecnológica aplicada al comercio internacional.jpg'
+    },
+    {
+        titulo:'Ética & Deontología',
+        url:'academico11',
+        imagen:'images/Editorial ULVR/Ética y Deontología.jpg'
+    },
+    {
+        titulo:'Estadística Descriptiva con Excel 1',
+        url:'academico12',
+        imagen:'images/Editorial ULVR/DLC 19 Estadística descriptica con excel 1.jpg'
+    },
+    {
+        titulo:'Administración Estratégica',
+        url:'academico13',
+        imagen:'images/Editorial ULVR/DLC 18 Administración estratégica en 11 lecciones.jpg'
+    },
+    {
+        titulo:'Libro V del COPCI',
+        url:'academico14',
+        imagen:'images/Editorial ULVR/COPCI.jpg'
+    },
+    {
+        titulo:'Educación, Enseñanza, Instrucción',
+        url:'academico15',
+        imagen:'images/Editorial ULVR/Educación Enseñanza Instrucción.jpg'
+    },
+    {
+        titulo:'Aplicando Microeconomía',
+        url:'academico16',
+        imagen:'images/Editorial ULVR/Aplicando microeconomía.jpg'
+    },
+    {
+        titulo:'Dolarización',
+        url:'academico17',
+        imagen:'images/Editorial ULVR/Dolarización.jpg'
+    },
+    {
+        titulo:'El Arte de Dibujar y aplicar color',
+        url:'academico18',
+        imagen:'images/Editorial ULVR/DLC 14 El arte de dibujar y aplicar color.jpg'
+    },
+    {
+        titulo:'Contabilidad Financiera',
+        url:'academico19',
+        imagen:'images/Editorial ULVR/DLC 13 Contabilidad financiera. Casos prácticos.png'
+    },
+    {
+        titulo:'Procesos de Transformación de la Matriz Productiva en Ecuador',
+        url:'academico20',
+        imagen:'images/Editorial ULVR/DLC 12 Proceso de transformación de la matriz productiva en Ecuador.jpg'
+    },
+    {
+        titulo:'Diccionario Contable Financiero',
+        url:'academico21',
+        imagen:'images/Editorial ULVR/DLC 11 Diccionario Financiero Contable.jpg'
+    },
+    {
+        titulo:'Estrategias Gubernamentales',
+        url:'academico22',
+        imagen:'images/Editorial ULVR/DLC 10 Estrategias gubernamentales.jpg'
+    },
+    {
+        titulo:'Decisiones Estratégicas',
+        url:'academico23',
+        imagen:'images/Editorial ULVR/DLC 9 Decisiones estratégicas.jpg'
+    },
+    {
+        titulo:'Matemáticas Financieras en términos simples',
+        url:'academico24',
+        imagen:'images/Editorial ULVR/DLC 8.jpg'
+    },
+    {
+        titulo:'Buenas Prácticas Empresariales',
+        url:'academico25',
+        imagen:'images/Editorial ULVR/DLC 7.jpg'
+    },
+    {
+        titulo:'Matemáticas',
+        url:'academico26',
+        imagen:'images/Editorial ULVR/DLC 6.jpg'
+    },
+    {
+        titulo:'Administración para Pymes Ecuatorianas',
+        url:'academico27',
+        imagen:'images/Editorial ULVR/DLC 5.jpg'
+    },
+    {
+        titulo:'Visión Glocal de las PYMES',
+        url:'academico28',
+        imagen:'images/Editorial ULVR/Visión Glocal de las Pymes.png'
+    },
+    {
+        titulo:'América Latina: Del Águila al Dragón - Los caminos hacia el desarrollo',
+        url:'academico29',
+        imagen:'images/Editorial ULVR/Del águila al dragón.png'
+    },
+    {
+        titulo:'América Latina: Del Águila al Dragón',
+        url:'academico30',
+        imagen:'images/Editorial ULVR/aguila1.png'
+    },
+    {
+        titulo:'El Abandono en la Relación Laboral',
+        url:'academico31',
+        imagen:'images/Editorial ULVR/DLC 4.jpg'
+    },
+    {
+        titulo:'Apuntes de Derecho de Trabajo',
+        url:'academico32',
+        imagen:'images/Editorial ULVR/DLC 3.jpg'
+    },
+    {
+        titulo:'Procesos Administrativos en la Organización Empresarial Moderna',
+        url:'academico33',
+        imagen:'images/Editorial ULVR/DLC 2.jpg'
+    },
+]
+
+
+const catalogoBibliotecaVirtualFilter = catalogoBibliotecaVirtual.filter((carrera:any) => carrera.url !== 'editorial_academico');
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        <div class="desc">
+            {
+                dataEncabezado.descripcion.map((desc:any) =>
+                <p class="text-justify">{desc}</p>
+                )
+
+            }
+        </div>				
+    </div>
+
+    <!--Shop part start-->
+    <ShopPartBook {dataLibros} />
+    <!--Shop part end-->
+
+
+    
+    <!--Caeds List Editorial part end-->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoBibliotecaVirtualFilter}>
+            Catálogo de la Biblioteca virtual
+        </CarrerasPorFacultad/>
+    </div>
+    <!--Caeds List Editorial part end-->
+ 
+</LayoutVarios>

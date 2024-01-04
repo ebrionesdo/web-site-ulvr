@@ -1,0 +1,439 @@
+---
+
+import TabConAcordion from "../Components/TabConAcordion.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Transparencia',
+    menuAtras : 'index',   
+    urlAtras : '/',   
+    servicio : 'Universidad',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+
+const dataBibliotecas = [
+    {
+        bibliotecas:{
+            tituloTab:'2022',
+            tab:'prod-2022',
+            mostrar:true,
+            titulo:'Información Pública',
+            parrafos:['Conoce más sobre la Información Pública de la ULVR'],
+            acordiones: [
+                {
+                    titulo:'Enero',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a3.- Regulaciones y procedimientos internos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b1.- Directorio de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b2.- Distributivo del Personal',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'d.- Servicios que ofrece y la forma de acceder a ellos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'f1.- Formularios o formatos de solicitudes',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'g.- Presupuesto de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'m.- Mecanismos de rendición de cuentas a la ciudadanía',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'o.- Responsable de atender la información pública',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'Febrero',
+                    posicion:'Two',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a3.- Regulaciones y procedimientos internos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b1.- Directorio de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b2.- Distributivo del Personal',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'d.- Servicios que ofrece y la forma de acceder a ellos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'f1.- Formularios o formatos de solicitudes',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'g.- Presupuesto de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'m.- Mecanismos de rendición de cuentas a la ciudadanía',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'o.- Responsable de atender la información pública',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'Marzo',
+                    posicion:'Three',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a3.- Regulaciones y procedimientos internos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b1.- Directorio de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b2.- Distributivo del Personal',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'d.- Servicios que ofrece y la forma de acceder a ellos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'f1.- Formularios o formatos de solicitudes',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'g.- Presupuesto de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'m.- Mecanismos de rendición de cuentas a la ciudadanía',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'o.- Responsable de atender la información pública',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+                {
+                    titulo:'Abril',
+                    posicion:'Four',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a3.- Regulaciones y procedimientos internos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b1.- Directorio de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'b2.- Distributivo del Personal',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'d.- Servicios que ofrece y la forma de acceder a ellos',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'f1.- Formularios o formatos de solicitudes',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'g.- Presupuesto de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'m.- Mecanismos de rendición de cuentas a la ciudadanía',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'o.- Responsable de atender la información pública',
+                            url:'#',
+                            imagen:''
+                        },
+                    ] 
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'2021',
+            tab:'prod-2021',
+            titulo:'Información Pública',
+            parrafos:['Conoce más sobre la Información Pública de la ULVR'],
+            acordiones: [
+                {
+                    titulo:'Enero a Diciembre',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        }
+                    ] 
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'2020',
+            tab:'prod-2020',
+            titulo:'Información Pública',
+            parrafos:['Conoce más sobre la Información Pública de la ULVR'],
+            acordiones: [
+                {
+                    titulo:'Enero a Diciembre',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        }
+                    ] 
+                },
+            ]
+        },
+    },
+    {
+        bibliotecas:{
+            tituloTab:'2019',
+            tab:'prod-2019',
+            titulo:'Información Pública',
+            parrafos:['Conoce más sobre la Información Pública de la ULVR'],
+            acordiones: [
+                {
+                    titulo:'Enero a Diciembre',
+                    mostrar:true,
+                    posicion:'One',
+                    detalle:[
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a1.- Organigrama de la Institución',
+                            url:'#',
+                            imagen:''
+                        },
+                        {
+                            titulo:'',
+                            descripcion:[],
+                            botonNombre:'a2.- Base legal que rige a la institución',
+                            url:'#',
+                            imagen:''
+                        }
+                    ] 
+                },
+            ]
+        },
+    },
+]
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+
+    <TabConAcordion {dataBibliotecas}/>
+ 
+</LayoutVarios>

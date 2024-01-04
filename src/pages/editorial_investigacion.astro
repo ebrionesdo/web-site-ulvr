@@ -1,0 +1,98 @@
+---
+
+import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
+import ShopPartBook from "../Components/ShopPartBook.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+import { catalogoBibliotecaVirtual } from "./editorial_ulvr.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Biblioteca Digital "Dra. Elsa Alarcón Soto"',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Editorial ULVR',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/investigacion.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataEncabezado = {
+    titulo:'Investigación',
+    descripcion: ['La Universidad Laica VICENTE ROCAFUERTE de Guayaquil, viene apostando a la mejora de la calidad académica de la institución a través del impulso de proyectos de investigación con resultados que aporten a la sociedad en general. La Investigación Científica es uno de los ejes fundamentales de la Educación Superior en el Ecuador, considerada como un elemento sustantivo del quehacer universitario. Ya no se puede concebir a la educación superior sin su rol en la investigación y sin que esta responda a las necesidades de la sociedad y su zona de influencia. En este apartado presentamos los resultados de la investigación de la ULVR, como un medio de transferencia del conocimiento, enmarcados en los dominios y líneas de investigación institucionales.']
+}
+
+const dataLibros = [
+    {
+        titulo:'Formación Científica y Dirección del Proceso Enseñanza-Aprendizaje en la Educación Superior',
+        url:'investigacion1',
+        imagen:'images/Editorial ULVR/CUDERNOS DE INVESTIGACION 5 portada.jpg'
+    },
+    {
+        titulo:'Comunicación No Verbal y la percepción en el campo de los negocios',
+        url:'investigacion2',
+        imagen:'images/Editorial ULVR/Cuadernos de investigación 4.jpg'
+    },
+    {
+        titulo:'Micronegocios Familiares en el desarrollo sostenible del sector turístico. Caso Guayaquil y sus sectores aledaños',
+        url:'investigacion3',
+        imagen:'images/Editorial ULVR/Cuadernos de investigación 3.jpg'
+    },
+    {
+        titulo:'Radio, Universidad y Comunidad: Desafíos en el contexto ecuatoriano',
+        url:'investigacion4',
+        imagen:'images/Editorial ULVR/Cuadernos de investigación 2.jpg'
+    },
+    {
+        titulo:'Compendio 2018',
+        url:'investigacion5',
+        imagen:'images/Editorial ULVR/Cuadernos de investigación 1.jpg'
+    },
+]
+
+
+const catalogoBibliotecaVirtualFilter = catalogoBibliotecaVirtual.filter((carrera:any) => carrera.url !== 'editorial_investigacion');
+---
+<style>
+    .contenedor {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 90%;
+    }
+</style>
+
+<LayoutVarios {breadcrumbs}>
+
+    <div class="contenedor">
+        <h3>{dataEncabezado.titulo}</h3><br />
+        <div class="desc">
+            {
+                dataEncabezado.descripcion.map((desc:any) =>
+                <p class="text-justify">{desc}</p>
+                )
+
+            }
+        </div>				
+    </div>
+
+    <!--Shop part start-->
+    <ShopPartBook {dataLibros} />
+    <!--Shop part end-->
+
+
+    
+    <!--Caeds List Editorial part end-->
+    <div class="contenedor">
+        <CarrerasPorFacultad carreras={catalogoBibliotecaVirtualFilter}>
+            Catálogo de la Biblioteca virtual
+        </CarrerasPorFacultad/>
+    </div>
+    <!--Caeds List Editorial part end-->
+ 
+</LayoutVarios>

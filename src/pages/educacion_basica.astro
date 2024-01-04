@@ -1,0 +1,139 @@
+---
+import LayoutCarrera from '../layouts/LayoutCarrera.astro';
+import { carrerasFacultadEducacion } from '../layouts/LayoutListaGrado.astro';
+
+const breadcrumbs = {
+    title : 'Carrera de',
+    titleCarrera : 'Educación Básica',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Grado',  
+    nombreBoton : 'Inscribete',
+    urlInscribete : '/admision',
+    img : 'images/banners carreras/FEDU/Educación Básica/Educación-Básica_Banner-Horizontal.jpg',        
+    descargarInformacion : 'documentos/Flyer de carreras 2022/Educación Básica.pdf',  
+}
+
+const carrerasEducacionFilter = carrerasFacultadEducacion.filter((carrera:any) => carrera.url !== 'educacion_basica');
+
+const acordionData = {
+    titulo:'',
+    acordion:[
+        {
+            titulo:'Descripción de la carrera',
+            descripcion:['El Licenciado en Ciencias de la Educación Básica de la ULVR propicia entornos de aprendizaje adecuados para el desarrollo de las destrezas y habilidades lingüísticas, matemáticas, naturales y sociales de los niños, niñas y adolescentes, promoviendo el pensamiento crítico, respetando su etapa evolutiva.',
+                 'Durante su proceso de formación el estudiante vincula los conocimientos teóricos con la práctica a través de los proyectos investigativos, formativos e integradores de saberes, a los que se suman las prácticas preprofesionales y los programas de vinculación con la sociedad.', 
+                 'El título en Licenciado en Ciencias de la Educación Básica de la ULVR también te permitirá cursar estudios a nivel de posgrado.'],
+            duracion: '8 semestres',
+            modalidad:'Híbrida, que combina las clases presenciales y virtuales utilizando herramientas didácticas y tecnológicas que facilitan el proceso de enseñanza-aprendizaje.',
+            troncocomun:'2 semestres',
+            tituloObtenido:'Licenciado(a) en Ciencias de la Educación Básica',
+            jornada:'Vespertina (16:00 a 20:15).',
+            posicion: 'One',             
+        },
+        {
+            titulo:'Objetivo de la carrera',
+            descripcion: ['El desarrollo de las competencias lingüísticas, lógico matemáticas, culturales y artísticas favorece el aprendizaje de los niños, niñas y adolescentes, dentro de un ambiente inclusivo y de equidad, con calidez y calidad.',
+                          'El Licenciado en Ciencias de la Educación Básica de la ULVR es un profesional innovador, que diseña proyectos curriculares que promueven la construcción de conocimientos vinculando la teoría con la práctica en espacios de colaboración que favorezcan la autonomía, la reflexión y la metacognición.'],
+            lista: ['A partir del 4° semestre cursarás materias propias de la especialidad que te darán la oportunidad de iniciar tu vida laboral mientras continúas tus estudios.',
+                    'Al 60% del plan de estudios ya tendrás las habilidades necesarias para desempeñarte como auxiliar en centros de educación básica.'
+                    ],
+            posicion: 'Two'             
+        },
+        {
+            titulo:'Perfil de egreso',
+            descripcion: ['El Licenciado en Ciencias de la Educación Básica de la ULVR será capaz de:'],
+            lista: ['Diseñar proyectos educativos para el desarrollo de niños, niñas y adolescentes.',
+                    'Facilitar los aprendizajes en educación general básica.',
+                    'Dirigir centros educativos.',
+                    'Crear recursos educativos.',
+                    'Gestionar procesos de enseñanza-aprendizaje integrales e inclusivos.',
+                    'Brindar asistencia para el mejoramiento de los procesos de enseñanza-aprendizaje.',
+                    'Diseñar adaptaciones curriculares.',
+                    'Integrar equipos de trabajo multidisciplinarios.',
+                    'Utilizar las TIC para guiar a los padres en los procesos de enseñanza-aprendizaje.',
+                    'Analizar las políticas públicas educativas para su correcta aplicación.',
+                    'Evaluar los procesos de aprendizaje, productos y contenidos de acuerdo a la realidad, ritmos y características de los niños, niñas y adolescentes.'
+                    ],
+            posicion: 'Three'             
+        },
+        {
+            titulo:'Perfil profesional',
+            descripcion: ['El Licenciado en Ciencias de la Educación Básica de la ULVR podrá desempeñarse en el ámbito público y privado, como:'],
+            lista: ['Directivo.',
+                    'Administrador educativo.',
+                    'Capacitador.',
+                    'Evaluador.',
+                    'Asesor académico.',
+                    'Diseñador de proyectos curriculares.',
+                    'Docente.',
+                    'Investigador.'
+                ],
+            posicion: 'Four'               
+        },
+        {
+            titulo:'Contactos',
+            contacto: [
+                {
+                    nombre:'Mgtr. Dunia Lucía Barreiro Moreira', 
+                    cargo:'Directora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'219', 
+                    email:'dbarreirom@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. Norma Alexandra Hinojosa Garcés', 
+                    cargo:'Coordinadora', 
+                    telefono:'(04) 2596 500', 
+                    ext:'209', 
+                    email:'nhinojosag@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Mgtr. José Martín Maldonado Morán', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'155', 
+                    email:'jmaldonadomo@ulvr.edu.ec'
+                },
+
+
+
+
+
+                {
+                    nombre:'Mgtr. Leonor Alexandra Muñoz García', 
+                    cargo:'Secretario', 
+                    telefono:'(04) 2596 500', 
+                    ext:'221', 
+                    email:'lmunozg@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Econ. Lucía Narcisa Aroca Briones', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'larocab@ulvr.edu.ec'
+                },
+                {
+                    nombre:'Sra. Ketty Elizabeth Rodríguez Barahona', 
+                    cargo:'Ayudante de secretaría', 
+                    telefono:'(04) 2596 500', 
+                    ext:'281', 
+                    email:'krodriguezb@ulvr.edu.ec'
+                }
+            ],
+            horario:'De lunes a viernes desde las 08:00 hasta las 20:00',
+            posicion: 'Five',                
+        },
+    ]
+}
+
+const descargarInformacion = 'documentos/Flyer de carreras 2022/Educación Básica.pdf';   
+
+const facultad='Carreras de la Facultad de Educación'
+
+---
+
+<LayoutCarrera {facultad} carreras={carrerasEducacionFilter} {breadcrumbs} {acordionData} {descargarInformacion} >
+
+</LayoutCarrera>

@@ -1,0 +1,156 @@
+---
+import AboutTabSection from "../Components/AboutTabSection.astro";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
+
+
+const breadcrumbs = {
+    title : '',
+    titleCarrera : 'Unidad de Salud',
+    menuAtras : 'Index',   
+    urlAtras : '/',   
+    servicio : 'Servicios',  
+    nombreBoton : '',
+    urlInscribete : '#',
+    img : 'images/breadcrumbs/universidadban123-01.jpg',        
+    descargarInformacvion : '',  
+}
+
+const dataAboutTab = {
+    cabeceraTab: {
+        imagen: 'images/about/Unidad de salud 1.JPG',
+        menu: [
+            {
+                nombre:'¿Qué hacemos?',
+                tab:'que-hacemos',
+                img:"images/about/icon/4.png",
+                mostrar:true
+            },
+            {
+                nombre:'Servicios y horarios',
+                tab:'servicios-horarios',
+                img:"images/about/icon/5.png"
+            },
+            {
+                nombre:'Contactos',
+                tab:'contactos',
+                img:"images/about/icon/EJEMPLO.png"
+            },
+        ]
+
+    },
+
+    detalletab: [
+        {
+            nombre:'¿Qué hacemos?',
+            tab:'que-hacemos',
+            imagen:'images/about/Unidad de salud 2.JPG',
+            mostrar:true,
+            descripcion: ['La Unidad de Salud brinda atención en medicina general y odontológica a los miembros de la comunidad universitaria, con dedicación y esmero, poniendo énfasis en su bienestar.',
+                           'Se atiende a partir de las 07:00 hasta las 21:00, en forma ininterrumpida.',
+                           'El acceso a la atención médica es para todas las personas, incluso si no pertenecen a la ULVR, a quienes se les proporciona servicios de atención ambulatoria y primeros auxilios.',
+                           'Realizamos campañas periódicas de salud preventiva a través de los medios de difusión de la ULVR.']
+        },
+        {
+            nombre:'Servicios y horarios',
+            tab:'servicios-horarios',
+            imagen:'',
+            descripcion: [],
+            descripcionItem: ['La Unidad de Salud está ubicada en la planta baja del edificio de Bienestar. Brinda servicios de atención ambulatoria y de consultas; atención de urgencias médicas; control de signos vitales; examen odontológico; y revalidación de certificados médicos.'],
+            items: [
+            {nombre:'Medicina General', atencion:'07:00 a 21:30'},
+            {nombre:'Odontología', atencion:'08:00 a 16:00'},
+            {nombre:'Médico ocupacional', atencion:'16:00 a 21:00'},
+            ]
+        },
+        {
+            nombre:'Contactos',
+            tab:'contactos',
+            imagen:'',
+            descripcion: [],
+            lista: [],
+            contacto: [
+                {
+                    nombre:'Dra. Lucila Sandoval Navarrete',
+                    cargo:'Directora Unidad de Salud',
+                    telefono:'04 2596-500 Ext. 162',
+                    email:'lsandovaln@ulvr.edu.ec',
+                    atencion:'Atención de 07:00 a 16:00'
+                },
+                {
+                    nombre:'Dra. María de Lourdes Hinojosa Dazza',
+                    cargo:'Odontóloga',
+                    telefono:'04 2596-500 Ext. 163',
+                    email:'mhinojosad@ulvr.edu.ec',
+                    atencion:'Atención de 07:00 a 16:00'
+                },
+                {
+                    nombre:'Dr. Abel Andrade Cedeño',
+                    cargo:'Médico ocupacional',
+                    telefono:'04 2596-500 Ext. 162',
+                    email:'aandradece@ulvr.edu.ec',
+                    atencion:'Atención de 16:00 a 21:00'
+                },
+                {
+                    nombre:'Dolores Buruhan Ramírez',
+                    cargo:'Auxiliar de Enfermería',
+                    telefono:'04 2596-500 Ext. 162',
+                    email:'dburuhanr@ulvr.edu.ec',
+                    atencion:'Atención de 07:00 a 16:00'
+                },
+                {
+                    nombre:'Paola Andrade Rivera',
+                    cargo:'Auxiliar de Enfermería',
+                    telefono:'04 2596-500 Ext. 162',
+                    email:'pandrader@ulvr.edu.ec',
+                    atencion:'Atención de 11:00 a 20:00'
+                },
+            ],
+        },
+    ]
+}
+
+// const acordionData = {
+//     titulo:'',
+//     acordion:[
+//         {
+//             mostrar:true,
+//             titulo:'Rutas y protocolos de atención',
+//             link:   [
+//                         {
+//                             url:'documentos/bienestar/ATENCIÓN PARA CASOS DE VIOLENCIA.pdf', 
+//                             texto:'Atención para casos de violencia.'
+//                         },
+//                         {
+//                             url:'documentos/bienestar/ATENCIÓN PARA CASOS DE ESTUDIANTES CON DISCAPACIDAD .pdf', 
+//                             texto:'Atención para casos de estudiantes con discapacidad.'
+//                         },
+//                         {
+//                             url:'documentos/bienestar/ATENCIÓN CASOS DE CONSUMO .pdf', 
+//                             texto:'Atención para casos de consumo y/o presunto expendio o consumo.'
+//                         },
+//                         {
+//                             url:'documentos/bienestar/ATENCIÓN DE CASOS CON PROBLEMAS DE DISCIPLINA ok.pdf', 
+//                             texto:'Atención de casos con problemas de disciplina.'
+//                         },
+//                         {
+//                             url:'documentos/bienestar/Reglamento para garantizar la Igualdad en el Sistema de Educación Superior..pdf', 
+//                             texto:'Reglamento para garantizar la igualdad en el sistema de educación.'
+//                         },
+//                         {
+//                             url:'documentos/bienestar/PROTOCOLO DE PREVENCIÓN Y ACTUACIÓN EN CASOS DE ACOSO, DISCRIMINACIÓN Y VIOLENCIA BASADA EN GÉNERO Y ORIENTACIÓN SEXUAL EN LAS INSTITUCIONES DE EDUCACIÓN SUPERIOR.pdf', 
+//                             texto:'Protocolo de prevención y actuación en casos de acoso, discriminación y violencia basada en género y orientación sexual en las instituciones de educación superior.'
+//                         },
+//                     ],
+//             posicion: 'One'   
+//         },
+//     ]
+// }
+
+
+---
+
+<LayoutVarios {breadcrumbs}>
+    <!-- About Section Start -->
+    <AboutTabSection {dataAboutTab} />
+    <!-- About Section End -->
+</LayoutVarios>

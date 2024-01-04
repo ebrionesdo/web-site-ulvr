@@ -1,0 +1,193 @@
+---
+const {dataBibliotecas} = Astro.props;
+---
+
+<!-- <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-8 mx-auto md-mb-50">
+                <div class="intro-info-tabs">
+                    <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                        {
+                            dataBibliotecas.map((tabBibliotecas:any) => 
+                                <li class="nav-item tab-btns" role="presentation">
+                                    <a class:list={[ 'nav-link tab-btn', { "active": tabBibliotecas.bibliotecas.mostrar }]}
+                                        id={`${tabBibliotecas.bibliotecas.tab}-tab`} data-bs-toggle="tab" href="#"
+                                        data-bs-target={`#${tabBibliotecas.bibliotecas.tab}`} role="tab" aria-controls={tabBibliotecas.bibliotecas.tab}
+                                        aria-selected="false">
+                                        {tabBibliotecas.bibliotecas.tituloTab}
+                                    </a>
+                                </li>
+                            )
+                        }
+                    </ul>
+                    <div class="tab-content tabs-content" id="myTabContent">
+                        {
+                            dataBibliotecas.map((tabBibliotecas:any) => 
+                                <div class:list={[ 'tab-pane fade', { "show active": tabBibliotecas.bibliotecas.mostrar }]} 
+                                     id={tabBibliotecas.bibliotecas.tab} role="tabpanel" 
+                                     aria-labelledby={`${tabBibliotecas.bibliotecas.tab}-tab`}>
+                                    <div class="content white-bg pt-30">
+                                        <div class="course-overview">
+                                            <div class="inner-box">
+                                                <h4>{tabBibliotecas.bibliotecas.titulo}</h4>
+                                                {
+                                                    tabBibliotecas.bibliotecas.parrafos && tabBibliotecas.bibliotecas.parrafos.map((parrafo:any) => 
+                                                    <p>{parrafo}</p>
+                                                    )
+                                                }
+                                                
+                                                <h4>{tabBibliotecas.bibliotecas.titulo2}</h4>
+
+                                                <div id="accordion" class="accordion-box">
+                                                    {
+                                                        tabBibliotecas.bibliotecas.acordiones.map( (acordion:any) => 
+
+                                                            <div class="card accordion block">
+                                                                <div class="card-header" id={`heading${acordion.posicion}`}>
+                                                                    <h5 class="mb-0">
+                                                                        <button class="btn btn-link acc-btn"
+                                                                            data-bs-toggle="collapse"
+                                                                            data-bs-target={`#collapse${acordion.posicion}`} aria-expanded="false"
+                                                                            aria-controls={`collapse${acordion.posicion}`}>{acordion.titulo}</button>
+                                                                    </h5>
+                                                                </div>
+
+                                                                <div id={`collapse${acordion.posicion}`} class:list={["collapse", {"show":acordion.mostrar}]}
+                                                                     aria-labelledby={`heading${acordion.posicion}`} data-bs-parent="#accordion">
+                                                                    <div class="card-body acc-content current">
+                                                                        <div class="content">
+                                                                            <div class="clearfix">
+                                                                                <div class="pull-left">
+                                                                                    {
+                                                                                        acordion.detalle.map((det:any) =>
+                                                                                        <br/>
+                                                                                            <a href={det.url}>  {det.botonNombre} </a>
+                                                                                            <br/>
+                                                                                        )
+                                                                                    }
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section> -->
+
+<section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-8 mx-auto md-mb-50">
+                <div class="intro-info-tabs">
+                    <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                        {
+                            dataBibliotecas.map((tabBibliotecas:any) => 
+                                <li class="nav-item tab-btns" role="presentation">
+                                    <a class:list={[ 'nav-link tab-btn', { "active": tabBibliotecas.bibliotecas.mostrar }]}
+                                        id={`${tabBibliotecas.bibliotecas.tab}-tab`} data-bs-toggle="tab" href="#"
+                                        data-bs-target={`#${tabBibliotecas.bibliotecas.tab}`} role="tab" aria-controls={tabBibliotecas.bibliotecas.tab}
+                                        aria-selected="false">
+                                        {tabBibliotecas.bibliotecas.tituloTab}
+                                    </a>
+                                </li>
+                            )
+                        }
+                    </ul>
+                    <div class="tab-content tabs-content" id="myTabContent">
+                        {
+                            dataBibliotecas.map((tabBibliotecas:any) => 
+                                <div class:list={[ 'tab-pane fade', { "show active": tabBibliotecas.bibliotecas.mostrar }]} 
+                                     id={tabBibliotecas.bibliotecas.tab} role="tabpanel" 
+                                     aria-labelledby={`${tabBibliotecas.bibliotecas.tab}-tab`}>
+                                    <div class="content white-bg pt-30">
+                                        <div class="course-overview">
+                                            <div class="inner-box">
+                                                <h4>{tabBibliotecas.bibliotecas.titulo}</h4>
+                                                {
+                                                    tabBibliotecas.bibliotecas.parrafos && tabBibliotecas.bibliotecas.parrafos.map((parrafo:any) => 
+                                                    <p>{parrafo}</p>
+                                                    )
+                                                }
+                                                
+                                                <h4>{tabBibliotecas.bibliotecas.titulo2}</h4>
+
+                                                <div id="accordion" class="accordion-box">
+                                                    {
+                                                        tabBibliotecas.bibliotecas.acordiones.map( (acordion:any) => 
+
+                                                            <div class="card accordion block">
+                                                                <div class="card-header" id={`heading${acordion.posicion}`}>
+                                                                    <h5 class="mb-0">
+                                                                        <button class="btn btn-link acc-btn"
+                                                                            data-bs-toggle="collapse"
+                                                                            data-bs-target={`#collapse${acordion.posicion}`} aria-expanded="false"
+                                                                            aria-controls={`collapse${acordion.posicion}`}>{acordion.titulo}
+                                                                        </button>
+                                                                    </h5>
+                                                                </div>
+
+                                                                <div id={`collapse${acordion.posicion}`} class:list={["collapse", {"show":acordion.mostrar}]}
+                                                                     aria-labelledby={`heading${acordion.posicion}`} data-bs-parent="#accordion">
+                                                                    <div class="card-body acc-content current">
+                                                                        <div class="content">
+                                                                            <div class="clearfix">
+                                                                                <div class="pull-left">
+                                                                                    {
+                                                                                        !acordion.acordionChild && acordion.detalle.map((det:any) =>
+                                                                                            <br/>
+                                                                                            <a href={det.url}>  {det.botonNombre} </a>
+                                                                                            <br/>
+                                                                                        )
+                                                                                    }
+                                                                                    {
+                                                                                        acordion.acordionChild && acordion.acordionChild.map((child:any) =>
+                                                                                            <br/>
+                                                                                            <br/>
+                                                                                            <h5>{child.titulo}</h5>
+                                                                                            <div>
+                                                                                                {
+                                                                                                    child.detalle.map((det:any) =>
+                                                                                                        <a href={det.url}>  {det.botonNombre} </a>
+                                                                                                        <br/>
+                                                                                                        <br/>
+                                                                                                    )
+
+                                                                                                }
+                                                                                            </div>
+                                                                                        )
+                                                                                    }
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
