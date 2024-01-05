@@ -9,11 +9,11 @@ def replace_space_by_underscore(parent):
         
          # rename the folders
         for i in range(len(folders)):
-            new_name = folders[i].replace('ñ', 'n')
-            bad_chars = [r'ñ']
+            new_name = folders[i].replace('Ú', 'U')
+            bad_chars = [r'Ú']
             for bad_char in bad_chars:
                 if bad_char in new_name:
-                    new_name = new_name.replace(bad_char, 'n')
+                    new_name = new_name.replace(bad_char, 'U')
                     print(folders[i], "==> ", new_name)
             old = os.path.join(path, folders[i])
             new = os.path.join(path, new_name)
@@ -24,10 +24,10 @@ def replace_space_by_underscore(parent):
         # rename the files
         for f in files:
             old = os.path.join(path, f)
-            bad_chars = [r'ñ']
+            bad_chars = [r'Ú']
             for bad_char in bad_chars:
                 if bad_char in f:
-                    new = old.replace(bad_char, 'n')
+                    new = old.replace(bad_char, 'U')
                     print(old, "==>", new)
                     os.rename(old, new)
 
