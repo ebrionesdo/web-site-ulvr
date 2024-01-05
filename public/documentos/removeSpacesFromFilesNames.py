@@ -11,16 +11,7 @@ def replace_space_by_underscore(parent):
     """
     import os
     for path, folders, files in os.walk(parent):
-        # rename the files
-        for f in files:
-            old = os.path.join(path, f)
-            bad_chars = [r' ', r',', r'-', r'&', r'[', r']', r'(', r')', r'__']
-            for bad_char in bad_chars:
-                if bad_char in f:
-                    new = old.replace(bad_char, '_')
-                    print(old, "==>", new)
-                    os.rename(old, new)
-
+        
         # rename the folders
         for i in range(len(folders)):
             new_name = folders[i].replace(' ', '_')
@@ -34,6 +25,18 @@ def replace_space_by_underscore(parent):
             new = os.path.join(path, new_name)
             os.rename(old, new)
             folders[i] = new_name
+        
+        # rename the files
+        for f in files:
+            old = os.path.join(path, f)
+            bad_chars = [r' ', r',', r'-', r'&', r'[', r']', r'(', r')', r'__']
+            for bad_char in bad_chars:
+                if bad_char in f:
+                    new = old.replace(bad_char, '_')
+                    print(old, "==>", new)
+                    os.rename(old, new)
+
+        
 
 
 if __name__ == "__main__":
