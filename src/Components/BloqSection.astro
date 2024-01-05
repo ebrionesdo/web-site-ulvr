@@ -1,3 +1,11 @@
+---
+import { noticias } from "../pages/noticias.astro";
+
+
+noticias
+---
+
+
 <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
     <div class="container">
         <div class="sec-title mb-60 text-center">
@@ -32,32 +40,43 @@
             data-md-device-nav="false"
             data-md-device-dots="false"
         >
-            <div class="blog-item">
-                <div class="image-part">
-                    <img src="images/blog/noticias/firma-de-convenio.jpg" alt="" />
-                </div>
-                <div class="blog-content new-style">
-                    <ul class="blog-meta">
-                        <li><i class="fa fa-user-o"></i> Admin</li>
-                        <li><i class="fa fa-calendar"></i>Febrero 22, 2023</li>
-                    </ul>
-                    <h3 class="title">
-                        <a href="noticias-firma convenio comercio.html"
-                            >ULVR firma convenio con Cámara de Comercio de Samborondón </a
-                        >
-                    </h3>
-                    <div class="desc">
-                        La Universidad Laica VICENTE ROCAFUERTE de Guayaquil recibió la visita de representantes de la Cámara de Comercio de Samborondón, encabezados por su presidente emérito, CPA Omar Zambrano Cedeño, para la firma de un convenio marco de cooperación interinstitucional
+            {
+                noticias && noticias.map((news:any) =>
+                    <div class="blog-item">
+                        <div class="image-part">
+                            <img src={news.imagen} alt="" />
+                        </div>
+                        <div class="blog-content new-style">
+                            <ul class="blog-meta">
+                                <li><i class="fa fa-user-o"></i> {news.usuario}</li>
+                                <li><i class="fa fa-calendar"></i>{news.fecha}</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href={`/noticia/${news.id}`}>
+                                    {news.titulo}
+                                </a>
+                            </h3>
+                            <div class="desc">
+                                {
+                                    news.descripcion && news.descripcion.map((desc:any) =>
+                                        <span>{desc}</span>
+                                    )
+                                }
+                            </div>
+                            <ul class="blog-bottom">
+                                <!-- <li class="cmnt-part"><a href="#">(12) Comentarios</a></li> -->
+                                <li class="btn-part">
+                                    <a class="readon-arrow" href={`/noticia/${news.id}`}>Leer más</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="blog-bottom">
-                        <li class="cmnt-part"><a href="#">(12) Comentarios</a></li>
-                        <li class="btn-part">
-                            <a class="readon-arrow" href="noticias-firmaniacopol.html">Leer más</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="blog-item">
+                )
+            }
+
+
+
+            <!-- <div class="blog-item">
                 <div class="image-part">
                     <img src="images/blog/noticias/n1.jpg" alt="" />
                 </div>
@@ -227,7 +246,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>						
+            </div>						 -->
         </div>
     </div>
 </div>

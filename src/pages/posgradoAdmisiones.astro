@@ -1,10 +1,11 @@
 ---
 import CarrerasPorFacultad from "../Components/CarrerasPorFacultad.astro";
-import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
+//  import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
 import { programasMaestrias } from "../layouts/LayoutListaPosGrado.astro";
 
 
 import nodemailer from "nodemailer";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
 
 export const prerender = true;
 
@@ -100,7 +101,8 @@ if (Astro.request.method === "POST") {
 
 ---
 
-<LayoutInscripcion>
+<LayoutVarios>
+<!-- <LayoutInscripcion> -->
 
      <!-- Banner Section Start -->
     <div class="rs-banner stylepaco">
@@ -326,4 +328,5 @@ if (Astro.request.method === "POST") {
             Programas de Posgrado
         </CarrerasPorFacultad>       
     </div>
-</LayoutInscripcion>
+<!-- </LayoutInscripcion> -->
+</LayoutVarios>

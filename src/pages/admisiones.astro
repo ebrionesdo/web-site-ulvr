@@ -1,6 +1,7 @@
 ---
-import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
+// import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
 import nodemailer from "nodemailer";
+import LayoutVarios from "../layouts/LayoutVarios.astro";
 
 export const prerender = true;
 
@@ -89,8 +90,8 @@ if (Astro.request.method === "POST") {
 
 ---
 
-<LayoutInscripcion>
-    
+<!-- <LayoutInscripcion> -->
+    <LayoutVarios>
     <!-- Banner Section Start -->
     <div class="rs-banner style11">
         <div class="container">
@@ -324,4 +325,5 @@ if (Astro.request.method === "POST") {
     <!-- Main content End -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</LayoutInscripcion>
+<!-- </LayoutInscripcion> -->
+</LayoutVarios>
