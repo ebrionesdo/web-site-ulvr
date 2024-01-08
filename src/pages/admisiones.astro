@@ -1,7 +1,7 @@
 ---
 import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
 // import LayoutVarios from "../layouts/LayoutVarios.astro";
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
 
 // export const prerender = true;
 
@@ -23,57 +23,61 @@ if (Astro.request.method === "POST") {
 
         console.log(data);
 
-//         const transporter = nodemailer.createTransport({
-//             host: "smtp.gmail.com",
-//             port: 587,
-//             secure: false,
-//             requireTLS: true,
-//             auth: {
-//                 user: 'testvocacional@ulvr.edu.ec',
-//                 pass: 'udbtlbtugeuqcgms',
-//             },
-//             logger: true
-//         });
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
+            requireTLS: true,
+            auth: {
+                user: 'testvocacional@ulvr.edu.ec',
+                pass: 'udbtlbtugeuqcgms',
+            },
+            logger: true
+        });
 
-//         const info = await transporter.sendMail({
-//             from: 'testvocacional@ulvr.edu.ec',
-//             to: correo,
-//             subject: "Proceso de admisión", 
-//             attachments: [
-//                 {
-//                     filename: 'oferta_academica',
-//                     path: './public/images/oferta_academica.png',
-//                     cid:'oferta_academica'
-//                 },
-//             ],
-//             html: ` <h2><strong> Te Invitamos a ser parte de la ULVR. </strong></h2>
-//                     <p>Hola,<strong> ${nombre} ${apellido}</strong>, revisa nuestra oferta académica para más información.</p>
-//                     <div style='margin: auto; text-align: center;'>
-//                         <img src='cid:oferta_academica' alt='oferta académica'>
-//                     </div>`,
-//             headers: { 'x-myheader': 'test header' }
-//         });
-//         const info2 = await transporter.sendMail({
-//             from: 'testvocacional@ulvr.edu.ec',
-//             to: 'testvocacional@ulvr.edu.ec',
-//             subject: "Proceso de admisión",
-//             html: `<h1><strong>Proceso de admisión</strong></h1>
-//                     <ul>
-//                         <li><strong>Aspirante:</strong> ${nombre} ${apellido}</li>
-//                         <li><strong>Cédula: </strong> ${cedula}</li>
-//                         <li><strong>Correo: </strong> ${correo}</li>
-//                         <li><strong>Celular: </strong> ${telefono}</li>
-//                         <li><strong>Medio: </strong> ${medio}</li>
-//                         <li><strong>Maestria: </strong> ${carrera}</li>
-//                     </ul>`,
-//             headers: { 'x-myheader': 'test header' }
-//         });
+
+        console.log(transporter);
+        
+
+        // const info = await transporter.sendMail({
+        //     from: 'testvocacional@ulvr.edu.ec',
+        //     to: correo,
+        //     subject: "Proceso de admisión", 
+        //     attachments: [
+        //         {
+        //             filename: 'oferta_academica',
+        //             path: './public/images/oferta_academica.png',
+        //             cid:'oferta_academica'
+        //         },
+        //     ],
+        //     html: ` <h2><strong> Te Invitamos a ser parte de la ULVR. </strong></h2>
+        //             <p>Hola,<strong> ${nombre} ${apellido}</strong>, revisa nuestra oferta académica para más información.</p>
+        //             <div style='margin: auto; text-align: center;'>
+        //                 <img src='cid:oferta_academica' alt='oferta académica'>
+        //             </div>`,
+        //     headers: { 'x-myheader': 'test header' }
+        // });
+        // const info2 = await transporter.sendMail({
+        //     from: 'testvocacional@ulvr.edu.ec',
+        //     to: 'testvocacional@ulvr.edu.ec',
+        //     subject: "Proceso de admisión",
+        //     html: `<h1><strong>Proceso de admisión</strong></h1>
+        //             <ul>
+        //                 <li><strong>Aspirante:</strong> ${nombre} ${apellido}</li>
+        //                 <li><strong>Cédula: </strong> ${cedula}</li>
+        //                 <li><strong>Correo: </strong> ${correo}</li>
+        //                 <li><strong>Celular: </strong> ${telefono}</li>
+        //                 <li><strong>Medio: </strong> ${medio}</li>
+        //                 <li><strong>Maestria: </strong> ${carrera}</li>
+        //             </ul>`,
+        //     headers: { 'x-myheader': 'test header' }
+        // });
 
         
-//         if (info.response && info2.response) {
-//             return Astro.redirect('/grado');
+        // if (info.response && info2.response) {
+        //     return Astro.redirect('/grado');
             
-//         }
+        // }
         
     }
  
