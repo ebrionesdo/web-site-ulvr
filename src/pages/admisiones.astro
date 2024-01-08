@@ -1,7 +1,7 @@
 ---
 import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
 // import LayoutVarios from "../layouts/LayoutVarios.astro";
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
 export const prerender = true;
 
@@ -23,17 +23,17 @@ if (Astro.request.method === "POST") {
 
         console.log(data);
 
-        const transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            port: 587,
-            secure: false,
-            requireTLS: true,
-            auth: {
-                user: 'testvocacional@ulvr.edu.ec',
-                pass: 'udbtlbtugeuqcgms',
-            },
-            logger: true
-        });
+        // const transporter = nodemailer.createTransport({
+        //     host: "smtp.gmail.com",
+        //     port: 587,
+        //     secure: false,
+        //     requireTLS: true,
+        //     auth: {
+        //         user: 'testvocacional@ulvr.edu.ec',
+        //         pass: 'udbtlbtugeuqcgms',
+        //     },
+        //     logger: true
+        // });
 
         // const info = await transporter.sendMail({
         //     from: 'testvocacional@ulvr.edu.ec',
