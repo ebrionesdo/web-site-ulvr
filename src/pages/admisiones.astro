@@ -3,25 +3,25 @@ import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
 // import LayoutVarios from "../layouts/LayoutVarios.astro";
 // import nodemailer from "nodemailer";
 
-// export const prerender = true;
+export const prerender = true;
 
 
 
 
-// if (Astro.request.method === "POST") {
-//   try {
-//     const data = await Astro.request.formData();
-//     const nombre = data.get("nombre");
-//     const apellido = data.get("apellido");
-//     const cedula = data.get("cedula");
-//     const correo:any = data.get("correo");
-//     const telefono = data.get("telefono");
-//     const carrera = data.get("carrera");
-//     const medio = data.get("medio");
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const nombre = data.get("nombre");
+    const apellido = data.get("apellido");
+    const cedula = data.get("cedula");
+    const correo:any = data.get("correo");
+    const telefono = data.get("telefono");
+    const carrera = data.get("carrera");
+    const medio = data.get("medio");
 
-//     if (nombre && apellido && cedula && correo && telefono && carrera && medio) {
+    if (nombre && apellido && cedula && correo && telefono && carrera && medio) {
 
-//         console.log(data);
+        console.log(data);
 
 //         const transporter = nodemailer.createTransport({
 //             host: "smtp.gmail.com",
@@ -75,14 +75,14 @@ import LayoutInscripcion from "../layouts/LayoutInscripcion.astro";
             
 //         }
         
-//     }
+    }
  
-//   } catch (error) {
-//     if (error instanceof Error) {
-//       console.error(error.message);
-//     }
-//   }
-// }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 
 ---
 

@@ -40,8 +40,6 @@ if (Astro.request.method === "POST") {
             },
             logger: true
         });
-
-        // send mail with defined transport object
         const info = await transporter.sendMail({
             from: 'testvocacional@ulvr.edu.ec',
             to: correo,
@@ -63,7 +61,6 @@ if (Astro.request.method === "POST") {
         const info2 = await transporter.sendMail({
             from: 'testvocacional@ulvr.edu.ec',
             to: 'testvocacional@ulvr.edu.ec',
-            // to: correo,
             subject: "Registro de postgrado",
             html: `<h1><strong>Registro de Postgrado</strong></h1>
                     <ul>
@@ -84,8 +81,6 @@ if (Astro.request.method === "POST") {
 
         
         if (info.response && info2.response) {
-            // console.log("Message sent: %s", info.response);
-            // console.log("Message sent: %s", info2.response);
             return Astro.redirect('/posgrado');
             
         }
