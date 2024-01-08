@@ -23,7 +23,7 @@ if (Astro.request.method === "POST") {
 
         console.log(data);
 
-        const transporter = nodemailer.createTransport({
+        const transporter = await nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 587,
             secure: false,
